@@ -29,6 +29,20 @@ Antes de executar, leia e internalize:
 - `skills/component-validation.md` ← nomenclatura e DS
 - `skills/edge-case-detection.md` ← cenários não cobertos
 
+E carregue o contexto do produto:
+
+**Global (sempre obrigatório):**
+- `context/global/product-principles.md` ← princípios, missão e valores da Loft
+- `context/global/brand-voice.md` ← voz e tom global da marca
+- `context/global/design-system.md` ← referências do Copan
+
+**Local (carregue o que existir no seu squad):**
+- `context/local/context.md` ← regras de negócio, terminologia e constraints
+- `context/local/personas.md` ← perfis de usuário do squad
+- `context/local/target-audiences.md` ← segmentos e guias de comunicação
+- `context/local/brand-voice-local.md` ← ajustes de tom específicos do domínio
+- `context/local/competitors.md` ← mapeamento competitivo do squad
+
 ## Protocolo de execução
 
 ### Fase 1 — Intake

@@ -30,9 +30,17 @@ Antes de executar, leia e internalize:
 
 E carregue o contexto do produto:
 
-- `context/global/product-principles.md`
-- `context/local/context.md`
-- `context/local/personas.md` ← se existir no seu squad
+**Global (sempre obrigatório):**
+- `context/global/product-principles.md` ← princípios, missão e valores da Loft
+- `context/global/brand-voice.md` ← voz e tom global da marca
+- `context/global/design-system.md` ← referências do Copan
+
+**Local (carregue o que existir no seu squad):**
+- `context/local/context.md` ← regras de negócio, terminologia e constraints
+- `context/local/personas.md` ← perfis de usuário do squad
+- `context/local/target-audiences.md` ← segmentos e guias de comunicação
+- `context/local/brand-voice-local.md` ← ajustes de tom específicos do domínio
+- `context/local/competitors.md` ← mapeamento competitivo do squad
 
 ## Protocolo de execução
 
