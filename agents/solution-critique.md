@@ -28,9 +28,10 @@ Antes de executar, leia e internalize:
 
 E carregue o contexto do produto:
 
-- `context/product-principles.md`
-- `context/personas.md`
-- `context/brand-voice.md`
+- `context/global/product-principles.md`
+- `context/global/brand-voice.md`
+- `context/local/context.md` ← regras e constraints do seu squad
+- `context/local/personas.md` ← se existir no seu squad
 
 ## Protocolo de execução
 
@@ -67,7 +68,7 @@ Verifique:
 
 Verifique (sem acesso ao Figma, baseado na descrição):
 
-- Componentes descritos existem no design system?
+- Componentes descritos existem no Copan (design system da Loft)?
 - Padrões de interação são consistentes com o sistema?
 - Nomenclaturas usadas seguem o glossário do produto?
 

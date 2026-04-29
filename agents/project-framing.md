@@ -28,8 +28,8 @@ Antes de executar, leia e internalize:
 
 E carregue o contexto do produto:
 
-- `context/product-principles.md`
-- `context/personas.md`
+- `context/global/product-principles.md`
+- `context/local/personas.md` ← se existir no seu squad
 
 ## Protocolo de execução
 

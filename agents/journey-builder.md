@@ -28,9 +28,10 @@ Antes de executar, leia e internalize:
 
 E carregue o contexto do produto:
 
-- `context/product-principles.md`
-- `context/personas.md`
-- `context/design-system-tokens.md`
+- `context/global/product-principles.md`
+- `context/global/design-system.md`
+- `context/local/context.md` ← regras de negócio e constraints do seu squad
+- `context/local/personas.md` ← se existir no seu squad
 
 ## Protocolo de execução
 

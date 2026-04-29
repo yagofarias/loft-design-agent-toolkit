@@ -27,10 +27,12 @@ Antes de executar, leia e internalize:
 
 E carregue o contexto do produto:
 
-- `context/brand-voice.md`
-- `context/design-system-tokens.md`
-- `context/personas.md`
-- `context/target-audiences.md`
+- `context/global/brand-voice.md`
+- `context/global/design-system.md`
+- `context/local/context.md` ← terminologia e regras do seu squad
+- `context/local/personas.md` ← se existir no seu squad
+- `context/local/target-audiences.md` ← se existir no seu squad
+- `context/local/brand-voice-local.md` ← tom específico do squad, se existir
 
 ## Protocolo de execução
 
@@ -51,7 +53,7 @@ Para cada copy identificado, avalie:
 |------|-------------|-----------|--------------|-----------|----------|
 | | | | | Sim/Não/Parcial | |
 
-Verifique contra `context/brand-voice.md`:
+Verifique contra `context/global/brand-voice.md` e, se existir, `context/local/brand-voice-local.md`:
 - **Voz** — Consistente com a personalidade definida?
 - **Tom** — Adequado ao momento emocional do usuário neste ponto da jornada?
 - **Nível de formalidade** — Coerente com o público-alvo desta tela?
@@ -69,7 +71,7 @@ Para cada copy:
 
 Verifique:
 
-- Termos usados existem no glossário do design system?
+- Termos usados existem no glossário do Copan ou no `context/local/context.md`?
 - O mesmo conceito está nomeado da mesma forma em toda a jornada?
 - Siglas e jargões técnicos foram evitados ou explicados?
 - Nomenclaturas de funcionalidades batem com o que está no produto atual?

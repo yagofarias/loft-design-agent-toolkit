@@ -8,8 +8,6 @@ Este guia é para designers que querem começar a usar o toolkit. Você não pre
 
 O Loft Design Agent Toolkit é um repositório de agentes, skills, playbooks e templates que você usa junto com Claude para estruturar e acelerar o seu trabalho de design.
 
-Pense nisso como um conjunto de "modos de trabalho" que você pode acionar dependendo do momento do projeto. Cada agente sabe exatamente o que fazer, o que perguntar, e o que produzir.
-
 **O que o toolkit faz:**
 - Estrutura o problema antes de você começar a desenhar
 - Mapeia jornadas com estados e edge cases completos
@@ -33,33 +31,38 @@ Você precisa de:
 2. **Este repositório clonado localmente** ou acessível para referência
 
 ```bash
-git clone https://github.com/loft/design-agent-toolkit
+git clone https://github.com/yagofarias/loft-design-agent-toolkit
 cd loft-design-agent-toolkit
 ```
-
-3. Os arquivos de `/context` preenchidos com os dados reais do produto (veja seção abaixo)
 
 ---
 
 ## Setup inicial (faça uma vez)
 
-### 1. Preencha o contexto do produto
+### 1. Preencha o contexto global
 
-A pasta `/context` é o que diferencia este toolkit de um toolkit genérico. Sem ela, os agentes trabalham com boas práticas gerais — com ela, eles trabalham com o contexto real do Loft.
+Os arquivos de `/context/global` são mantidos pelo time central de design e valem para todos os squads. Verifique se estão atualizados antes de usar:
 
-Abra cada arquivo e preencha:
+| Arquivo | O que contém |
+|---------|--------------|
+| `context/global/product-principles.md` | Princípios de design e produto da Loft |
+| `context/global/design-system.md` | Links e referência rápida do Copan (DS da Loft) |
+| `context/global/brand-voice.md` | Guia de voz e tom da marca Loft |
 
-| Arquivo | O que colocar |
-|---------|---------------|
-| `context/product-principles.md` | Princípios de design e produto do Loft |
-| `context/personas.md` | Personas atuais com contextos de uso |
-| `context/design-system-tokens.md` | Tokens de cor, tipografia, spacing e componentes principais |
-| `context/brand-voice.md` | Guia de voz e tom, exemplos de copies aprovados e reprovados |
-| `context/target-audiences.md` | Segmentos de público com particularidades de comunicação |
+### 2. Preencha o contexto do seu squad
 
-> **Dica:** Não precisa ser perfeito para começar. Um contexto parcial já é melhor do que nenhum. Vá refinando conforme usar.
+Os arquivos de `/context/local` são mantidos por você e pelo seu squad. São o que torna os outputs do toolkit específicos para o seu domínio:
 
-### 2. Teste com um projeto real
+| Arquivo | O que colocar | Obrigatório? |
+|---------|---------------|-------------|
+| `context/local/context.md` | Regras de negócio, terminologia, constraints, métricas | ✅ Sempre |
+| `context/local/personas.md` | Personas específicas do seu segmento | Se o squad tiver personas próprias |
+| `context/local/target-audiences.md` | Segmentações de público (B2B/B2C, tamanho de empresa) | Se a comunicação variar por segmento |
+| `context/local/brand-voice-local.md` | Tom específico do squad que complementa o global | Se o squad tiver tom próprio |
+
+> **Dica:** Comece preenchendo só o `context/local/context.md`. Mesmo parcialmente preenchido, ele já melhora muito a qualidade dos outputs.
+
+### 3. Teste com um projeto real
 
 Escolha um projeto pequeno em andamento e passe pelo `playbooks/quick-product-change.md`. É o mais rápido e te dá uma ideia de como o toolkit funciona antes de usar em algo maior.
 
@@ -71,33 +74,30 @@ Escolha um projeto pequeno em andamento e passe pelo `playbooks/quick-product-ch
 
 1. Abra uma nova conversa no claude.ai
 2. Faça upload do arquivo do agente que você quer usar (ex: `agents/project-framing.md`)
-3. Faça upload dos arquivos de contexto relevantes (`context/personas.md`, etc.)
+3. Faça upload dos arquivos de contexto relevantes:
+   - `context/global/product-principles.md`
+   - `context/global/brand-voice.md`
+   - `context/local/context.md`
+   - (outros opcionais dependendo do projeto)
 4. Cole o template correspondente no chat e diga: *"Use este agente para me ajudar com [projeto]"*
 
 ### Opção B — Pelo Claude Code (mais poderoso)
 
-Se você usa Claude Code no terminal:
-
 ```bash
-# Navegue até a pasta do seu projeto de design
 cd ~/projetos/meu-projeto
 
-# Inicie o Claude Code referenciando o toolkit
 claude --context ~/loft-design-agent-toolkit/agents/project-framing.md \
-       --context ~/loft-design-agent-toolkit/context/personas.md
+       --context ~/loft-design-agent-toolkit/context/global/product-principles.md \
+       --context ~/loft-design-agent-toolkit/context/local/context.md
 ```
-
-Ou adicione ao `CLAUDE.md` do seu projeto de design uma referência ao toolkit para que seja carregado automaticamente.
 
 ### Opção C — Referência manual (mais flexível)
 
-Abra o arquivo do agente que você quer usar, copie o conteúdo, e cole no início de uma conversa com Claude como contexto. Funciona em qualquer interface.
+Abra o arquivo do agente, copie o conteúdo e cole no início de uma conversa com Claude como contexto. Funciona em qualquer interface.
 
 ---
 
 ## Qual agente usar em cada situação
-
-Use esta tabela como referência rápida:
 
 | Situação | Use este agente / playbook |
 |----------|---------------------------|
@@ -110,6 +110,8 @@ Use esta tabela como referência rápida:
 | Preciso revisar copies e consistência de DS | `agents/ds-copy-review.md` |
 | Preciso gerar spec de tracking para o dev | `agents/tracking-handoff.md` |
 | Quero verificar se o handoff está completo | `agents/dev-handoff.md` |
+| Preciso sintetizar pesquisa antes de começar | `agents/ux-research-primer.md` |
+| Quero ver como o mercado resolve esse problema | `agents/benchmark-research.md` |
 
 ---
 
@@ -118,33 +120,32 @@ Use esta tabela como referência rápida:
 ```
 /agents      → Orquestradores. Conduzem uma tarefa completa, do início ao output.
 /skills      → Conhecimento modular. Os agentes carregam skills automaticamente.
-              Você também pode usar skills diretamente para tarefas pontuais.
 /playbooks   → Sequências. Dizem quais agentes usar, em qual ordem, com quais gates.
 /templates   → Outputs estruturados. Os agentes preenchem esses arquivos.
-/context     → Contexto do produto. O que torna o toolkit específico para o Loft.
+/context
+  /global    → Contexto da Loft. Mantido pelo time central. Vale para todos.
+  /squad     → Contexto do seu squad. Mantido por você. Específico do seu domínio.
 /docs        → Este arquivo e o guia de contribuição.
 ```
-
-Você interage principalmente com **agents** e **playbooks**. As **skills** funcionam em segundo plano. Os **templates** são os documentos que você vai acumular por projeto.
 
 ---
 
 ## Dicas de uso
 
+**Preencha o contexto do squad antes de qualquer coisa.**
+É o que faz os agentes responderem com o vocabulário certo, respeitarem as regras de negócio do seu domínio e gerarem outputs úteis ao invés de genéricos.
+
 **Comece pelo problem frame, sempre.**
-Mesmo em projetos pequenos, ter o problem statement claro muda a qualidade de tudo que vem depois. Leva 30 minutos e poupa horas de retrabalho.
+Mesmo em projetos pequenos, ter o problem statement claro muda a qualidade de tudo que vem depois.
 
 **Use os gates dos playbooks como check-ins reais.**
-Os checklists entre fases existem para prevenir que você avance com uma base fraca. Se um gate falha, é sinal de que há algo a resolver — não pule.
+Os checklists entre fases existem para prevenir que você avance com uma base fraca. Se um gate falha, há algo a resolver — não pule.
 
 **Salve os templates preenchidos junto ao projeto.**
-Crie uma pasta de artefatos no seu projeto de design (ou no Notion, ou no Figma) e salve os templates preenchidos. Eles viram documentação viva do projeto.
+Eles viram documentação viva — úteis para onboarding de novos membros, revisões retrospectivas e auditorias.
 
-**O toolkit é um ponto de partida, não uma receita.**
-Se um agente está pedindo informação que você não tem, documente como `[A VALIDAR]` e continue. Um framing com lacunas explícitas é melhor do que um framing com lacunas escondidas.
-
-**Itere no contexto conforme aprender.**
-Toda vez que você usar o toolkit e sentir que a resposta ficou genérica demais, provavelmente é porque um arquivo de contexto está incompleto. Adicione o que faltou e o próximo uso vai ser melhor.
+**Itere no contexto do squad conforme aprender.**
+Toda vez que o output parecer genérico demais, provavelmente é porque o `context/local/context.md` está incompleto. Adicione o que faltou.
 
 ---
 
@@ -154,6 +155,8 @@ Toda vez que você usar o toolkit e sentir que a resposta ficou genérica demais
 Projeto novo chegou
        ↓
 Abro o playbook adequado
+       ↓
+Verifico se context/local/context.md está atualizado
        ↓
 Chamo o agente de project-framing
        ↓
@@ -181,16 +184,16 @@ Movo para "Pronto para Dev" no Figma
 ## Perguntas frequentes
 
 **Preciso usar todos os agentes em todo projeto?**
-Não. Para mudanças pequenas, o `quick-product-change.md` pula vários agentes. Use o que fizer sentido para o escopo.
+Não. Para mudanças pequenas, o `quick-product-change.md` pula vários agentes.
 
-**Posso usar os agentes fora de ordem?**
-Sim, mas alguns dependem do output de outros. O `journey-builder` funciona melhor com o `problem-frame.md` preenchido. O `solution-critique` funciona melhor com o `journey-spec.md`. Siga a ordem recomendada quando puder.
+**O contexto do squad pode ficar vazio?**
+Pode, mas os outputs vão ser genéricos. Vale 30 minutos preenchendo o básico antes do primeiro uso.
 
-**O que faço se o agente pedir uma informação que não tenho?**
-Marque como `[A VALIDAR]` e continue. O objetivo é ter clareza sobre o que está confirmado e o que ainda é suposição — não bloquear o trabalho por falta de uma informação.
+**Quem mantém os arquivos de `/context/global`?**
+O time central de design / design ops. Se algo estiver desatualizado, sinalize via PR ou para o responsável pelo toolkit.
 
-**Posso adaptar os agentes para o meu projeto específico?**
-Sim. Os arquivos são markdown — edite à vontade para o contexto do seu projeto. Se a adaptação for útil para o time inteiro, considere abrir uma PR (veja `how-to-contribute.md`).
+**Posso ter múltiplos arquivos de contexto de squad?**
+Sim. Se você atua em mais de um domínio, pode manter versões diferentes da pasta `/context/local` e carregar a que for relevante para cada projeto.
 
 **O toolkit funciona com outros modelos além do Claude?**
-Os arquivos são texto puro e funcionam com qualquer modelo que aceite contexto longo. O formato de SKILL.md é compatível com Claude Code nativamente. Para outros modelos, cole o conteúdo manualmente como contexto.
+Os arquivos são texto puro e funcionam com qualquer modelo que aceite contexto longo. O formato de SKILL.md é compatível com Claude Code nativamente.

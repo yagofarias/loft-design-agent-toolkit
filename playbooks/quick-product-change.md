@@ -9,7 +9,7 @@ description: >
 
 Use quando: Mudança pontual em feature existente, ajuste de copy, correção de UX, ou melhoria incremental com escopo bem definido.
 
-**Não use quando:** A mudança afeta fluxos inteiros, muda a arquitetura de informação, ou envolve componentes novos significativos.
+**Não use quando:** A mudança afeta fluxos inteiros, muda a arquitetura de informação, ou envolve componentes novos significativos. Nesses casos, use `start-from-scratch.md`.
 
 ## Decisão Rápida de Escopo
 
@@ -17,7 +17,7 @@ Responda:
 
 1. A mudança afeta mais de 3 telas? → Se sim, use `start-from-scratch`
 2. A mudança muda como o usuário completa uma tarefa principal? → Se sim, use `start-from-scratch`
-3. Precisa de componentes novos que não existem no DS? → Se sim, consulte o time de DS
+3. Precisa de componentes novos que não existem no Copan? → Se sim, consulte o time de DS antes de continuar
 
 ---
 
@@ -26,7 +26,7 @@ Responda:
 ```
 [Mudança identificada]
         ↓
-  MINI FRAMING (você mesmo)
+  MINI FRAMING (você mesmo, sem agente)
         ↓
       (design)
         ↓
@@ -61,8 +61,9 @@ Responda:
 ## Fase 2 — Design
 
 Referências obrigatórias:
-- `context/design-system-tokens.md`
-- `context/brand-voice.md` (se houver copy nova)
+- `context/global/design-system.md` — para garantir uso correto do Copan
+- `context/global/brand-voice.md` — se houver copy nova
+- `context/local/context.md` — se a mudança tiver regras específicas do squad
 
 ---
 
@@ -89,3 +90,5 @@ COMPORTAMENTO: [Como deve funcionar]
 COPY NOVA: [Se houver, o texto final]
 TRACKING: [Se algum evento precisa ser adicionado ou modificado]
 ```
+
+Use `agents/dev-handoff.md` apenas se a mudança tiver qualquer ambiguidade que possa gerar dúvida do dev.

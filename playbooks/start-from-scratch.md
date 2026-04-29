@@ -40,12 +40,20 @@ TRACKING HANDOFF + DEV HANDOFF
 
 ## Fase 0 — Contexto
 
-Antes de chamar qualquer agente, verifique se os arquivos de contexto estão atualizados:
+Antes de chamar qualquer agente, verifique se os arquivos de contexto estão prontos:
 
-- [ ] `context/product-principles.md`
-- [ ] `context/personas.md`
-- [ ] `context/design-system-tokens.md`
-- [ ] `context/brand-voice.md`
+**Globais (obrigatórios — mantidos pelo time central):**
+- [ ] `context/global/product-principles.md`
+- [ ] `context/global/design-system.md`
+- [ ] `context/global/brand-voice.md`
+
+**Do seu squad (preencha antes de começar):**
+- [ ] `context/local/context.md` ← regras de negócio, terminologia, constraints
+- [ ] `context/local/personas.md` ← se relevante para este projeto
+- [ ] `context/local/target-audiences.md` ← se relevante para este projeto
+- [ ] `context/local/brand-voice-local.md` ← se o squad tiver tom específico
+
+> Quanto mais rico o contexto do squad, mais específicos e úteis serão os outputs dos agentes.
 
 ---
 
@@ -68,6 +76,8 @@ Antes de chamar qualquer agente, verifique se os arquivos de contexto estão atu
 - [ ] O que está fora do escopo está explícito?
 - [ ] As hipóteses são verificáveis?
 
+**Se algum item falhar:** Retorne ao agente `project-framing` para refinamento.
+
 ---
 
 ## Fase 2 — Estruturação da Jornada
@@ -84,18 +94,32 @@ Antes de chamar qualquer agente, verifique se os arquivos de contexto estão atu
 - [ ] Todos os estados obrigatórios documentados por tela?
 - [ ] Edge cases críticos identificados e priorizados?
 - [ ] Dependências de dados/API mapeadas?
+- [ ] Dúvidas em aberto documentadas com responsável?
+
+**Se algum item falhar:** Retorne ao agente `journey-builder`.
 
 ---
 
 ## Fase 3 — Design (Figma)
 
-Use o `templates/journey-spec.md` como referência constante.
+Esta é a fase de design visual. O toolkit não substitui o trabalho no Figma — ele o informa.
+
+Use o `templates/journey-spec.md` como referência constante. Para cada tela:
+
+1. Consulte `context/global/design-system.md` para componentes disponíveis no Copan
+2. Implemente todos os estados mapeados no journey spec
+3. Documente nos layers do Figma qualquer decisão que não seja óbvia
 
 ---
 
 ## Fase 4 — Critique
 
 **Agente:** `agents/solution-critique.md`
+
+**Input necessário:**
+- Link do Figma ou descrição detalhada da jornada
+- `templates/problem-frame.md`
+- `templates/journey-spec.md`
 
 **Output esperado:** `templates/critique-output.md`
 
@@ -104,6 +128,9 @@ Use o `templates/journey-spec.md` como referência constante.
 - [ ] Nenhum problema de severidade catastrófica (nível 4)?
 - [ ] Problemas de severidade 3 têm plano de endereçamento?
 - [ ] O design atende ao problem statement?
+- [ ] O usuário primário consegue completar o fluxo sem ambiguidade?
+
+**Se houver bloqueantes:** Corrija no Figma e repita a critique.
 
 ---
 
@@ -111,23 +138,27 @@ Use o `templates/journey-spec.md` como referência constante.
 
 **Agente:** `agents/ds-copy-review.md`
 
+**Input necessário:** Inventário de copies da jornada + link do Figma
+
 **Output esperado:** `templates/ds-audit-output.md`
 
 ---
 
 ## Fase 6 — Tracking e Handoff
 
-Execute em paralelo:
+Execute os dois agentes em paralelo:
 
 **Agente:** `agents/tracking-handoff.md` → `templates/tracking-spec.md`
 **Agente:** `agents/dev-handoff.md` → Relatório de prontidão
 
 ### Gate 4 — Checklist Final
 
-- [ ] Nenhum item bloqueante no relatório do dev-handoff?
+- [ ] Nenhum item bloqueante no relatório do `dev-handoff`?
 - [ ] Tracking spec aprovado pelo time de dados?
 - [ ] Copies finalizados?
-- [ ] Componentes novos comunicados ao time de DS?
+- [ ] Componentes novos documentados e comunicados ao time de DS (Copan)?
+
+**Somente após todos os gates:** Mover frame no Figma para "Pronto para Dev".
 
 ---
 

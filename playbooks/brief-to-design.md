@@ -59,17 +59,19 @@ Consulte o time de engenharia para constraints técnicas antes de mapear.
 
 ## Fase 3 — Design
 
-Referências obrigatórias:
+Referências obrigatórias durante o design:
 - `templates/journey-spec.md`
 - `templates/problem-frame.md`
-- `context/design-system-tokens.md`
-- `context/brand-voice.md`
+- `context/global/design-system.md`
+- `context/global/brand-voice.md`
+- `context/local/context.md` ← regras e terminologia do seu domínio
 
 ---
 
 ## Fase 4 — Validação com Stakeholder (pré-critique)
 
-Apresente para o stakeholder com foco em:
+Apresente o design para o stakeholder com foco em:
+
 1. "Isso resolve o que foi pedido?"
 2. "Há algum requisito que não ficou representado?"
 
