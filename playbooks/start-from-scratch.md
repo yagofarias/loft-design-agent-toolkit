@@ -2,8 +2,8 @@
 name: start-from-scratch
 description: >
   Playbook completo para projetos que começam do zero. Define a
-  sequência de agentes e artefatos necessários desde o brief até
-  o handoff, com gates de qualidade entre cada fase.
+  sequência de agentes desde o brief até o handoff, com gates de
+  qualidade entre cada fase.
 ---
 
 # Playbook: Start From Scratch
@@ -16,6 +16,7 @@ Use quando: Novo produto, nova feature de médio ou grande porte, ou quando não
 [Brief / Ideia bruta]
         ↓
    PROJECT FRAMING
+   (+ pesquisa e benchmark quando necessário)
         ↓
   [Problem Frame] ← gate 1
         ↓
@@ -23,37 +24,35 @@ Use quando: Novo produto, nova feature de médio ou grande porte, ou quando não
         ↓
   [Journey Spec] ← gate 2
         ↓
-      (design no Figma)
+    (design no Figma)
         ↓
  SOLUTION CRITIQUE
+ (usabilidade + acessibilidade + copy + DS)
         ↓
   [Critique Output] ← gate 3
         ↓
-  DS COPY REVIEW
+  DELIVERY HANDOFF
+  (tracking spec + validação para dev)
         ↓
-TRACKING HANDOFF + DEV HANDOFF
-        ↓
-   [Specs prontas] ← gate 4
+   [Pronto para dev] ← gate 4
 ```
 
 ---
 
 ## Fase 0 — Contexto
 
-Antes de chamar qualquer agente, verifique se os arquivos de contexto estão prontos:
+Antes de chamar qualquer agente, verifique:
 
-**Globais (obrigatórios — mantidos pelo time central):**
+**Globais (mantidos pelo time central):**
 - [ ] `context/global/product-principles.md`
 - [ ] `context/global/design-system.md`
 - [ ] `context/global/brand-voice.md`
 
-**Do seu squad (preencha antes de começar):**
+**Locais (preencha antes de começar):**
 - [ ] `context/local/context.md` ← regras de negócio, terminologia, constraints
-- [ ] `context/local/personas.md` ← se relevante para este projeto
-- [ ] `context/local/target-audiences.md` ← se relevante para este projeto
+- [ ] `context/local/personas.md` ← se relevante
+- [ ] `context/local/target-audiences.md` ← se relevante
 - [ ] `context/local/brand-voice-local.md` ← se o squad tiver tom específico
-
-> Quanto mais rico o contexto do squad, mais específicos e úteis serão os outputs dos agentes.
 
 ---
 
@@ -63,24 +62,24 @@ Antes de chamar qualquer agente, verifique se os arquivos de contexto estão pro
 
 **Input necessário:**
 - Brief, PRD, ou descrição do problema
-- Nome do stakeholder que pediu
-- Prazo esperado
+- Nome do stakeholder que pediu e prazo
+- Pesquisa, analytics ou benchmarks disponíveis (opcional)
 
 **Output esperado:** `templates/problem-frame.md`
+
+O agente decide automaticamente se executa as fases de pesquisa e benchmark com base no contexto disponível.
 
 ### Gate 1 — Checklist de Aprovação
 
 - [ ] O problem statement está em formato "Como podemos..."?
-- [ ] O usuário primário está identificado?
+- [ ] O usuário primário está identificado com contexto de uso?
 - [ ] Os critérios de sucesso são mensuráveis?
 - [ ] O que está fora do escopo está explícito?
 - [ ] As hipóteses são verificáveis?
 
-**Se algum item falhar:** Retorne ao agente `project-framing` para refinamento.
-
 ---
 
-## Fase 2 — Estruturação da Jornada
+## Fase 2 — Jornada
 
 **Agente:** `agents/journey-builder.md`
 
@@ -96,13 +95,9 @@ Antes de chamar qualquer agente, verifique se os arquivos de contexto estão pro
 - [ ] Dependências de dados/API mapeadas?
 - [ ] Dúvidas em aberto documentadas com responsável?
 
-**Se algum item falhar:** Retorne ao agente `journey-builder`.
-
 ---
 
 ## Fase 3 — Design (Figma)
-
-Esta é a fase de design visual. O toolkit não substitui o trabalho no Figma — ele o informa.
 
 Use o `templates/journey-spec.md` como referência constante. Para cada tela:
 
@@ -123,52 +118,34 @@ Use o `templates/journey-spec.md` como referência constante. Para cada tela:
 
 **Output esperado:** `templates/critique-output.md`
 
+O agente cobre heurísticas de usabilidade, acessibilidade, estados, edge cases, copies e consistência com o Copan em um único relatório.
+
 ### Gate 3 — Checklist de Aprovação
 
-- [ ] Nenhum problema de severidade catastrófica (nível 4)?
+- [ ] Nenhum problema de severidade 4 (catastrófico)?
 - [ ] Problemas de severidade 3 têm plano de endereçamento?
 - [ ] O design atende ao problem statement?
-- [ ] O usuário primário consegue completar o fluxo sem ambiguidade?
-
-**Se houver bloqueantes:** Corrija no Figma e repita a critique.
+- [ ] Nenhum componente novo bloqueando — proposta ao Copan feita?
 
 ---
 
-## Fase 5 — DS Copy Review
+## Fase 4 — Entrega
 
-**Agente:** `agents/ds-copy-review.md`
+**Agente:** `agents/delivery-handoff.md`
 
-**Input necessário:** Inventário de copies da jornada + link do Figma
+**Input necessário:**
+- `templates/journey-spec.md`
+- `templates/critique-output.md` (confirmando que passou pela revisão)
+- Ferramenta de analytics do time
 
-**Output esperado:** `templates/ds-audit-output.md`
-
----
-
-## Fase 6 — Tracking e Handoff
-
-Execute os dois agentes em paralelo:
-
-**Agente:** `agents/tracking-handoff.md` → `templates/tracking-spec.md`
-**Agente:** `agents/dev-handoff.md` → Relatório de prontidão
+**Output esperado:**
+- `templates/tracking-spec.md`
+- Relatório de handoff com checklist para o dev
 
 ### Gate 4 — Checklist Final
 
-- [ ] Nenhum item bloqueante no relatório do `dev-handoff`?
-- [ ] Tracking spec aprovado pelo time de dados?
-- [ ] Copies finalizados?
-- [ ] Componentes novos documentados e comunicados ao time de DS (Copan)?
+- [ ] Nenhum item bloqueante no relatório de handoff?
+- [ ] Tracking spec com todos os eventos P0 especificados?
+- [ ] Componentes novos comunicados ao time de DS?
 
 **Somente após todos os gates:** Mover frame no Figma para "Pronto para Dev".
-
----
-
-## Tempo Estimado por Fase
-
-| Fase | Pequena | Média | Grande |
-|------|---------|-------|--------|
-| Framing | 30 min | 1h | 2h |
-| Journey | 1h | 2-3h | 4-8h |
-| Design | Variável | Variável | Variável |
-| Critique | 30 min | 1h | 2h |
-| DS Review | 30 min | 1h | 2h |
-| Handoff | 1h | 2h | 4h |

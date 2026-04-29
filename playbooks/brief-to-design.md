@@ -24,8 +24,6 @@ Use quando: Você recebeu um PRD, um requisito de stakeholder, ou um brief forma
 
 ## Fase 0 — Validação do Brief (quando necessário)
 
-Use a skill `requirement-translation` para processar o input.
-
 Produza um documento de alinhamento com:
 1. **O que entendi que foi pedido**
 2. **O que está ambíguo**
@@ -41,11 +39,12 @@ Produza um documento de alinhamento com:
 **Agente:** `agents/project-framing.md`
 
 Passe como input:
-- O brief original
-- O documento de validação (Fase 0)
+- O brief original e o documento de validação (Fase 0)
 - Confirmações recebidas do stakeholder
 
-Ao final, valide com o stakeholder se o problem statement representa o que foi pedido.
+O agente vai decidir se executa pesquisa ou benchmark com base no contexto disponível.
+
+Valide com o stakeholder se o problem statement representa o que foi pedido antes de avançar.
 
 ---
 
@@ -59,39 +58,36 @@ Consulte o time de engenharia para constraints técnicas antes de mapear.
 
 ## Fase 3 — Design
 
-Referências obrigatórias durante o design:
+Referências obrigatórias:
 - `templates/journey-spec.md`
 - `templates/problem-frame.md`
 - `context/global/design-system.md`
-- `context/global/brand-voice.md`
-- `context/local/context.md` ← regras e terminologia do seu domínio
+- `context/local/context.md`
+
+A cada decisão de design que se afasta do brief, documente o motivo.
 
 ---
 
 ## Fase 4 — Validação com Stakeholder (pré-critique)
 
-Apresente o design para o stakeholder com foco em:
-
+Apresente o design para o stakeholder:
 1. "Isso resolve o que foi pedido?"
 2. "Há algum requisito que não ficou representado?"
 
-Registre o feedback e ajuste antes da critique.
+Ajuste antes de chamar o critique.
 
 ---
 
-## Fase 5 — Critique, DS Review e Handoff
+## Fase 5 — Critique e Entrega
 
-Siga as fases 4, 5 e 6 do `start-from-scratch.md`.
+Siga as fases 4 e 5 do `start-from-scratch.md`.
 
 ---
 
-## Armadilhas Comuns em Brief-to-Design
+## Armadilhas Comuns
 
-**A solução já vem no brief:**
-Stakeholders frequentemente pedem uma feature específica quando o problema real é outro. Sempre questione.
+**A solução já vem no brief:** Stakeholders frequentemente pedem uma feature específica quando o problema real é outro. Sempre questione.
 
-**O escopo cresce durante o design:**
-Documente o que está fora do escopo e resista à expansão — crie tickets separados.
+**O escopo cresce durante o design:** Documente o que está fora do escopo e crie tickets separados para o resto.
 
-**O brief está desatualizado:**
-Confirme se as premissas ainda são válidas antes de começar.
+**O brief está desatualizado:** Confirme se as premissas ainda são válidas antes de começar.

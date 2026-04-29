@@ -104,14 +104,10 @@ Abra o arquivo do agente, copie o conteúdo e cole no início de uma conversa co
 | Recebi um brief e não sei por onde começar | `playbooks/start-from-scratch.md` |
 | Recebi um PRD e preciso transformar em design | `playbooks/brief-to-design.md` |
 | Mudança pequena em feature existente | `playbooks/quick-product-change.md` |
-| Preciso definir o problema antes de desenhar | `agents/project-framing.md` |
+| Preciso definir o problema (com ou sem pesquisa/benchmark) | `agents/project-framing.md` |
 | Preciso mapear telas e estados da jornada | `agents/journey-builder.md` |
-| Quero revisar meu design antes de apresentar | `agents/solution-critique.md` |
-| Preciso revisar copies e consistência de DS | `agents/ds-copy-review.md` |
-| Preciso gerar spec de tracking para o dev | `agents/tracking-handoff.md` |
-| Quero verificar se o handoff está completo | `agents/dev-handoff.md` |
-| Preciso sintetizar pesquisa antes de começar | `agents/ux-research-primer.md` |
-| Quero ver como o mercado resolve esse problema | `agents/benchmark-research.md` |
+| Quero revisar meu design (usabilidade, copy e DS de uma vez) | `agents/solution-critique.md` |
+| Preciso gerar tracking spec e validar handoff para dev | `agents/delivery-handoff.md` |
 
 ---
 
