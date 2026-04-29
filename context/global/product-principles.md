@@ -5,33 +5,62 @@
 
 ---
 
+## Missão
+
+Oferecer acesso à moradia de forma inteligente e inclusiva, com segurança e transparência — e empoderar as imobiliárias, independentemente do tamanho, para acelerar o negócio e servir melhor o cliente.
+
+---
+
 ## Princípios de Design
 
-[Descreva os princípios que qualquer designer da Loft reconheceria como verdadeiros,
-independente de squad ou vertical. Ex: mobile-first, clareza antes de sofisticação,
-design orientado a conversão.]
+Verdades que qualquer designer da Loft reconheceria, independente de squad ou vertical.
 
-1. [Princípio 1]
-2. [Princípio 2]
-3. [Princípio 3]
+1. **Simplicidade que não sacrifica rigor.** Tornar a jornada mais fluida não significa pular etapas — significa organizar o caminho para reduzir retrabalho e aliviar o que é burocrático sem abrir mão de conformidade e qualidade.
+
+2. **Transparência em cada troca.** Experiências ruins quase sempre nascem de informação incompleta: preço mal explicado, prazo incerto, condição obscura, regra que muda no meio do caminho. Clareza é, ao mesmo tempo, proteção e eficiência.
+
+3. **Dados como base de decisão.** Tirar o "achismo" do caminho é um princípio fundador da Loft. Designs que dependem de "sensação" em vez de evidência precisam ser questionados. O produto deve ajudar pessoas a decidirem melhor — não a confiar em instinto.
+
+4. **Segurança que cabe no digital.** Digitalizar só vale a pena quando reduz risco, não quando cria novas vulnerabilidades. Jornadas que lidam com documentação, renda e decisões financeiras exigem governança e proteção explícitas no design.
+
+5. **Inclusão como consequência de processo bem desenhado.** Quando o processo melhora, mais gente consegue participar com dignidade: mais previsibilidade, menos dependência de exceções, menos barreiras informais que historicamente limitaram o acesso à moradia.
+
+6. **Mobile-first, sempre.** O usuário da Loft opera em movimento. O produto precisa funcionar primeiro na mão, não na tela grande.
 
 ---
 
 ## Princípios de Produto
 
-[Valores que guiam decisões de produto em nível macro.
-Ex: "Priorizamos confiança sobre velocidade em fluxos financeiros."]
+Valores que guiam decisões de produto em nível macro.
 
-1. [Princípio 1]
-2. [Princípio 2]
+1. **Confiança é infraestrutura, não feature.** Confiança não é uma tela de onboarding ou um badge. É o resultado de consistência ao longo de toda a jornada — do primeiro acesso ao pós-contrato. Qualquer decisão de produto que comprometa previsibilidade, clareza ou honestidade compromete confiança.
+
+2. **Priorizamos redução de fricção sobre adição de funcionalidade.** Um fluxo que elimina um passo vale mais do que uma feature nova. Produto bom no mercado imobiliário é produto que remove o peso do processo, não que o decora.
+
+3. **O sucesso da imobiliária é o nosso sucesso.** A Loft existe para impulsionar quem opera o setor. O produto não deve competir com as imobiliárias parceiras — deve torná-las mais fortes, mais ágeis e mais confiáveis para os clientes finais.
+
+4. **Priorizamos confiança sobre velocidade em fluxos financeiros e jurídicos.** Quando há tensão entre agilidade e segurança em contextos de crédito, garantia ou contrato, a segurança prevalece. Clareza e rastreabilidade não são opcionais.
+
+---
+
+## Valores Operacionais
+
+Como a Loft toma decisões no dia a dia — funciona como critério de priorização e tradeoff.
+
+- **Get It Done** — Mentalidade prática, orientada a resultado. Execução > debate. Resolve a ineficiência, não apenas a descreve.
+- **Think Big, Move Fast** — Ambição com agilidade. Testa, aprende, melhora. Não espera a solução perfeita para começar.
+- **Simply Delight** — Facilita a vida das pessoas. Eleva a experiência com empatia e atenção ao detalhe. O "simplesmente" é intencional: simplicidade é difícil.
+- **Enjoy the Ride** — Energia e autenticidade. Constrói relações mais leves, conectadas ao propósito.
+- **Win Together** — Colaboração, senso de justiça, construção coletiva. Diversidade como fonte de valor, não de compliance.
 
 ---
 
 ## Guia de Tradeoffs
 
-[Quando há conflito entre dois valores, qual prevalece?
-Ex: "Quando há tensão entre simplicidade e controle, priorizamos simplicidade para
-o usuário primário e oferecemos controle como opção avançada."]
+Quando há conflito entre dois valores, qual prevalece?
 
-- [Tradeoff 1]
-- [Tradeoff 2]
+- **Simplicidade vs. controle:** Priorizamos simplicidade para o usuário primário e oferecemos controle como opção avançada. Nunca escondemos informação crítica em nome da limpeza visual.
+- **Velocidade vs. confiança (fluxos financeiros/jurídicos):** Confiança prevalece. Usuário pode tolerar um passo a mais; não tolera surpresa contratual.
+- **Personalização vs. consistência:** Consistência de padrão primeiro. Personalização só onde gera ganho real de relevância — e nunca ao custo de coerência entre produtos do ecossistema.
+- **Feature nova vs. fluxo existente melhorado:** Melhorar o que já existe tem prioridade sobre adicionar o que ainda não existe. O mercado imobiliário já é complexo demais para adicionar camadas sem necessidade.
+- **Linguagem técnica vs. linguagem acessível:** Sempre linguagem acessível exposta ao usuário. Rigor técnico fica no backend, não na interface.
