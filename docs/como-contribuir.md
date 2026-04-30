@@ -1,4 +1,4 @@
-# How to Contribute — Loft Design Agent Toolkit
+# Como Contribuir — Loft Design Agent Toolkit
 
 Este guia é para quem quer melhorar o toolkit: corrigir algo que não está funcionando, propor um agente novo, ou refinar uma skill existente com aprendizados reais de uso.
 
@@ -30,7 +30,7 @@ Antes de reescrever um agente, verifique se os arquivos de `/context` estão bem
 | **Nova skill** | Conhecimento modular reutilizável por múltiplos agentes |
 | **Novo playbook** | Sequência para um tipo de projeto não coberto |
 | **Contexto global** | Melhorias nos arquivos de `/context/global` |
-| **Documentação** | Melhorias neste arquivo ou no `how-to-use.md` |
+| **Documentação** | Melhorias neste arquivo ou no `como-usar.md` |
 
 > **Contexto de squad** (`/context/local`) não é contribuído para o repositório central — cada squad mantém o seu localmente.
 

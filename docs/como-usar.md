@@ -1,4 +1,4 @@
-# How to Use — Loft Design Agent Toolkit
+# Como Usar — Loft Design Agent Toolkit
 
 Este guia é para designers que querem começar a usar o toolkit. Você não precisa entender tudo de uma vez — comece pelo básico e vá expandindo conforme o uso.
 
@@ -120,7 +120,7 @@ Abra o arquivo do agente, copie o conteúdo e cole no início de uma conversa co
 /templates   → Outputs estruturados. Os agentes preenchem esses arquivos.
 /context
   /global    → Contexto da Loft. Mantido pelo time central. Vale para todos.
-  /squad     → Contexto do seu squad. Mantido por você. Específico do seu domínio.
+  /local     → Contexto do seu squad. Mantido por você. Específico do seu domínio.
 /docs        → Este arquivo e o guia de contribuição.
 ```
 

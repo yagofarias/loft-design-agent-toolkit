@@ -1,44 +1,44 @@
 # Loft Design Agent Toolkit
 
-A design agent toolkit for Loft's design team — structured agents, skills, playbooks and templates to frame problems, map journeys, critique solutions, and generate dev-ready specs using Claude.
+Um toolkit de agentes de design para o time da Loft — agentes, skills, playbooks e templates para estruturar problemas, mapear jornadas, revisar soluções e gerar specs prontas para dev usando Claude.
 
 ---
 
-## Agents
+## Agentes
 
-Five agents covering the full design process. Each can be used standalone or sequenced via a playbook.
+Quatro agentes que cobrem o processo completo de design. Cada um pode ser usado de forma independente ou em sequência via playbook.
 
-### Context
-> Use before designing when user context or market approach is unclear.
+### Contexto
+> Use antes de desenhar quando o contexto do usuário ou a abordagem de mercado ainda não estiver clara.
 
-| Agent | What it does |
-|-------|-------------|
-| `project-framing` | Transforms a brief or PRD into a structured problem statement. Includes optional research synthesis and competitive benchmark phases when context is missing. |
+| Agente | O que faz |
+|--------|-----------|
+| `project-framing` | Transforma um brief ou PRD em um problem statement estruturado. Inclui fases opcionais de síntese de pesquisa e benchmark competitivo quando o contexto ainda não estiver claro. |
 
 ### Design Core
-> The heart of the process — frame, map, critique.
+> O coração do processo — define, mapeia, critica.
 
-| Agent | What it does |
-|-------|-------------|
-| `project-framing` | ↑ also the entry point for design core |
-| `journey-builder` | Maps flows, states, edge cases and dependencies from the problem frame. |
-| `solution-critique` | Evaluates the design in one pass: usability heuristics, WCAG accessibility, state completeness, copy clarity, and DS consistency. Single consolidated report. |
+| Agente | O que faz |
+|--------|-----------|
+| `project-framing` | ↑ também é a entrada do design core |
+| `journey-builder` | Mapeia fluxos, estados, edge cases e dependências a partir do problem frame. |
+| `solution-critique` | Avalia o design em uma passagem: heurísticas de usabilidade, acessibilidade WCAG, completude de estados, clareza de copy e consistência com o DS. Relatório consolidado. |
 
-### Delivery
-> Last step before handing off to dev.
+### Entrega
+> Último passo antes de passar para o dev.
 
-| Agent | What it does |
-|-------|-------------|
-| `delivery-handoff` | Generates the analytics event spec and validates the design is fully documented for dev — no ambiguity, no missing states. |
+| Agente | O que faz |
+|--------|-----------|
+| `delivery-handoff` | Gera a spec de eventos de analytics e valida se o design está completamente documentado para o dev — sem ambiguidade, sem estados faltando. |
 
 ---
 
 ## Skills
 
-Modular knowledge units loaded by agents. Can also be used directly in a conversation.
+Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas diretamente em uma conversa.
 
-| Skill | Loaded by |
-|-------|-----------|
+| Skill | Carregada por |
+|-------|--------------|
 | `problem-definition` | project-framing |
 | `flow-structuring` | journey-builder, delivery-handoff |
 | `state-mapping` | journey-builder, solution-critique, delivery-handoff |
@@ -52,42 +52,44 @@ Modular knowledge units loaded by agents. Can also be used directly in a convers
 
 ## Playbooks
 
-Step-by-step sequences with quality gates between phases.
+Sequências passo a passo com gates de qualidade entre as fases.
 
-| Playbook | When to use |
-|----------|-------------|
-| `start-from-scratch` | New product or large feature from zero |
-| `brief-to-design` | Received a PRD or formal brief to execute |
-| `quick-product-change` | Small incremental change to existing feature |
+| Playbook | Quando usar |
+|----------|------------|
+| `start-from-scratch` | Produto novo ou feature grande do zero |
+| `brief-to-design` | Recebeu um PRD ou brief formal para executar |
+| `quick-product-change` | Mudança pequena e incremental em feature existente |
+| `setup-local-context` | Primeira vez usando o toolkit — preencha o contexto do seu squad |
 
 ---
 
-## Context Structure
+## Estrutura de Contexto
 
 ```
 context/
-  global/                  ← maintained by central design team
-    product-principles.md
-    design-system.md       ← links and quick reference for Copan
-    brand-voice.md
+  global/                  ← mantido pelo time central de design
+    product-principles.md  ← princípios, missão e valores da Loft
+    brand-voice.md         ← voz, tom e guia de writing
+    design-system.md       ← links e referência rápida do Copan
 
-  local/                   ← maintained by your squad (fill this first)
-    README.md              ← instructions
-    context.md             ← business rules, terminology, constraints
-    personas.md            ← optional
-    target-audiences.md    ← optional
-    brand-voice-local.md   ← optional
+  local/                   ← mantido pelo seu squad (preencha antes de usar)
+    README.md              ← instruções
+    context.md             ← regras de negócio, terminologia, constraints
+    personas.md            ← personas específicas do squad
+    target-audiences.md    ← segmentos de público e guias de comunicação
+    brand-voice-local.md   ← ajustes de tom específicos do domínio
+    competitors.md         ← mapeamento competitivo do squad
 ```
 
 ---
 
-## Quick Start
+## Por onde começar
 
-1. Fill in `context/local/context.md` with your squad's domain knowledge
-2. Check that `context/global/` files are up to date
-3. Read `docs/how-to-use.md`
-4. Start with `agents/project-framing.md`
+1. Execute o `playbooks/setup-local-context.md` para preencher o contexto do seu squad
+2. Verifique se os arquivos de `context/global/` estão atualizados
+3. Leia `docs/como-usar.md`
+4. Comece com `agents/project-framing.md`
 
-## Contributing
+## Contribuindo
 
-See `docs/how-to-contribute.md`.
+Veja `docs/como-contribuir.md`.
