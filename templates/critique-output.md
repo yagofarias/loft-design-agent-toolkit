@@ -1,88 +1,139 @@
 ---
-version: "1.0"
+version: "2.0"
 agent: design-critique
-status: "[RASCUNHO | ENTREGUE]"
+status: "[Rascunho | Entregue]"
 ---
 
 # Critique Output
 
 **Projeto:** [Nome]
-**Jornada revisada:** [Nome]
+**Designer:** [Nome]
+**Jornada revisada:** [Nome da jornada ou feature]
 **Data:** [DD/MM/AAAA]
 **Figma:** [Link]
-**Problem Frame:** [Link]
+**Design Doc:** [Link para templates/design-doc.md]
+
+---
+
+## Gate de Aprovação
+
+> Decisão sobre se este design pode avançar para o `delivery-handoff`.
+
+- ☐ ✅ **Aprovado** — sem problemas bloqueantes, pode ir para handoff
+- ☐ ⚠️ **Aprovado com ressalvas** — problemas de severidade ≤ 2, podem ser corrigidos em paralelo ao handoff
+- ☐ ❌ **Reprovado** — há problemas de severidade 3 ou 4 que precisam ser resolvidos antes de avançar
+
+**Justificativa:** [1-2 frases explicando a decisão]
 
 ---
 
 ## Sumário Executivo
 
-**Recomendação geral:**
-- ☐ Pronto para avançar
-- ☐ Pronto com ressalvas
-- ☐ Requer revisão antes de avançar
+*O que o design acerta, os 2-3 problemas de maior impacto e o que fazer a seguir. Máximo 5 frases.*
 
-[3-5 frases: o que acerta, os 2-3 problemas principais, o que fazer a seguir.]
+[escreva aqui]
 
 ---
 
-## Problemas por Severidade
+## Problemas Identificados
 
-### Severidade 4 — Catastrófico (bloqueia avanço)
+*Tabela unificada ordenada por severidade (4 → 1). Categorias: `Usabilidade` · `Acessibilidade` · `Copy` · `Design System`.*
 
-| # | Heurística | Problema | Tela/Momento | Sugestão |
-|---|-----------|---------|-------------|----------|
-| | | | | |
+*Escala de severidade: **4** = bloqueia avanço · **3** = corrigir antes do lançamento · **2** = melhoria importante · **1** = cosmético*
 
-### Severidade 3 — Maior (corrigir antes do lançamento)
+| # | Categoria | Severidade | Problema | Onde ocorre | Sugestão |
+|---|-----------|-----------|---------|-------------|----------|
+| 1 | [Categoria] | [4/3/2/1] | [Descrição objetiva do problema] | [Tela / componente / momento] | [O que fazer] |
 
-| # | Heurística | Problema | Tela/Momento | Sugestão |
-|---|-----------|---------|-------------|----------|
-| | | | | |
+---
 
-### Severidade 2 — Menor (baixa prioridade)
+## Copies — Antes e Depois
 
-| # | Heurística | Problema | Tela/Momento | Sugestão |
-|---|-----------|---------|-------------|----------|
-| | | | | |
+*Preencha apenas para copies com problemas de severidade 2 ou maior. Formato lado a lado facilita a revisão pelo designer.*
 
-### Severidade 1 — Cosmético
+*Se não houver problemas de copy, escreva "Nenhum problema de copy identificado."*
 
-| # | Observação | Tela/Momento |
-|---|-----------|-------------|
-| | | |
+### Copy #1
+
+| | Texto |
+|--|-------|
+| **Como está** | [copy atual] |
+| **Problema** | [por que não funciona — tom, clareza, tamanho, etc.] |
+| **Sugestão A** | [alternativa — justificativa em uma frase] |
+| **Sugestão B** | [alternativa — se houver uma segunda opção] |
+
+---
+
+## Design System
+
+*Consistência com o Copan. Preencha apenas o que foi encontrado.*
+
+### Componentes
+
+| Componente | Variante usada | Existe no Copan? | Tokens corretos? | Status | Ação |
+|-----------|----------------|-----------------|------------------|--------|------|
+| [Nome] | [Variante] | Sim / Não | Sim / Não | ✅ / ⚠️ / ❌ | [O que fazer] |
+
+### Componentes novos identificados
+
+*Componentes que não existem no Copan e precisam de proposta antes do handoff.*
+
+| Componente proposto | Baseado em | O que é diferente | Prioridade |
+|--------------------|-----------|-------------------|-----------|
+| [Nome] | [Componente existente mais próximo] | [O que justifica ser novo] | Antes do handoff / Pós-lançamento |
+
+*Se nenhum componente novo foi identificado, escreva "Nenhum componente novo identificado."*
 
 ---
 
 ## Estados Ausentes ou Incompletos
 
-| Tela | Estado faltando | Impacto |
-|------|----------------|---------|
-| [Nome] | [Estado] | [O que o usuário experimenta] |
+*Estados obrigatórios que estão faltando ou incompletos no design.*
+
+| Tela / Componente | Estado faltando | Impacto para o usuário | Prioridade |
+|-------------------|----------------|----------------------|-----------|
+| [Nome] | [Ex: estado de erro da API] | [O que o usuário experimenta se não tratado] | P0 / P1 / P2 |
+
+*Se todos os estados estiverem cobertos, escreva "Todos os estados obrigatórios estão cobertos."*
 
 ---
 
 ## Pontos Positivos
 
-- [Ponto 1 — específico]
-- [Ponto 2 — específico]
+*O que está funcionando bem e deve ser preservado — específico, não genérico. Critique sem pontos positivos não é critique, é ataque.*
+
+- [Ponto concreto — ex: "A hierarquia visual da tela de confirmação está clara e guia o usuário sem ambiguidade"]
+- [Ponto concreto]
 
 ---
 
-## Validação contra o Problem Statement
+## Validação contra o Design Doc
 
-**Problem statement:**
-> [Copiar do design-doc.md]
+*Verifica se o design entrega o que foi prometido nas seções 1 e 2 do design-doc.*
 
-**O design endereça o problema?**
+**Problema declarado:**
+> [Copiar da seção 1.1 do design-doc.md]
+
+**O design resolve o problema?**
 - ☐ Sim, completamente
-- ☐ Sim, parcialmente — [o que falta]
+- ☐ Sim, parcialmente — [o que falta ou não está coberto]
 - ☐ Não — [por quê]
+
+**Métricas de sucesso definidas:**
+> [Copiar da seção 2.2 do design-doc.md — métrica primária e guardrail]
+
+**Este design viabiliza as métricas?**
+- ☐ Sim — [por quê este design permite medir o que foi definido]
+- ☐ Parcialmente — [o que está faltando para medir]
+- ☐ Não — [o que precisa mudar no design para as métricas serem mensuráveis]
 
 ---
 
 ## Próximos Passos
 
-| Prioridade | Ação | Responsável |
-|-----------|------|-------------|
-| 1 | [Ação específica] | Designer |
-| 2 | [Ação específica] | Designer / DS / Eng |
+*Ações ordenadas por prioridade. Itens com severidade 3-4 devem estar resolvidos antes de avançar.*
+
+| # | Ação | Severidade relacionada | Responsável | Prazo |
+|---|------|----------------------|-------------|-------|
+| 1 | [Ação específica e verificável] | [4/3/2/1] | Designer | Antes do handoff |
+| 2 | [Ação específica e verificável] | [2/1] | Designer / DS | Pode ser paralelo |
