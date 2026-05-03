@@ -1,5 +1,5 @@
 ---
-version: "2.0"
+version: "2.1"
 agent: design-critique
 status: "[Rascunho | Entregue]"
 ---
@@ -9,13 +9,37 @@ status: "[Rascunho | Entregue]"
 **Projeto:** [Nome]
 **Designer:** [Nome]
 **Jornada revisada:** [Nome da jornada ou feature]
+**Avaliado por:** [Nome(s) — expert review solo ou sessão de grupo]
+**Estágio do design:** [Exploração / Refinamento / Pré-handoff]
 **Data:** [DD/MM/AAAA]
 **Figma:** [Link]
 **Design Doc:** [Link para templates/design-doc.md]
 
 ---
 
+## Escopo desta rodada
+
+*O que estava em escopo para este critique e o que foi explicitamente deixado de fora. Sem escopo definido, o feedback perde foco.*
+
+**Em escopo:** [Ex: fluxo de análise de fiança — do intake ao parecer. Foco em usabilidade e copy.]
+
+**Fora de escopo:** [Ex: telas de onboarding, responsivo mobile, animações — serão avaliados na próxima iteração.]
+
+**Decisões intencionais do designer:** [Escolhas deliberadas que podem parecer estranhas mas têm razão de ser — para o crítico não flagrar o que já foi pensado. Ex: "O botão de cancelar foi omitido intencionalmente nesta etapa por restrição de negócio discutida com PM."]
+
+---
+
 ## Gate de Aprovação
+
+> Decisão sobre se este design pode avançar para o `delivery-handoff`.
+
+- ☐ ✅ **Aprovado** — sem problemas bloqueantes, pode ir para handoff
+- ☐ ⚠️ **Aprovado com ressalvas** — problemas de severidade ≤ 2, podem ser corrigidos em paralelo ao handoff
+- ☐ ❌ **Reprovado** — há problemas de severidade 3 ou 4 que precisam ser resolvidos antes de avançar
+
+**Justificativa:** [1-2 frases explicando a decisão]
+
+---
 
 > Decisão sobre se este design pode avançar para o `delivery-handoff`.
 
@@ -37,13 +61,14 @@ status: "[Rascunho | Entregue]"
 
 ## Problemas Identificados
 
-*Tabela unificada ordenada por severidade (4 → 1). Categorias: `Usabilidade` · `Acessibilidade` · `Copy` · `Design System`.*
+*Tabela unificada ordenada por severidade (4 → 1). A metodologia de avaliação está em `skills/heuristic-evaluation.md`.*
 
-*Escala de severidade: **4** = bloqueia avanço · **3** = corrigir antes do lançamento · **2** = melhoria importante · **1** = cosmético*
+*Escala: **4** = bloqueia avanço · **3** = corrigir antes do lançamento · **2** = melhoria importante · **1** = cosmético*
+*Tipos: `Usabilidade` · `Acessibilidade` · `Copy` · `Design System` · `Opinião` — marcar Opinião quando não houver heurística objetiva por trás*
 
-| # | Categoria | Severidade | Problema | Onde ocorre | Sugestão |
-|---|-----------|-----------|---------|-------------|----------|
-| 1 | [Categoria] | [4/3/2/1] | [Descrição objetiva do problema] | [Tela / componente / momento] | [O que fazer] |
+| # | Tipo | Sev. | Problema | Onde ocorre | Sugestão |
+|---|------|------|---------|-------------|----------|
+| 1 | [Tipo] | [4–1] | [Descrição objetiva — o que o usuário não consegue fazer ou entende errado] | [Tela / componente / momento] | [O que fazer — específico] |
 
 ---
 
