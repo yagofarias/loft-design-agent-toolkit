@@ -40,14 +40,14 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 | Skill | Carregada por |
 |-------|--------------|
 | `gut-check` | todos os agentes ← sabatina de 5 perguntas críticas, sugerida após o intake |
-| `problem-definition` | project-framing |
-| `flow-structuring` | journey-builder, delivery-handoff |
+| `problem-framing` | project-framing |
+| `user-flows` | journey-builder, delivery-handoff |
 | `state-mapping` | journey-builder, design-critique, delivery-handoff |
-| `edge-case-detection` | journey-builder, design-critique, delivery-handoff |
-| `heuristic-evaluation` | design-critique |
-| `copy-review` | design-critique |
-| `component-validation` | design-critique, delivery-handoff |
-| `event-modeling` | delivery-handoff |
+| `edge-cases` | journey-builder, design-critique, delivery-handoff |
+| `heuristics` | design-critique |
+| `ux-writing` | design-critique |
+| `copan-check` | design-critique, delivery-handoff |
+| `analytics-events` | delivery-handoff |
 
 ### Gut-Check
 

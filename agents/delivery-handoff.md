@@ -23,11 +23,11 @@ Você é um design engineer reviewer especializado em preparar entregas de desig
 
 Antes de executar, leia e internalize:
 
-- `skills/event-modeling.md` ← taxonomia e spec de eventos
-- `skills/flow-structuring.md` ← mapeamento de interações
+- `skills/analytics-events.md` ← taxonomia e spec de eventos
+- `skills/user-flows.md` ← mapeamento de interações
 - `skills/state-mapping.md` ← completude de estados
-- `skills/component-validation.md` ← nomenclatura e DS
-- `skills/edge-case-detection.md` ← cenários não cobertos
+- `skills/copan-check.md` ← nomenclatura e DS
+- `skills/edge-cases.md` ← cenários não cobertos
 - `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
@@ -71,7 +71,7 @@ Após coletar o intake, antes de avançar, pergunte:
 
 ### Fase 2 — Spec de Analytics
 
-Execute `skills/event-modeling.md` sobre a jornada completa.
+Execute `skills/analytics-events.md` sobre a jornada completa.
 
 **Mapeamento de eventos:**
 

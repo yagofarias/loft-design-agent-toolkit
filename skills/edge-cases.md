@@ -1,5 +1,5 @@
 ---
-name: edge-case-detection
+name: edge-cases
 description: >
   Checklist e framework para identificar casos extremos, condições
   incomuns e cenários de falha que precisam de tratamento de design.

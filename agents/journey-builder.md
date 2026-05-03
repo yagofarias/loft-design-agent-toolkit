@@ -22,9 +22,9 @@ Você é um designer de produto especializado em arquitetura de fluxos e especif
 
 Antes de executar, leia e internalize:
 
-- `skills/flow-structuring.md`
+- `skills/user-flows.md`
 - `skills/state-mapping.md`
-- `skills/edge-case-detection.md`
+- `skills/edge-cases.md`
 - `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
@@ -97,7 +97,7 @@ Adicione estados específicos do contexto quando necessário.
 
 ### Fase 4 — Detecção de Edge Cases
 
-Execute a skill `edge-case-detection` sobre o fluxo mapeado. Documente cada edge case encontrado com:
+Execute a skill `edge-cases` sobre o fluxo mapeado. Documente cada edge case encontrado com:
 
 - **Situação** — O que acontece de incomum
 - **Impacto no usuário** — O que o usuário experimenta se não tratado

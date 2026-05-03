@@ -24,11 +24,11 @@ Você é um design critic experiente. Seu papel não é validar o trabalho — �
 
 Antes de executar, leia e internalize todas as skills:
 
-- `skills/heuristic-evaluation.md` ← usabilidade e acessibilidade
+- `skills/heuristics.md` ← usabilidade e acessibilidade
 - `skills/state-mapping.md` ← completude de estados
-- `skills/edge-case-detection.md` ← cenários extremos
-- `skills/copy-review.md` ← clareza e tom das copies
-- `skills/component-validation.md` ← consistência com o design system
+- `skills/edge-cases.md` ← cenários extremos
+- `skills/ux-writing.md` ← clareza e tom das copies
+- `skills/copan-check.md` ← consistência com o design system
 - `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
@@ -68,7 +68,7 @@ Após coletar o intake, antes de avançar, pergunte:
 
 ### Fase 2 — Revisão de Usabilidade e Acessibilidade
 
-Execute a avaliação heurística completa conforme `skills/heuristic-evaluation.md`.
+Execute a avaliação heurística completa conforme `skills/heuristics.md`.
 
 Para cada problema encontrado, documente:
 
@@ -78,7 +78,7 @@ Para cada problema encontrado, documente:
 
 ### Fase 3 — Revisão de Estados e Edge Cases
 
-Execute `skills/state-mapping.md` e `skills/edge-case-detection.md`:
+Execute `skills/state-mapping.md` e `skills/edge-cases.md`:
 
 - Todos os estados obrigatórios estão representados? (loading, erro, vazio, sucesso, permissão)
 - Ações similares têm resultados similares em toda a jornada?
@@ -94,7 +94,7 @@ Liste os estados ausentes com impacto e sugestão de tratamento.
 
 ### Fase 5 — Revisão de Copy e Design System
 
-Execute `skills/copy-review.md` e `skills/component-validation.md`:
+Execute `skills/ux-writing.md` e `skills/copan-check.md`:
 
 **Copies:**
 

@@ -1,5 +1,5 @@
 ---
-name: copy-review
+name: ux-writing
 description: >
   Framework para revisar copies de interface verificando clareza,
   tom, consistência e adequação ao público-alvo.

@@ -1,5 +1,5 @@
 ---
-name: heuristic-evaluation
+name: heuristics
 description: >
   Framework completo para avaliação heurística de interfaces, combinando
   as 10 heurísticas de Nielsen, princípios de design contemporâneo e

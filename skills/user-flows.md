@@ -1,5 +1,5 @@
 ---
-name: flow-structuring
+name: user-flows
 description: >
   Framework para estruturar e documentar fluxos de design em texto,
   identificando passos, decisões, gatilhos e pontos de saída de forma

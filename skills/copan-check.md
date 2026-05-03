@@ -1,5 +1,5 @@
 ---
-name: component-validation
+name: copan-check
 description: >
   Framework para validar se componentes de uma tela ou jornada estão
   alinhados com o design system: nomenclatura, variantes, tokens e

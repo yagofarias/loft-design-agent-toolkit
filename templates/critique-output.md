@@ -61,7 +61,7 @@ status: "[Rascunho | Entregue]"
 
 ## Problemas Identificados
 
-*Tabela unificada ordenada por severidade (4 → 1). A metodologia de avaliação está em `skills/heuristic-evaluation.md`.*
+*Tabela unificada ordenada por severidade (4 → 1). A metodologia de avaliação está em `skills/heuristics.md`.*
 
 *Escala: **4** = bloqueia avanço · **3** = corrigir antes do lançamento · **2** = melhoria importante · **1** = cosmético*
 *Tipos: `Usabilidade` · `Acessibilidade` · `Copy` · `Design System` · `Opinião` — marcar Opinião quando não houver heurística objetiva por trás*

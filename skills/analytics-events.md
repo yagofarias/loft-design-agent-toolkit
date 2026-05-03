@@ -1,5 +1,5 @@
 ---
-name: event-modeling
+name: analytics-events
 description: >
   Framework para modelar eventos de analytics a partir de jornadas de
   design. Define taxonomia, nomenclatura, propriedades e priorização
