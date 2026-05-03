@@ -39,6 +39,7 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 
 | Skill | Carregada por |
 |-------|--------------|
+| `gut-check` | todos os agentes ← sabatina de 5 perguntas críticas, sugerida após o intake |
 | `problem-definition` | project-framing |
 | `flow-structuring` | journey-builder, delivery-handoff |
 | `state-mapping` | journey-builder, solution-critique, delivery-handoff |
@@ -47,6 +48,10 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 | `copy-review` | solution-critique |
 | `component-validation` | solution-critique, delivery-handoff |
 | `event-modeling` | delivery-handoff |
+
+### Gut-Check
+
+Após o intake de qualquer agente, o toolkit sugere passar pelo gut-check antes de avançar. São 5 perguntas de alto risco selecionadas para o contexto específico — perspectivas de Produto, Negócio, Design e Persona (quando definida no contexto local). A skill oferece uma resposta sugerida para cada pergunta e, ao final, pergunta se a pessoa quer aprofundar — onde a perspectiva de Engenharia entra. Se o gut-check for pulado, o agente lembra ao final caso identifique premissas frágeis no output.
 
 ---
 
@@ -57,7 +62,7 @@ Sequências passo a passo com gates de qualidade entre as fases.
 | Playbook | Quando usar |
 |----------|------------|
 | `start-from-scratch` | Produto novo ou feature grande do zero |
-| `brief-to-design` | Recebeu um PRD ou brief formal para executar |
+| `brief-to-design` | Recebeu um PRD, SDD ou brief formal para executar |
 | `quick-product-change` | Mudança pequena e incremental em feature existente |
 | `setup-local-context` | Primeira vez usando o toolkit — preencha o contexto do seu squad |
 
