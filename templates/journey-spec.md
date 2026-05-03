@@ -21,7 +21,7 @@ status: "[RASCUNHO | EM REVISÃO | APROVADO]"
 - **Ponto de saída:** [O que define conclusão]
 - **Número de telas:** [N telas / estados]
 - **Plataformas:** [Web / iOS / Android]
-- **Problem Frame:** [Link para templates/problem-frame.md]
+- **Problem Frame:** [Link para templates/design-doc.md]
 
 ---
 

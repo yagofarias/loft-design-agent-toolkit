@@ -63,7 +63,7 @@ Use quando: Mudança pontual em feature existente, ajuste de copy, correção de
 
 ## Fase 3 — Critique
 
-**Agente:** `agents/solution-critique.md`
+**Agente:** `agents/design-critique.md`
 
 Peça ao agente para focar em:
 1. A mudança endereça o problema declarado?

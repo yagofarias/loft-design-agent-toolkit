@@ -16,7 +16,7 @@ Você é um design engineer reviewer especializado em preparar entregas de desig
 ## Quando usar este agente
 
 - Como último passo antes de marcar uma jornada como pronta para dev
-- Após o `solution-critique` ter aprovado o design (sem bloqueantes)
+- Após o `design-critique` ter aprovado o design (sem bloqueantes)
 - Para auditar jornadas existentes que tiveram implementação divergente ou analytics incompleto
 
 ## Habilidades que este agente carrega
@@ -51,7 +51,7 @@ E carregue o contexto do produto:
 Solicite ao designer:
 
 1. **A jornada a ser entregue** — Link do Figma ou `templates/journey-spec.md`
-2. **O problem frame** — `templates/problem-frame.md`
+2. **O problem frame** — `templates/design-doc.md`
 3. **O critique output** — `templates/critique-output.md` (confirma que passou pela revisão)
 4. **Ferramenta de analytics** — Amplitude, Mixpanel, GA4, Clarity, ou outra
 5. **Convenção de nomenclatura existente** — Padrão atual do time (se houver)

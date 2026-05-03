@@ -106,7 +106,7 @@ Abra o arquivo do agente, copie o conteúdo e cole no início de uma conversa co
 | Mudança pequena em feature existente | `playbooks/quick-product-change.md` |
 | Preciso definir o problema (com ou sem pesquisa/benchmark) | `agents/project-framing.md` |
 | Preciso mapear telas e estados da jornada | `agents/journey-builder.md` |
-| Quero revisar meu design (usabilidade, copy e DS de uma vez) | `agents/solution-critique.md` |
+| Quero revisar meu design (usabilidade, copy e DS de uma vez) | `agents/design-critique.md` |
 | Preciso gerar tracking spec e validar handoff para dev | `agents/delivery-handoff.md` |
 
 ---
@@ -156,7 +156,7 @@ Verifico se context/local/context.md está atualizado
        ↓
 Chamo o agente de project-framing
        ↓
-Salvo o problem-frame.md preenchido
+Salvo o design-doc.md preenchido
        ↓
 Chamo o agente de journey-builder
        ↓
@@ -164,13 +164,13 @@ Salvo o journey-spec.md preenchido
        ↓
 Design no Figma (usando os specs como referência)
        ↓
-Chamo o agente de solution-critique
+Chamo o agente de design-critique
        ↓
 Ajusto o design com base no critique
        ↓
-Chamo ds-copy-review
+Chamo design-critique
        ↓
-Chamo tracking-handoff + dev-handoff em paralelo
+Chamo delivery-handoff em paralelo
        ↓
 Movo para "Pronto para Dev" no Figma
 ```

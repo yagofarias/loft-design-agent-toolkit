@@ -1,6 +1,6 @@
 ---
 version: "1.0"
-agent: solution-critique
+agent: design-critique
 status: "[RASCUNHO | ENTREGUE]"
 ---
 
@@ -71,7 +71,7 @@ status: "[RASCUNHO | ENTREGUE]"
 ## Validação contra o Problem Statement
 
 **Problem statement:**
-> [Copiar do problem-frame.md]
+> [Copiar do design-doc.md]
 
 **O design endereça o problema?**
 - ☐ Sim, completamente

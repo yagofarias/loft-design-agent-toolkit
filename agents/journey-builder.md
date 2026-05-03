@@ -47,7 +47,7 @@ E carregue o contexto do produto:
 
 Solicite ou localize:
 
-1. **Problem frame** — Preferencialmente o output de `project-framing` (`templates/problem-frame.md`)
+1. **Problem frame** — Preferencialmente o output de `project-framing` (`templates/design-doc.md`)
 2. **Usuários e contextos de uso** — Quem usa, em qual dispositivo, em qual situação
 3. **Ponto de entrada e saída da jornada** — Onde começa e onde termina o escopo
 4. **Constraints técnicos conhecidos** — Limitações de backend, APIs, permissões

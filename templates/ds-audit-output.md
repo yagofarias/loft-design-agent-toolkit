@@ -1,6 +1,6 @@
 ---
 version: "1.0"
-agent: ds-copy-review
+agent: design-critique
 status: "[RASCUNHO | ENTREGUE]"
 ---
 

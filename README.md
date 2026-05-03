@@ -13,7 +13,7 @@ Quatro agentes que cobrem o processo completo de design. Cada um pode ser usado 
 
 | Agente | O que faz |
 |--------|-----------|
-| `project-framing` | Transforma um brief ou PRD em um problem statement estruturado. Inclui fases opcionais de síntese de pesquisa e benchmark competitivo quando o contexto ainda não estiver claro. |
+| `project-framing` | Transforma qualquer ponto de partida (brief, PRD, RFC, SDD ou ideia bruta) em um Design Doc estruturado. Aceita documentos existentes como input e extrai o que é relevante para design. Gera o documento vivo que guia o projeto inteiro. |
 
 ### Design Core
 > O coração do processo — define, mapeia, critica.
@@ -21,8 +21,8 @@ Quatro agentes que cobrem o processo completo de design. Cada um pode ser usado 
 | Agente | O que faz |
 |--------|-----------|
 | `project-framing` | ↑ também é a entrada do design core |
-| `journey-builder` | Mapeia fluxos, estados, edge cases e dependências a partir do problem frame. |
-| `solution-critique` | Avalia o design em uma passagem: heurísticas de usabilidade, acessibilidade WCAG, completude de estados, clareza de copy e consistência com o DS. Relatório consolidado. |
+| `journey-builder` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc. Preenche a seção 4 (Solução) do documento vivo. |
+| `design-critique` | Avalia o design em uma passagem: heurísticas de usabilidade, acessibilidade WCAG, completude de estados, clareza de copy e consistência com o DS. Relatório consolidado. |
 
 ### Entrega
 > Último passo antes de passar para o dev.
@@ -42,11 +42,11 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 | `gut-check` | todos os agentes ← sabatina de 5 perguntas críticas, sugerida após o intake |
 | `problem-definition` | project-framing |
 | `flow-structuring` | journey-builder, delivery-handoff |
-| `state-mapping` | journey-builder, solution-critique, delivery-handoff |
-| `edge-case-detection` | journey-builder, solution-critique, delivery-handoff |
-| `heuristic-evaluation` | solution-critique |
-| `copy-review` | solution-critique |
-| `component-validation` | solution-critique, delivery-handoff |
+| `state-mapping` | journey-builder, design-critique, delivery-handoff |
+| `edge-case-detection` | journey-builder, design-critique, delivery-handoff |
+| `heuristic-evaluation` | design-critique |
+| `copy-review` | design-critique |
+| `component-validation` | design-critique, delivery-handoff |
 | `event-modeling` | delivery-handoff |
 
 ### Gut-Check
@@ -85,6 +85,21 @@ context/
     brand-voice-local.md   ← ajustes de tom específicos do domínio
     competitors.md         ← mapeamento competitivo do squad
 ```
+
+---
+
+## Templates
+
+Outputs estruturados gerados pelos agentes ao longo do processo.
+
+| Template | Gerado por | O que contém |
+|----------|-----------|--------------|
+| `design-doc.md` | `project-framing` | Documento vivo do projeto — TL;DR, cronograma, contexto, objetivo, usuários, solução, riscos e entrega |
+| `journey-spec.md` | `journey-builder` | Fluxo principal, estados, edge cases e dependências |
+| `critique-output.md` | `design-critique` | Relatório de heurísticas, acessibilidade, copy e DS por severidade |
+| `tracking-spec.md` | `delivery-handoff` | Spec de eventos de analytics com payloads e funil de conversão |
+
+> O `design-doc.md` é o documento central. Ele começa preenchido pelo `project-framing` e evolui ao longo do projeto — seções 4-6 são completadas pelos agentes seguintes.
 
 ---
 

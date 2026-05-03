@@ -65,7 +65,7 @@ Antes de chamar qualquer agente, verifique:
 - Nome do stakeholder que pediu e prazo
 - Pesquisa, analytics ou benchmarks disponíveis (opcional)
 
-**Output esperado:** `templates/problem-frame.md`
+**Output esperado:** `templates/design-doc.md`
 
 O agente decide automaticamente se executa as fases de pesquisa e benchmark com base no contexto disponível.
 
@@ -83,7 +83,7 @@ O agente decide automaticamente se executa as fases de pesquisa e benchmark com 
 
 **Agente:** `agents/journey-builder.md`
 
-**Input necessário:** `templates/problem-frame.md` aprovado
+**Input necessário:** `templates/design-doc.md` aprovado
 
 **Output esperado:** `templates/journey-spec.md`
 
@@ -109,11 +109,11 @@ Use o `templates/journey-spec.md` como referência constante. Para cada tela:
 
 ## Fase 4 — Critique
 
-**Agente:** `agents/solution-critique.md`
+**Agente:** `agents/design-critique.md`
 
 **Input necessário:**
 - Link do Figma ou descrição detalhada da jornada
-- `templates/problem-frame.md`
+- `templates/design-doc.md`
 - `templates/journey-spec.md`
 
 **Output esperado:** `templates/critique-output.md`

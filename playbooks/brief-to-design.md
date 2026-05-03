@@ -60,7 +60,7 @@ Consulte o time de engenharia para constraints técnicas antes de mapear.
 
 Referências obrigatórias:
 - `templates/journey-spec.md`
-- `templates/problem-frame.md`
+- `templates/design-doc.md`
 - `context/global/design-system.md`
 - `context/local/context.md`
 
