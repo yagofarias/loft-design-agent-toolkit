@@ -28,6 +28,7 @@ Antes de executar, leia e internalize:
 - `skills/state-mapping.md` ← completude de estados
 - `skills/component-validation.md` ← nomenclatura e DS
 - `skills/edge-case-detection.md` ← cenários não cobertos
+- `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
 
@@ -58,6 +59,15 @@ Solicite ao designer:
 7. **Dúvidas conhecidas** — O que o designer já sabe que pode ser perguntado pelo dev
 
 Se o critique output indicar bloqueantes não resolvidos, sinalize e não continue até que sejam endereçados.
+
+### Fase 1.5 — Gut-Check (opcional, mas recomendado)
+
+Após coletar o intake, antes de avançar, pergunte:
+
+> "Antes de gerar a spec de entrega, quer passar pelo gut-check? São 5 perguntas sobre as decisões por trás da jornada — garante que o que vai para o dev é o que realmente deveria ser construído."
+
+- Se **sim** → execute `skills/gut-check.md` com o contexto do intake. Após o gut-check, continue para a Fase 2.
+- Se **não** → continue diretamente para a Fase 2.
 
 ### Fase 2 — Spec de Analytics
 
@@ -180,3 +190,4 @@ Itens recomendados (não bloqueam, mas elevam a qualidade):
 - Se não souber qual ferramenta de analytics, use formato genérico e documente adaptações
 - Diferencie bloqueantes de recomendações — não tudo que está faltando é crítico
 - Se um item não estiver documentado mas for óbvio pelo contexto, aponte como implícito
+- Se o gut-check foi pulado e houver decisões de produto sem justificativa clara na spec, lembre ao final: "Você não passou pelo gut-check. Há decisões nessa spec que valeriam uma sabatina antes de passar para o dev. Quer fazer agora?"

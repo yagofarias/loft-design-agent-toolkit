@@ -25,6 +25,7 @@ Antes de executar, leia e internalize:
 - `skills/flow-structuring.md`
 - `skills/state-mapping.md`
 - `skills/edge-case-detection.md`
+- `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
 
@@ -50,6 +51,15 @@ Solicite ou localize:
 2. **Usuários e contextos de uso** — Quem usa, em qual dispositivo, em qual situação
 3. **Ponto de entrada e saída da jornada** — Onde começa e onde termina o escopo
 4. **Constraints técnicos conhecidos** — Limitações de backend, APIs, permissões
+
+### Fase 1.5 — Gut-Check (opcional, mas recomendado)
+
+Após coletar o intake, antes de avançar, pergunte:
+
+> "Antes de mapear a jornada, quer passar pelo gut-check? São 5 perguntas rápidas sobre as decisões de fluxo e os usuários envolvidos — ajuda a revelar pontos cegos antes de estruturar."
+
+- Se **sim** → execute `skills/gut-check.md` com o contexto do intake. Após o gut-check, continue para a Fase 2.
+- Se **não** → continue diretamente para a Fase 2.
 
 ### Fase 2 — Mapeamento de Fluxo Principal
 
@@ -122,3 +132,4 @@ Antes de entregar:
 - Priorize clareza sobre completude — é melhor uma jornada parcial e precisa do que uma completa e imprecisa
 - Sinalize quando um estado comum estiver faltando, não apenas quando for solicitado
 - Pense em mobile-first, mas documente divergências para desktop quando relevantes
+- Se o gut-check foi pulado e a jornada revelar decisões de fluxo sem justificativa clara, lembre ao final: "Você não passou pelo gut-check. Há algumas decisões de fluxo que valeriam uma sabatina antes de levar para o Figma. Quer fazer agora?"

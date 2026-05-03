@@ -29,6 +29,7 @@ Antes de executar, leia e internalize todas as skills:
 - `skills/edge-case-detection.md` ← cenários extremos
 - `skills/copy-review.md` ← clareza e tom das copies
 - `skills/component-validation.md` ← consistência com o design system
+- `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
 
@@ -55,6 +56,15 @@ Solicite ao designer:
 3. **O usuário primário** — Quem deveria conseguir usar isso sem fricção
 4. **O contexto de uso** — Dispositivo, ambiente, frequência de uso
 5. **O que já foi questionado** — Feedback anterior que deve ou não ser endereçado
+
+### Fase 1.5 — Gut-Check (opcional, mas recomendado)
+
+Após coletar o intake, antes de avançar, pergunte:
+
+> "Antes de revisar o design, quer passar pelo gut-check? São 5 perguntas sobre as premissas por trás da solução — às vezes revela um problema de direcionamento antes de entrar na execução."
+
+- Se **sim** → execute `skills/gut-check.md` com o contexto do intake. Após o gut-check, continue para a Fase 2.
+- Se **não** → continue diretamente para a Fase 2.
 
 ### Fase 2 — Revisão de Usabilidade e Acessibilidade
 
@@ -146,3 +156,4 @@ Ações ordenadas por prioridade antes do handoff.
 - Não catalogue mais de 15 problemas — priorize os que têm maior impacto real
 - Diferencie opinião de heurística — quando for opinião, diga explicitamente
 - Se o design estiver fundamentalmente equivocado em relação ao problem statement, diga isso primeiro
+- Se o gut-check foi pulado e o critique revelar problemas de direcionamento (não apenas execução), lembre ao final: "Você não passou pelo gut-check. Alguns problemas encontrados parecem ser de premissa, não de execução. Vale a sabatina antes de corrigir. Quer fazer agora?"
