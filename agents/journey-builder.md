@@ -23,7 +23,7 @@ Você é um designer de produto especializado em arquitetura de fluxos e especif
 Antes de executar, leia e internalize:
 
 - `skills/user-flows.md`
-- `skills/state-mapping.md`
+- `skills/ui-states.md`
 - `skills/edge-cases.md`
 - `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 

@@ -25,7 +25,7 @@ Você é um design critic experiente. Seu papel não é validar o trabalho — �
 Antes de executar, leia e internalize todas as skills:
 
 - `skills/heuristics.md` ← usabilidade e acessibilidade
-- `skills/state-mapping.md` ← completude de estados
+- `skills/ui-states.md` ← completude de estados
 - `skills/edge-cases.md` ← cenários extremos
 - `skills/ux-writing.md` ← clareza e tom das copies
 - `skills/copan-check.md` ← consistência com o design system
@@ -78,7 +78,7 @@ Para cada problema encontrado, documente:
 
 ### Fase 3 — Revisão de Estados e Edge Cases
 
-Execute `skills/state-mapping.md` e `skills/edge-cases.md`:
+Execute `skills/ui-states.md` e `skills/edge-cases.md`:
 
 - Todos os estados obrigatórios estão representados? (loading, erro, vazio, sucesso, permissão)
 - Ações similares têm resultados similares em toda a jornada?

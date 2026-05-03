@@ -1,5 +1,5 @@
 ---
-name: state-mapping
+name: ui-states
 description: >
   Framework para identificar e documentar todos os estados necessários
   de telas e componentes. Garante que loading, erro, vazio, sucesso e
