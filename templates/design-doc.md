@@ -1,194 +1,254 @@
 ---
-version: "1.0"
+version: "2.0"
 agent: project-framing
 status: "[Rascunho | Em revisão | Aprovado | Em execução | Arquivado]"
 ---
 
 # Design Doc — [Nome do Projeto ou Feature]
 
-**Dono:** [Designer responsável]
-**Squad:** [Nome do squad]
-**Stakeholder principal:** [Nome + área]
-**Última atualização:** [DD/MM/AAAA]
-**Documentos relacionados:** [Links — Figma, tickets, SDD, PRD existente]
+**Dono:** [Designer responsável]  
+**Squad:** [Nome do squad]  
+**Stakeholder principal:** [Nome + área]  
+**Última atualização:** [DD/MM/AAAA]  
+**Documentos relacionados:** [Links — Figma, ticket, SDD, PRD existente]
+
+---
+
+## Como usar este documento
+
+Este documento pode ser preenchido de duas formas:
+
+**Com o agente** — use `agents/project-framing.md`. O agente faz as perguntas e preenche as seções 1-3 automaticamente. As seções 4-6 ficam com marcações para você completar depois.
+
+**Sozinho** — leia as instruções de cada campo (em itálico abaixo de cada título), preencha o conteúdo no espaço indicado e delete as instruções quando não precisar mais delas.
+
+### Ordem sugerida de preenchimento
+
+| Seção | Quando preencher | Quem | Obrigatório? |
+|-------|-----------------|------|-------------|
+| TL;DR | Ao final do framing — escreva depois de preencher as seções 1-3 | Designer | ✅ Sim |
+| Cronograma | Opcional no início, essencial antes do handoff | Designer + PM | Progressivo |
+| 1. Contexto | Primeira coisa a preencher | Designer + PM | ✅ Sim |
+| 2. Objetivo e Sucesso | Logo após o contexto | Designer + PM | ✅ Sim |
+| 3. Usuários e Cenário | Durante o framing | Designer | ✅ Sim |
+| 4. Solução | Durante a exploração de design | Designer | ✅ Sim |
+| 5. Riscos e Incertezas | Durante a exploração — antes de finalizar | Designer + Eng | ✅ Sim |
+| 6. Viabilidade e Entrega | Antes do handoff | Designer + Eng + PM | ✅ Sim |
+| Decisões Registradas | Ao longo de todo o projeto | Todos | Recomendado |
+
+> **Dica para começar:** preencha apenas a Seção 1 (Contexto) e o TL;DR. Com isso já dá para alinhar com o time e continuar o resto de forma iterativa.
 
 ---
 
 ## TL;DR
 
-> [A PREENCHER — 3 a 5 frases que qualquer pessoa do time entenderia em 30 segundos]
->
-> 💡 Pense nisto como um mini press release: qual é o problema, quem sente, o que estamos fazendo e como vamos saber que funcionou. Escreva para alguém que não está no contexto do squad.
->
-> Exemplo: "Gestores de imobiliárias pequenas perdem até 40 minutos por análise de fiança por precisar alternar entre sistemas. Estamos redesenhando o fluxo de análise do Loft/Fiança para consolidar as etapas em uma única tela. O sucesso será medido pela redução do tempo médio de análise de 40 para 15 minutos nos primeiros 30 dias após o lançamento."
+*3 a 5 frases que qualquer pessoa do time entenderia em 30 segundos. Escreva por último, depois de preencher as seções 1-3. Pense: qual é o problema, quem sente, o que estamos fazendo, como saberemos que deu certo.*
+
+*Exemplo: "Gestores de imobiliárias pequenas perdem até 40 minutos por análise de fiança por precisar alternar entre sistemas. Estamos redesenhando o fluxo de análise do Loft/Fiança para consolidar as etapas em uma única tela. O sucesso será medido pela redução do tempo médio de análise de 40 para 15 minutos nos primeiros 30 dias após o lançamento."*
+
+[escreva aqui]
 
 ---
 
 ## Cronograma
 
-> Preencha conforme o projeto avança. Não precisa ter datas no início — comece com fases e vá refinando.
-> Use este cronograma para comunicar o que você precisa garantir antes de construir. Ele é sua ferramenta para argumentar por mais tempo quando necessário.
->
-> 💡 Se você tem uma data de entrega, informe ao agente e ele faz a engenharia reversa sugerindo uma distribuição realista das fases.
+*Preencha conforme o projeto avança. Não precisa ter datas no início — comece pelas fases que sabe que existem e vá refinando. Use este cronograma para argumentar por tempo adequado para cada etapa.*
+
+*Fases opcionais (adicione se fizer sentido para o projeto): `Benchmark competitivo` · `Pesquisa quantitativa` · `Teste A/B` · `Rollout gradual por segmento`*
 
 | Fase | O que acontece | Responsável | Prazo estimado | Status |
 |------|----------------|-------------|----------------|--------|
 | Alinhamento inicial | Compartilhar este design doc com stakeholders e coletar feedback | Designer + PM | [A DEFINIR] | ⬜ Pendente |
 | Discovery de usuário | Entrevistas ou validação qualitativa do problema | Designer | [A DEFINIR] | ⬜ Pendente |
 | Discovery de engenharia | Confirmar viabilidade técnica das principais decisões antes de desenhar | Eng + Designer | [A DEFINIR] | ⬜ Pendente |
-| Exploração de design | Wireframes, jornada mapeada no journey-builder | Designer | [A DEFINIR] | ⬜ Pendente |
+| Exploração de design | Wireframes e jornada mapeada | Designer | [A DEFINIR] | ⬜ Pendente |
 | Teste de usabilidade | Validar fluxo com usuários reais antes de polir | Designer | [A DEFINIR] | ⬜ Pendente |
 | Design critique | Revisão heurística com pares | Designer + pares | [A DEFINIR] | ⬜ Pendente |
 | Handoff para dev | Spec completa, tracking spec aprovada | Designer + Eng | [A DEFINIR] | ⬜ Pendente |
 | Lançamento | Ship + ativação de tracking | Eng + PM | [A DEFINIR] | ⬜ Pendente |
-| Revisão pós-lançamento | Checar métricas de sucesso contra as metas definidas | PM + Designer | [A DEFINIR] | ⬜ Pendente |
-
-> Fases opcionais dependendo do projeto: `Benchmark competitivo` · `Pesquisa quantitativa` · `Teste A/B` · `Rollout gradual`
+| Revisão pós-lançamento | Checar métricas de sucesso | PM + Designer | [A DEFINIR] | ⬜ Pendente |
 
 ---
 
 ## 1. Contexto
 
-### Problema
+### 1.1 Problema ✅ obrigatório
 
-> [A PREENCHER]
->
-> 💡 Descreva a dor real — evite começar pela solução. Use dados ou evidências quando possível.
->
-> Perguntas para guiar:
-> - O que está acontecendo hoje que não deveria?
-> - Quem sente essa dor? Com que frequência?
-> - Como sabemos que esse é o problema certo? Existe evidência (dado, pesquisa, reclamação recorrente)?
+*O que está acontecendo hoje que não deveria? Descreva a dor real — não a solução. Use dados ou evidências sempre que tiver.*
 
-### Por que agora
+*Perguntas para ajudar:*
+*— Quem sente essa dor e com que frequência?*
+*— Como sabemos que esse é o problema certo? Existe evidência (dado, pesquisa, reclamação recorrente)?*
+*— O que essa dor custa (tempo, dinheiro, confiança)?*
 
-> [A PREENCHER]
->
-> 💡 O que mudou ou o que está em jogo que torna isso urgente ou oportuno?
->
-> Perguntas para guiar:
-> - Existe uma data, evento ou dependência que força a decisão?
-> - O que acontece se não fizermos isso agora?
-> - Existe uma janela de mercado ou oportunidade que fecha?
+*Exemplo ruim: "A tela de análise de fiança precisa ser redesenhada."*
+*Exemplo bom: "Gestores de imobiliárias levam em média 40 minutos para analisar uma proposta de fiança porque precisam alternar entre 3 sistemas diferentes. Isso causa atrasos de até 2 dias na resposta ao inquilino e leva à perda de 15% das propostas para concorrentes mais ágeis (dado interno, Q1/2026)."*
 
-### O que foi pedido vs. o problema real
+[descreva o problema aqui]
+
+---
+
+### 1.2 Por que agora ✅ obrigatório
+
+*O que mudou ou o que está em jogo que torna isso urgente ou oportuno? O que acontece se não fizermos isso agora?*
+
+*Perguntas para ajudar:*
+*— Existe uma data, evento ou dependência que força a decisão?*
+*— Existe uma janela de oportunidade que fecha?*
+*— O que perdemos se deixarmos para o próximo trimestre?*
+
+*Exemplo: "A Loft está lançando o Qualifica Leads em agosto. Se o fluxo de análise não for redesenhado antes, o tempo ganho na qualificação será perdido na análise — e o benefício do novo produto será invisível para a imobiliária."*
+
+[descreva por que agora]
+
+---
+
+### 1.3 O que foi pedido vs. o problema real ✅ obrigatório
+
+*Stakeholders frequentemente pedem uma solução específica quando o problema real é outro. Separar os dois evita entregar a coisa errada perfeitamente feita.*
 
 | O que foi pedido | O problema que interpretamos |
 |------------------|------------------------------|
-| [Literal: o que o stakeholder disse] | [Sua leitura: qual problema de fundo isso endereça] |
+| [O que o stakeholder pediu, literalmente] | [Sua leitura: qual problema de fundo isso endereça] |
 
-> 💡 Stakeholders frequentemente pedem uma solução específica quando o problema real é outro. Esta tabela força a separação.
+*Exemplo:*
+
+| O que foi pedido | O problema que interpretamos |
+|------------------|------------------------------|
+| "Adiciona um botão de aprovar na tela de análise" | Gestores não conseguem agir rápido porque as informações necessárias estão em telas diferentes |
 
 ---
 
 ## 2. Objetivo e Sucesso
 
-### O que queremos alcançar
+### 2.1 O que queremos alcançar ✅ obrigatório
 
-> [A PREENCHER]
->
-> 💡 Escreva em termos de impacto no usuário ou no negócio — não em termos de entregáveis.
->
-> ❌ "Redesenhar a tela de análise de fiança"
-> ✅ "Reduzir o tempo médio de análise de fiança de 40 para 15 minutos"
+*Escreva em termos de impacto no usuário ou no negócio — não em termos de entregáveis ou funcionalidades.*
 
-### Métricas de sucesso
+*❌ Não: "Redesenhar a tela de análise de fiança"*
+*✅ Sim: "Reduzir o tempo médio de análise de fiança de 40 para 15 minutos"*
 
-> [A PREENCHER]
->
-> 💡 Defina pelo menos uma métrica primária (o que muda se funcionou) e uma guardrail (o que não pode piorar). Sem métricas, não há como saber se o projeto foi bem-sucedido.
->
-> Perguntas para guiar:
-> - Como saberemos que deu certo em 30 dias? Em 90 dias?
-> - O que seria um resultado ruim mas aceitável?
-> - O que seria inaceitável — e que nos faria reverter?
-> - Existe uma métrica que já acompanhamos que este projeto deve mover?
+*❌ Não: "Implementar notificações em tempo real"*
+*✅ Sim: "Garantir que nenhuma proposta fique sem resposta por mais de 4 horas durante horário comercial"*
+
+[descreva o objetivo aqui]
+
+---
+
+### 2.2 Métricas de sucesso ✅ obrigatório
+
+*Defina pelo menos uma métrica primária e uma guardrail. A primária mede o que mudou se deu certo. A guardrail é o que não pode piorar com a mudança.*
+
+*Se não souber os valores de baseline, escreva "a levantar" — mas defina qual métrica você quer acompanhar.*
+
+*Perguntas para ajudar:*
+*— Como saberemos que deu certo em 30 dias? Em 90 dias?*
+*— O que seria um resultado ruim mas aceitável?*
+*— O que seria inaceitável — e que nos faria reverter a mudança?*
 
 | Tipo | Métrica | Baseline atual | Meta | Prazo para medir |
 |------|---------|----------------|------|-----------------|
-| Primária | [ex: tempo médio de análise] | [valor atual] | [valor alvo] | [30/60/90 dias] |
-| Guardrail | [ex: NPS do fluxo] | [valor atual] | Não piorar | Contínuo |
-| Secundária | [ex: taxa de abandono do fluxo] | [valor atual] | [valor alvo] | [prazo] |
+| Primária | [ex: tempo médio de análise de fiança] | [ex: 40 min] | [ex: 15 min] | [ex: 30 dias] |
+| Guardrail | [ex: NPS do fluxo de locação] | [ex: 42] | Não piorar | Contínuo |
+| Secundária | [ex: taxa de conclusão da análise no mesmo dia] | [ex: 60%] | [ex: 85%] | [ex: 60 dias] |
 
-### Fora do escopo (explícito)
+---
 
-> [A PREENCHER]
->
-> 💡 Liste o que explicitamente NÃO entra nesta entrega. Isso previne escopo crescente e alinha expectativas antes de começar.
+### 2.3 Fora do escopo (explícito) ✅ obrigatório
 
-- [Item fora do escopo — motivo]
-- [Item fora do escopo — motivo]
+*Liste o que explicitamente NÃO entra nesta entrega. Isso previne que o escopo cresça no meio do projeto e alinha expectativas com stakeholders e engenharia antes de começar.*
+
+*Exemplo:*
+*— Não inclui o redesign do fluxo de renovação de contrato (próximo trimestre)*
+*— Não inclui integração com cartório digital (dependência de contrato com fornecedor)*
+
+- [item fora do escopo — motivo ou contexto]
+- [item fora do escopo — motivo ou contexto]
 
 ---
 
 ## 3. Usuários e Cenário
 
-### Personas impactadas
+### 3.1 Personas impactadas ✅ obrigatório
 
-> [A PREENCHER — referencie `context/local/personas.md` se existir no seu squad]
->
-> 💡 Quem usa isso diretamente? Quem é afetado indiretamente? Há conflito de necessidades entre personas?
+*Quem usa isso diretamente? Quem é afetado indiretamente? Se o seu squad tiver personas definidas em `context/local/personas.md`, referencie-as aqui pelo nome.*
 
-| Persona | Papel no fluxo | Como é afetada | Prioridade |
-|---------|----------------|----------------|-----------|
-| [Nome] | Usuário primário | [O que muda para ela] | Alta |
-| [Nome] | Usuário secundário | [O que muda para ela] | Média |
+*Há conflito de necessidades entre personas? Se sim, qual persona tem prioridade?*
 
-### Como fazem hoje (sem a solução)
+| Persona | Papel no fluxo | O que muda para ela com esta entrega | Prioridade |
+|---------|----------------|--------------------------------------|-----------|
+| [Nome ou descrição] | Usuário primário — quem executa o fluxo | [O que muda ou melhora] | Alta |
+| [Nome ou descrição] | Usuário secundário — quem é afetado pelo resultado | [O que muda ou melhora] | Média |
 
-> [A PREENCHER]
->
-> 💡 Descreva o workaround atual. Isso ancora o valor da solução e impede que subestimemos o impacto real.
->
-> Perguntas para guiar:
-> - O que a pessoa faz hoje quando encontra esse problema?
-> - Quanto tempo, esforço ou frustração isso custa?
-> - Existe algum dado de suporte, NPS, ou pesquisa que ilustra essa dor?
+---
 
-### Cenário de uso principal
+### 3.2 Como fazem hoje (sem a solução) ✅ obrigatório
 
-> [A PREENCHER]
->
-> 💡 Uma história curta: quem é a pessoa, em qual situação, o que ela precisa fazer, o que acontece. Baseie-se em uma persona real do seu squad quando possível.
->
-> Exemplo: "Ana, gestora de uma imobiliária com 3 corretores, recebe uma proposta de locação às 18h. Ela precisa analisar a fiança antes de responder ao inquilino, mas o sistema atual exige que ela alterne entre 3 abas diferentes para verificar documentos, histórico e status de análise."
+*Descreva o workaround atual. Isso ancora o valor real da solução — sem isso, fica difícil justificar por que vale a pena construir.*
+
+*Perguntas para ajudar:*
+*— O que a pessoa faz hoje quando encontra esse problema?*
+*— Quantas etapas, sistemas ou pessoas estão envolvidos no workaround atual?*
+*— Qual é o custo em tempo, esforço ou frustração?*
+
+*Exemplo: "A gestora abre o email com a proposta, copia o CPF do inquilino, acessa o portal de análise de crédito, cola o CPF, aguarda o resultado, volta ao email para comparar com os documentos anexados, e então acessa o sistema de contratos para registrar a decisão. Em média 40 minutos por proposta, com risco de erro a cada troca de sistema."*
+
+[descreva o processo atual aqui]
+
+---
+
+### 3.3 Cenário de uso principal ✅ obrigatório
+
+*Uma história curta em linguagem simples: quem é a pessoa, em qual situação real, o que ela precisa fazer e o que acontece. Não precisa ser perfeita — só precisa ser concreta.*
+
+*Escreva para alguém que nunca viu o produto. Se possível, use uma persona real do seu squad.*
+
+*Exemplo: "Ana gere uma imobiliária com 3 corretores. São 18h de uma quinta-feira. Ela recebe uma notificação de nova proposta de locação para um apartamento que está há 45 dias no mercado. O inquilino quer uma resposta ainda hoje. Ana precisa analisar a fiança e dar um parecer, mas já está encerrando o expediente. Com o fluxo atual, ela sabe que vai levar pelo menos meia hora — e provavelmente vai perder a proposta para outra imobiliária que responder mais rápido."*
+
+[escreva o cenário aqui]
 
 ---
 
 ## 4. Solução
 
-### Opções consideradas
+*Esta seção é preenchida durante a exploração de design, em conjunto com o `journey-builder`. No início do projeto, deixe as subseções em aberto — preencha quando tiver alternativas para comparar.*
 
-> [A PREENCHER — modo RFC: exponha as alternativas antes de defender a escolha]
->
-> 💡 Liste pelo menos 2 opções reais, incluindo "não fazer nada" ou "solução mínima". Mostrar que você avaliou alternativas aumenta a confiança na decisão final.
+### 4.1 Opções consideradas ✅ obrigatório quando houver decisão
 
-**Opção A: [Nome]**
+*Liste pelo menos 2 opções antes de defender a escolha. Inclua sempre a opção de "não fazer nada" — ela ajuda a calibrar o valor do que você está propondo. Mostrar que você avaliou alternativas aumenta a confiança na decisão final.*
+
+**Opção A: [Nome da opção]**
 - O que é: [Descrição em 1-2 frases]
-- O que resolve: [Benefícios]
-- O que não resolve: [Limitações]
-- Trade-off principal: [O custo desta escolha]
+- O que resolve: [Benefícios concretos]
+- O que não resolve: [Limitações — seja honesto]
+- Trade-off principal: [O custo real desta escolha — tempo, complexidade, risco]
 
-**Opção B: [Nome]**
+**Opção B: [Nome da opção]**
 - O que é:
 - O que resolve:
 - O que não resolve:
 - Trade-off principal:
 
-**Opção C: Não fazer nada**
-- Consequência: [O que acontece se mantivermos o estado atual]
+**Opção C: Não fazer nada (sempre inclua)**
+- Consequência: [O que acontece se mantivermos o estado atual por mais 3-6 meses]
 
-### Decisão recomendada
+---
 
-> [A PREENCHER]
->
-> 💡 Qual opção e por quê. Seja direto. Se ainda não decidiu, diga isso explicitamente — uma decisão pendente é melhor do que uma decisão disfarçada de certeza.
+### 4.2 Decisão recomendada ✅ obrigatório quando houver decisão
 
-### Premissas assumidas
+*Qual opção você recomenda e por quê. Seja direto. Se ainda não decidiu, escreva "Decisão pendente" e liste o que precisa ser resolvido para decidir — isso é mais honesto do que deixar vago.*
 
-> [A PREENCHER]
->
-> 💡 O que precisa ser verdade para esta solução funcionar? Se uma premissa for falsa, o que quebra?
+[escreva a decisão ou "Decisão pendente — aguardando [X]"]
+
+---
+
+### 4.3 Premissas assumidas ⚠️ importante
+
+*O que precisa ser verdade para esta solução funcionar? Se alguma dessas premissas for falsa, o design pode precisar mudar. Liste explicitamente para que o time possa validá-las.*
+
+*Exemplo:*
+*— `[ASSUMIDO:` o backend já expõe os dados de análise em uma única API — validar com eng]*
+*— `[ASSUMIDO:` o gestor usa o produto pelo celular na maioria das vezes — validar com analytics]*
 
 - `[ASSUMIDO:` ...]
 - `[ASSUMIDO:` ...]
@@ -197,66 +257,81 @@ status: "[Rascunho | Em revisão | Aprovado | Em execução | Arquivado]"
 
 ## 5. Riscos e Incertezas
 
-### O que pode dar errado
+*Preencha durante a exploração — antes de finalizar o design. Um risco identificado aqui é um problema evitado depois.*
 
-> [A PREENCHER]
->
-> 💡 Pense em riscos de produto (usuário não adota), de UX (fluxo confuso), de negócio (ROI não se concretiza) e de eng (dependência técnica não resolvida).
+### 5.1 O que pode dar errado ✅ obrigatório
+
+*Pense em riscos de produto (usuário não adota), de UX (fluxo confuso), de negócio (ROI não acontece) e de engenharia (dependência técnica não resolvida). Liste os mais relevantes — não precisa ser exaustivo.*
 
 | Risco | Probabilidade | Impacto | Mitigação proposta |
 |-------|--------------|---------|-------------------|
-| [Descrição] | Alta / Média / Baixa | Alto / Médio / Baixo | [O que fazer se ocorrer] |
+| [Descreva o risco em uma frase] | Alta / Média / Baixa | Alto / Médio / Baixo | [O que fazer para reduzir ou responder] |
+| [ex: Gestores não adotam o novo fluxo por falta de treinamento] | Média | Alto | [Criar onboarding in-product + comunicar lançamento pela imobiliária] |
 
-### O que ainda não sabemos
+---
 
-> [A PREENCHER]
->
-> 💡 Honestidade intelectual: liste as dúvidas que ainda não foram respondidas e que podem impactar a solução. Isso não é fraqueza — é o que diferencia um design pensado de um design empurrado.
->
-> Perguntas para guiar:
-> - Existe alguma suposição que ainda não validamos com usuários?
-> - Existe alguma dependência técnica que não foi confirmada?
-> - Existe algo que se mudar quebra a solução?
+### 5.2 O que ainda não sabemos ✅ obrigatório
+
+*Liste as dúvidas que ainda não foram respondidas e que podem impactar a solução. Isso é honestidade intelectual — não fraqueza. Um `[A VALIDAR]` explícito é melhor do que uma falsa certeza.*
+
+*Perguntas para ajudar:*
+*— Existe alguma suposição sobre o usuário que ainda não validamos?*
+*— Existe alguma dependência técnica que não foi confirmada?*
+*— Existe algo que, se mudar, quebra a solução?*
+
+- `[A VALIDAR:` ...] — como validar: [...]
+- `[A VALIDAR:` ...] — como validar: [...]
 
 ---
 
 ## 6. Viabilidade e Entrega
 
-### Considerações de engenharia
+*Esta seção é preenchida em conjunto com engenharia, antes do handoff. O objetivo não é detalhar a implementação, mas garantir que não haverá surpresas.*
 
-> [A PREENCHER — idealmente preenchido junto com eng, não sem]
->
-> 💡 Não precisa ser técnico. O objetivo é identificar dependências críticas e pontos de risco antes que virem surpresas.
->
-> Perguntas para guiar:
-> - Existe alguma API ou sistema que precisa ser criado ou modificado?
-> - Existe alguma dependência de outro squad ou time?
-> - Alguma parte desta solução tem risco de prazo ou complexidade inesperada?
+### 6.1 Considerações de engenharia ✅ obrigatório antes do handoff
 
-### Estratégia de rollout
+*Não precisa ser técnico. Identifique as dependências críticas e os pontos de risco para que engenharia possa se planejar.*
 
-> [A PREENCHER]
->
-> 💡 Como isso vai ao ar? Feature flag para rollout gradual? Apenas para um segmento de imobiliárias primeiro? Existe critério para expandir ou reverter?
+*Perguntas para discutir com eng:*
+*— Existe alguma API ou sistema que precisa ser criado ou modificado?*
+*— Existe alguma dependência de outro squad ou time?*
+*— Alguma parte desta solução tem risco de prazo ou complexidade inesperada?*
+*— Existe algum risco de regressão em outras partes do produto?*
 
-### Validação pós-lançamento
+[preencha após conversa com engenharia]
 
-> [A PREENCHER]
->
-> 💡 O que você vai checar nos primeiros dias e semanas? Quando o time se reúne para analisar os dados?
+---
 
-| Marco | O que checar | Quando |
-|-------|-------------|--------|
-| 7 dias | [Indicadores iniciais — bugs, erros, reclamações] | [Data] |
-| 30 dias | [Métricas primárias contra baseline] | [Data] |
-| 90 dias | [Métricas de longo prazo, hipóteses de impacto] | [Data] |
+### 6.2 Estratégia de rollout ✅ obrigatório antes do handoff
+
+*Como isso vai ao ar? Qual é o plano se algo der errado?*
+
+*Opções comuns: lançamento para todos ao mesmo tempo · feature flag para rollout gradual · apenas para um segmento de imobiliárias primeiro · experimento A/B*
+
+*Critério de rollback: qual sinal indica que precisamos reverter?*
+
+[descreva a estratégia de rollout e o critério de reversão]
+
+---
+
+### 6.3 Validação pós-lançamento ✅ obrigatório antes do handoff
+
+*O que você vai checar nos primeiros dias e semanas? Quando o time se reúne para analisar os dados? Conecte com as métricas da Seção 2.2.*
+
+| Marco | O que checar | Responsável | Quando |
+|-------|-------------|-------------|--------|
+| 7 dias | Bugs, erros de fluxo, reclamações críticas | Designer + Eng | [Data] |
+| 30 dias | Métricas primárias e guardrail contra baseline | PM + Designer | [Data] |
+| 90 dias | Métricas de longo prazo e hipóteses de impacto | PM + Designer | [Data] |
 
 ---
 
 ## Decisões Registradas
 
-> Use esta seção ao longo do projeto para registrar decisões importantes com contexto suficiente para alguém que entrar no projeto depois entender o raciocínio.
+*Use ao longo do projeto para registrar decisões importantes com contexto suficiente para que alguém que entrar depois entenda o raciocínio. Uma linha por decisão relevante — não precisa registrar tudo.*
 
-| Data | Decisão | Alternativa descartada | Motivo |
-|------|---------|------------------------|--------|
-| [DD/MM] | [O que foi decidido] | [O que foi descartado] | [Por quê esta e não aquela] |
+*Quando registrar: quando o time debateu duas opções e escolheu uma, quando um requisito mudou, quando uma premissa foi validada ou invalidada.*
+
+| Data | Decisão | Alternativa descartada | Por quê esta e não aquela |
+|------|---------|------------------------|--------------------------|
+| [DD/MM] | [O que foi decidido, em uma frase] | [O que foi descartado] | [O raciocínio — 1-2 frases] |
