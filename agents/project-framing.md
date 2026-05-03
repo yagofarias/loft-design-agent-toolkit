@@ -163,24 +163,42 @@ Se **sim** → gere o `templates/design-doc.md` preenchido com:
 - **Seção 5 — Riscos e Incertezas** — A ser enriquecida pelo `gut-check` e `design-critique`
 - **Seção 6 — Viabilidade e Entrega** — A ser completada pelo `delivery-handoff`
 
-**Cronograma — engenharia reversa a partir de data:**
+**Cronograma — formato Gantt por semanas:**
 
-Se o designer informou uma data de entrega, calcule a distribuição sugerida:
+O cronograma usa uma tabela visual com 3 meses completos. Ao gerar:
+
+1. **Calcule as semanas corretas** a partir do mês atual (ou do mês informado pelo designer):
+   - Mostre sempre 3 meses completos, começando pelo mês de início
+   - Cada coluna = 1 semana de trabalho (segunda a sexta)
+   - Cabeçalho de mês: use `colspan` igual ao número de semanas do mês
+   - Meses com semana cruzando a virada: atribua a semana ao mês onde cai a maioria dos dias úteis
+   - Exemplo para maio/2026: 4 semanas (04–08, 11–15, 18–22, 25–29) → colspan=4
+   - Exemplo para julho/2026: 5 semanas (29/06–03, 07–11, 14–18, 21–25, 28–01/08) → colspan=5
+
+2. **Marque as fases com ████** nas semanas correspondentes. Células inativas ficam vazias.
+
+3. **Se o designer tiver data de entrega**, faça engenharia reversa:
+   - Calcule quantas semanas estão disponíveis
+   - Distribua as fases de trás para frente a partir da data de entrega
+   - Sinaliza com `⚠️` fases que estão comprimidas demais
+
+Exemplo de tabela gerada (maio–junho–julho 2026):
+
 ```
-Data de entrega: [DATA]
-Hoje: [DATA]
-Total de dias disponíveis: [N dias]
-
-Distribuição sugerida:
-- Alinhamento inicial (design doc): [% dos dias] → [data sugerida]
-- Discovery de usuário (se necessário): [% dos dias] → [data sugerida]
-- Discovery de engenharia: [% dos dias] → [data sugerida]
-- Exploração de design: [% dos dias] → [data sugerida]
-- Teste de usabilidade (se incluído): [% dos dias] → [data sugerida]
-- Design critique: [% dos dias] → [data sugerida]
-- Handoff: [% dos dias] → [data sugerida]
-
-⚠️ Aviso: com [N dias] disponíveis, [X fases] estão comprimidas. Recomendo negociar [fase Y] com o stakeholder para garantir qualidade.
+| Fase | Mai 04-08 | Mai 11-15 | Mai 18-22 | Mai 25-29 | Jun 01-05 | Jun 08-12 | Jun 15-19 | Jun 22-26 | Jul 29/06-03 | Jul 07-11 | Jul 14-18 | Jul 21-25 | Jul 28-01/08 |
+|------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|-------------|
+| **Alinhamento e discovery** | | | | | | | | | | | | | |
+| Alinhamento inicial | ████ | | | | | | | | | | | | |
+| Discovery de usuário | ████ | ████ | | | | | | | | | | | |
+| Discovery de eng | | ████ | | | | | | | | | | | |
+| **Design e validação** | | | | | | | | | | | | | |
+| Exploração de design | | | ████ | ████ | | | | | | | | | |
+| Teste de usabilidade | | | | ████ | ████ | | | | | | | | |
+| Design critique | | | | | | ████ | ████ | | | | | | |
+| **Entrega** | | | | | | | | | | | | | |
+| Handoff para dev | | | | | | | | ████ | | | | | |
+| Lançamento | | | | | | | | | | ████ | | | |
+| Revisão pós-lançamento | | | | | | | | | | | ████ | | |
 ```
 
 ---

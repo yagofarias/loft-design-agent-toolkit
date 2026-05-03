@@ -52,21 +52,34 @@ Este documento pode ser preenchido de duas formas:
 
 ## Cronograma
 
-*Preencha conforme o projeto avança. Não precisa ter datas no início — comece pelas fases que sabe que existem e vá refinando. Use este cronograma para argumentar por tempo adequado para cada etapa.*
+*Visão de 3 meses completos a partir do mês de início. O agente preenche as datas corretas automaticamente. Preencha as células (████ = semana ativa, vazio = inativo) conforme o projeto avança. Use este cronograma para argumentar por mais tempo quando necessário.*
 
-*Fases opcionais (adicione se fizer sentido para o projeto): `Benchmark competitivo` · `Pesquisa quantitativa` · `Teste A/B` · `Rollout gradual por segmento`*
+*Fases opcionais — adicione linhas se fizer sentido: `Benchmark competitivo` · `Pesquisa quantitativa` · `Teste A/B` · `Rollout gradual`*
 
-| Fase | O que acontece | Responsável | Prazo estimado | Status |
-|------|----------------|-------------|----------------|--------|
-| Alinhamento inicial | Compartilhar este design doc com stakeholders e coletar feedback | Designer + PM | [A DEFINIR] | ⬜ Pendente |
-| Discovery de usuário | Entrevistas ou validação qualitativa do problema | Designer | [A DEFINIR] | ⬜ Pendente |
-| Discovery de engenharia | Confirmar viabilidade técnica das principais decisões antes de desenhar | Eng + Designer | [A DEFINIR] | ⬜ Pendente |
-| Exploração de design | Wireframes e jornada mapeada | Designer | [A DEFINIR] | ⬜ Pendente |
-| Teste de usabilidade | Validar fluxo com usuários reais antes de polir | Designer | [A DEFINIR] | ⬜ Pendente |
-| Design critique | Revisão heurística com pares | Designer + pares | [A DEFINIR] | ⬜ Pendente |
-| Handoff para dev | Spec completa, tracking spec aprovada | Designer + Eng | [A DEFINIR] | ⬜ Pendente |
-| Lançamento | Ship + ativação de tracking | Eng + PM | [A DEFINIR] | ⬜ Pendente |
-| Revisão pós-lançamento | Checar métricas de sucesso | PM + Designer | [A DEFINIR] | ⬜ Pendente |
+<!-- 
+  INSTRUÇÕES PARA PREENCHER MANUALMENTE:
+  - Substitua [Mês N] pelos 3 meses do projeto (ex: Maio, Junho, Julho)
+  - Substitua os cabeçalhos de semana pelas datas reais (seg–sex de cada semana)
+  - Use ████ para marcar as semanas em que cada fase acontece
+  - Meses com 4 semanas: colspan=4. Julho e meses com semana de virada: colspan=5
+  - Agrupe as fases por categoria com linhas de grupo em negrito
+-->
+
+| Fase | [Mês 1] | | | | [Mês 2] | | | | [Mês 3] | | | | |
+|------|---------|---|---|---|---------|---|---|---|---------|---|---|---|---|
+| | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] | [dd–dd] |
+| **Alinhamento e discovery** | | | | | | | | | | | | | |
+| Alinhamento inicial | | | | | | | | | | | | | |
+| Discovery de usuário | | | | | | | | | | | | | |
+| Discovery de eng | | | | | | | | | | | | | |
+| **Design e validação** | | | | | | | | | | | | | |
+| Exploração de design | | | | | | | | | | | | | |
+| Teste de usabilidade | | | | | | | | | | | | | |
+| Design critique | | | | | | | | | | | | | |
+| **Entrega** | | | | | | | | | | | | | |
+| Handoff para dev | | | | | | | | | | | | | |
+| Lançamento | | | | | | | | | | | | | |
+| Revisão pós-lançamento | | | | | | | | | | | | | |
 
 ---
 
