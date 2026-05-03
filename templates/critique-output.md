@@ -109,6 +109,16 @@ status: "[Rascunho | Entregue]"
 
 *Se nenhum componente novo foi identificado, escreva "Nenhum componente novo identificado."*
 
+### Terminologia e Nomenclatura
+
+*Termos ou labels usados de forma inconsistente entre telas — o usuário vê palavras diferentes para a mesma coisa. Preencha apenas se encontrado.*
+
+| Termo encontrado | Onde aparece | Padronizar para | Motivo |
+|-----------------|-------------|----------------|--------|
+| [Como está no design] | [Telas afetadas] | [Termo correto conforme brand-voice.md ou glossário local] | [Ex: alinha com glossário global / é o termo do produto] |
+
+*Se não há inconsistências, escreva "Terminologia consistente em toda a jornada."*
+
 ---
 
 ## Estados Ausentes ou Incompletos
