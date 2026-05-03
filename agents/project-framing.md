@@ -196,6 +196,60 @@ Distribuição sugerida:
 
 ---
 
+### Fase 6 — Exportação para Google Docs (opcional)
+
+Após gerar o `design-doc.md`, pergunte:
+
+> "Quer exportar o Design Doc como `.docx` para abrir no Google Docs e compartilhar com o time?"
+
+Se **sim** → gere um arquivo `.docx` bem formatado usando a biblioteca `docx` (Node.js). Instale com `npm install -g docx` se necessário.
+
+**Estrutura visual do documento:**
+
+```
+[Capa]
+  Nome do projeto — bold, 28pt
+  Status + Squad + Dono + Data — 11pt, cinza
+
+[Corpo]
+  TL;DR — caixa destacada com fundo #F0F4F8, texto 11pt
+  Cronograma — tabela com colunas: Fase | O que acontece | Responsável | Prazo | Status
+  Seção 1: Contexto
+  Seção 2: Objetivo e Sucesso (inclui tabela de métricas)
+  Seção 3: Usuários e Cenário (inclui tabela de personas)
+  Seção 4: Solução
+  Seção 5: Riscos e Incertezas (inclui tabela de riscos)
+  Seção 6: Viabilidade e Entrega (inclui tabela de validação pós-lançamento)
+  Decisões Registradas — tabela
+```
+
+**Regras de formatação obrigatórias:**
+
+- Fonte: Arial em todo o documento
+- Títulos de seção: Arial 14pt bold, cor `#1A3C5E` (azul escuro Loft)
+- Subtítulos: Arial 12pt bold, cor `#1A3C5E`
+- Corpo: Arial 11pt, cor `#333333`
+- Texto `[A PREENCHER]`: Arial 11pt itálico, cor `#999999`
+- Perguntas de orientação: Arial 10pt itálico, cor `#666666`, recuadas com indent
+- Tabelas: cabeçalho com fundo `#1A3C5E` e texto branco; linhas alternadas em `#F5F7FA` e branco; bordas `#CCCCCC`; usar `WidthType.DXA` (nunca porcentagem — quebra no Google Docs)
+- Página: A4, margens de 2cm em todos os lados (1134 DXA)
+- Numeração de páginas no rodapé, centralizada
+
+**Tratamento de conteúdo:**
+
+- Seções preenchidas: mostrar conteúdo normalmente
+- Seções com `[A PREENCHER]`: mostrar o placeholder em cinza itálico + as perguntas de orientação do template abaixo, em cinza mais claro
+- Tabelas do template que estiverem vazias: incluir uma linha com células em cinza itálico `[A PREENCHER]`
+- Nunca omitir uma seção — sempre incluir com o placeholder quando vazia
+
+**Onde salvar:**
+
+Salvar como `design-doc-[nome-do-projeto].docx` na pasta de trabalho atual. Após gerar, informe o caminho e diga:
+
+> "Abra no Google Drive: arraste o arquivo para o Drive ou use Arquivo → Importar. O Google Docs converte automaticamente."
+
+---
+
 ## Comportamento esperado
 
 - Leia documentos de entrada antes de perguntar — não repita o que já foi respondido
