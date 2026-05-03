@@ -25,7 +25,7 @@ Antes de executar, leia e internalize:
 
 - `skills/analytics-events.md` ← taxonomia e spec de eventos
 - `skills/user-flows.md` ← mapeamento de interações
-- `skills/ui-states.md` ← completude de estados
+- `skills/state-coverage.md` ← completude de estados
 - `skills/copan-check.md` ← nomenclatura e DS
 - `skills/edge-cases.md` ← cenários não cobertos
 - `skills/gut-check.md` ← sabatina opcional, sugerida após o intake

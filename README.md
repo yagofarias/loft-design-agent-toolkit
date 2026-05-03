@@ -42,7 +42,7 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 | `gut-check` | todos os agentes ← sabatina de 5 perguntas críticas, sugerida após o intake |
 | `problem-framing` | project-framing |
 | `user-flows` | journey-builder, delivery-handoff |
-| `ui-states` | journey-builder, design-critique, delivery-handoff |
+| `state-coverage` | journey-builder, design-critique, delivery-handoff |
 | `edge-cases` | journey-builder, design-critique, delivery-handoff |
 | `heuristics` | design-critique |
 | `ux-writing` | design-critique |
