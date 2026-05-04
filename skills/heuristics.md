@@ -7,11 +7,13 @@ description: >
   de avaliação, escala de severidade e checklist por tipo de componente.
 ---
 
-# Skill: Heuristic Evaluation
+# Skill: Heuristics
 
 ## Propósito
 
 Avaliação heurística é uma forma estruturada de encontrar problemas de usabilidade sem precisar de usuários reais. Quando aplicada com rigor, captura a maioria dos problemas antes de qualquer teste.
+
+**Output desta skill:** alimenta o `agents/design-critique.md`, que produz o `templates/critique-output.md`.
 
 ---
 
@@ -28,6 +30,8 @@ O sistema sempre mantém o usuário informado sobre o que está acontecendo.
 
 **Sinais de problema:** Usuário clica, nada aparece. Processamento sem indicador. Progresso invisível.
 
+**No contexto da Loft:** proposta enviada sem confirmação de recebimento. Análise de fiança em andamento sem indicador de progresso ou tempo estimado. Contrato gerado sem notificação de conclusão.
+
 ---
 
 ### H2 — Correspondência com o Mundo Real
@@ -39,6 +43,8 @@ O sistema fala a língua do usuário, com palavras e conceitos familiares ao pú
 - A ordenação lógica dos conteúdos corresponde à ordem mental do usuário?
 
 **Sinais de problema:** Jargão técnico exposto. Metáforas sem contexto. Ordem que confunde.
+
+**No contexto da Loft:** "locatário" em vez de "inquilino" para público leigo. Termos jurídicos de contrato expostos sem explicação. "Score" ou "rating" em vez de "análise de crédito" dependendo do público.
 
 ---
 
@@ -103,6 +109,8 @@ Atalhos permitem que usuários experientes completem tarefas mais rapidamente.
 
 **Sinais de problema:** Todo usuário passa pelo mesmo fluxo longo independente de frequência.
 
+**No contexto da Loft:** gestores de imobiliárias analisam dezenas de propostas por dia. Ausência de ações em lote (aprovar múltiplas de uma vez), filtros salvos, ou acesso rápido às propostas pendentes são violações críticas de H7 para usuários B2B recorrentes.
+
 ---
 
 ### H8 — Design Estético e Minimalista
@@ -114,6 +122,8 @@ Interfaces não devem conter informações irrelevantes.
 - Existe conteúdo adicionado "por precaução" mas raramente usado?
 
 **Sinais de problema:** Múltiplas CTAs de igual peso. Visual poluído.
+
+**No contexto da Loft — trust signals:** em fintech, H8 tem uma exceção importante. Ao coletar dados sensíveis (CPF, renda, conta bancária), sinais de segurança e conformidade precisam estar visíveis no momento da coleta — não só no rodapé. Omitir esses sinais em nome do minimalismo aumenta abandono e desconfiança. Exemplos do que deve estar presente: "Seus dados são criptografados", ícone de cadeado, referência à LGPD contextual.
 
 ---
 
@@ -162,7 +172,9 @@ Embora o melhor sistema não precise de documentação, pode ser necessário for
 
 ## Avaliação de Acessibilidade (WCAG 2.1)
 
-A acessibilidade não é uma camada extra — é parte da avaliação heurística. Avalie em quatro dimensões:
+A acessibilidade não é uma camada extra — é parte da avaliação heurística. Avalie em quatro dimensões.
+
+> **Nota de uso:** itens marcados com `→ anotar para dev` são verificações que o designer não consegue fazer no Figma, mas deve especificar como anotação para a implementação. Os demais são verificáveis diretamente no design.
 
 ### A1 — Perceptível (o conteúdo pode ser percebido por todos os sentidos)
 
@@ -220,17 +232,18 @@ A acessibilidade não é uma camada extra — é parte da avaliação heurístic
 
 ### A4 — Robusto (funciona com tecnologias assistivas)
 
-**Markup semântico:**
-- [ ] Hierarquia de headings é lógica (h1 → h2 → h3, sem pular níveis)
-- [ ] Listas são marcadas como `<ul>`, `<ol>` ou `<dl>` (não divs com bullets visuais)
-- [ ] Tabelas têm `<th>` com escopo correto para cabeçalhos de linha e coluna
-- [ ] Botões são `<button>` e links são `<a>` (não divs clicáveis)
+*Estes itens são anotações para dev — especifique no design, não é possível verificar no Figma.*
 
-**ARIA (quando HTML semântico não é suficiente):**
-- [ ] Componentes customizados têm roles ARIA corretos (ex: `role="dialog"` para modais)
-- [ ] Estados dinâmicos são comunicados (ex: `aria-expanded`, `aria-selected`, `aria-live`)
-- [ ] ARIA não é usado para compensar HTML não semântico — corrija o HTML primeiro
-- [ ] Labels e descriptions de formulário estão associados via `for`/`id` ou `aria-labelledby`
+**Markup semântico → anotar para dev:**
+- [ ] Hierarquia de headings é lógica (h1 → h2 → h3, sem pular níveis)
+- [ ] Listas de itens devem ser marcadas como listas no HTML, não como divs com bullets visuais
+- [ ] Tabelas têm cabeçalhos de linha e coluna explícitos
+- [ ] Botões são implementados como `<button>` e links como `<a>` — não divs clicáveis
+
+**ARIA → anotar para dev:**
+- [ ] Modais e dialogs precisam de `role="dialog"` e foco gerenciado
+- [ ] Estados dinâmicos como dropdown expandido, tab selecionada e live regions precisam ser comunicados via ARIA
+- [ ] Labels de formulário devem ser associados programaticamente aos campos (não apenas visualmente)
 
 ---
 
