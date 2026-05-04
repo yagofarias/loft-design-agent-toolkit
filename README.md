@@ -8,27 +8,11 @@ Um toolkit de agentes de design para o time da Loft — agentes, skills, playboo
 
 Quatro agentes que cobrem o processo completo de design. Cada um pode ser usado de forma independente ou em sequência via playbook.
 
-### Contexto
-> Use antes de desenhar quando o contexto do usuário ou a abordagem de mercado ainda não estiver clara.
-
 | Agente | O que faz |
 |--------|-----------|
 | `project-framing` | Transforma qualquer ponto de partida (brief, PRD, RFC, SDD ou ideia bruta) em um Design Doc estruturado. Aceita documentos existentes como input e extrai o que é relevante para design. Gera o documento vivo que guia o projeto inteiro. |
-
-### Design Core
-> O coração do processo — define, mapeia, critica.
-
-| Agente | O que faz |
-|--------|-----------|
-| `project-framing` | ↑ também é a entrada do design core |
 | `journey-builder` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc. Preenche a seção 4 (Solução) do documento vivo. |
 | `design-critique` | Avalia o design em uma passagem: heurísticas de usabilidade, acessibilidade WCAG, completude de estados, clareza de copy e consistência com o DS. Relatório consolidado. |
-
-### Entrega
-> Último passo antes de passar para o dev.
-
-| Agente | O que faz |
-|--------|-----------|
 | `delivery-handoff` | Gera a spec de eventos de analytics e valida se o design está completamente documentado para o dev — sem ambiguidade, sem estados faltando. |
 
 ---
