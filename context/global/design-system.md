@@ -1,65 +1,26 @@
 # Design System — Copan
 
-> A fonte da verdade do design system da Loft é a documentação oficial do Copan.
-> Este arquivo é uma ponte — não uma cópia. Mantenha os links atualizados e
-> use a seção de referência rápida apenas para tokens de uso muito frequente.
+> Referência ao design system oficial da Loft.
+> Preencha os links abaixo para que os agentes possam orientar designers
+> a consultar a fonte correta.
 
 ---
 
 ## Links Oficiais
 
 - **Documentação:** [link para a doc do Copan]
-- **Figma (biblioteca):** [link para o Figma]
+- **Figma (biblioteca):** [link para o arquivo Figma do Copan]
 - **Storybook:** [link para o Storybook]
-- **Changelog:** [link para o changelog do DS]
 
 ---
 
-## Como usar em conjunto com os agentes
+## Como o agente valida componentes e tokens
 
-Ao revisar componentes ou copies, os agentes validam contra o Copan.
-Se um componente não existir na documentação, deve ser tratado como
-componente novo que precisa ser proposto ao time de DS antes do handoff.
+O designer pode compartilhar o design de duas formas:
 
-Para sugerir um componente novo ao Copan, siga o processo em: [link do processo]
+- **Link do Figma** — o agente acessa diretamente via Figma MCP quando disponível
+- **Print ou descrição** — o agente valida com base no que for compartilhado
 
----
+Em ambos os casos, a validação foca em: componentes do Copan sendo usados corretamente, tokens aplicados em vez de valores manuais, e instâncias não desvinculadas.
 
-## Referência Rápida de Tokens
-
-> Inclua aqui apenas os tokens mais usados no dia a dia para consulta rápida.
-> Para a lista completa, sempre consulte a documentação oficial.
-
-### Cores principais
-
-| Token | Uso |
-|-------|-----|
-| `[token]` | [Para que serve] |
-
-### Tipografia principal
-
-| Token | Uso |
-|-------|-----|
-| `[token]` | [Para que serve] |
-
-### Spacing
-
-| Token | Valor | Uso |
-|-------|-------|-----|
-| `[token]` | [px] | [Para que serve] |
-
----
-
-## Componentes Mais Usados
-
-| Componente | Variantes | Quando usar |
-|-----------|-----------|-------------|
-| [Nome] | [Lista] | [Contexto correto] |
-
----
-
-## Glossário DS ↔ Código
-
-| Nome no Figma | Nome no código | Observação |
-|---------------|----------------|------------|
-| [Como está no Figma] | [Como está no código] | [Diferenças importantes] |
+Para validação mais detalhada ou dúvidas sobre componentes específicos, consultar a documentação oficial do Copan nos links acima.

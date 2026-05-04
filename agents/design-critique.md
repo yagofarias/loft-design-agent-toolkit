@@ -51,7 +51,9 @@ E carregue o contexto do produto:
 
 Solicite ao designer:
 
-1. **O que está sendo revisado** — Link do Figma, prints, ou descrição textual da jornada
+1. **O design a revisar** — Pode ser compartilhado de duas formas:
+   - **Link do Figma** → o agente acessa via Figma MCP quando disponível
+   - **Prints ou descrição** → o agente valida com base no que for compartilhado
 2. **O problem statement** — Preferencialmente do `templates/design-doc.md`
 3. **O usuário primário** — Quem deveria conseguir usar isso sem fricção
 4. **O contexto de uso** — Dispositivo, ambiente, frequência de uso
