@@ -1,5 +1,5 @@
 ---
-name: problem-framing
+name: problem-scoping
 description: >
   Framework completo para definir problemas de design: transforma pedidos,
   briefs e PRDs em problem statements estruturados, gera hipóteses verificáveis

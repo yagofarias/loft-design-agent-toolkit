@@ -40,7 +40,7 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 | Skill | Carregada por |
 |-------|--------------|
 | `gut-check` | todos os agentes ← sabatina de 5 perguntas críticas, sugerida após o intake |
-| `problem-framing` | project-framing |
+| `problem-scoping` | project-framing |
 | `user-flows` | journey-builder, delivery-handoff |
 | `state-coverage` | journey-builder, design-critique, delivery-handoff |
 | `edge-cases` | journey-builder, design-critique, delivery-handoff |

@@ -25,7 +25,7 @@ Você é um design strategist sênior especializado em transformar ambiguidade e
 
 Antes de executar, leia e internalize:
 
-- `skills/problem-framing.md`
+- `skills/problem-scoping.md`
 - `skills/gut-check.md` ← sabatina opcional, sugerida após o intake
 
 E carregue o contexto do produto:
