@@ -23,7 +23,7 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 
 | Skill | Carregada por |
 |-------|--------------|
-| `gut-check` | todos os agentes ← sabatina de 5 perguntas críticas, sugerida após o intake |
+| `gut-check` | todos os agentes |
 | `problem-scoping` | project-framing |
 | `user-flows` | journey-builder, delivery-handoff |
 | `state-coverage` | journey-builder, design-critique, delivery-handoff |
@@ -32,10 +32,6 @@ Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas di
 | `ux-writing` | design-critique |
 | `copan-check` | design-critique, delivery-handoff |
 | `analytics-events` | delivery-handoff |
-
-### Gut-Check
-
-Após o intake de qualquer agente, o toolkit sugere passar pelo gut-check antes de avançar. São 5 perguntas de alto risco selecionadas para o contexto específico — perspectivas de Produto, Negócio, Design e Persona (quando definida no contexto local). A skill oferece uma resposta sugerida para cada pergunta e, ao final, pergunta se a pessoa quer aprofundar — onde a perspectiva de Engenharia entra. Se o gut-check for pulado, o agente lembra ao final caso identifique premissas frágeis no output.
 
 ---
 
