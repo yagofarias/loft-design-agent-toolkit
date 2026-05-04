@@ -6,11 +6,13 @@ description: >
   e traduz requisitos de negócio em requisitos de design acionáveis.
 ---
 
-# Skill: Problem Definition
+# Skill: Problem Scoping
 
 ## Propósito
 
 Esta skill cobre três capacidades que sempre andam juntas na fase de definição: estruturar o problema certo, tornar suposições explícitas como hipóteses verificáveis, e traduzir o que foi pedido no que o design realmente precisa entregar.
+
+**Output desta skill:** alimenta as seções 1, 2 e 3 do `templates/design-doc.md` — Contexto, Objetivo e Sucesso, e Usuários e Cenário.
 
 ---
 
@@ -30,8 +32,11 @@ Use a estrutura:
 
 **Exemplos:**
 
-❌ Fraco: "Como podemos melhorar o checkout?"
-✅ Forte: "Como podemos reduzir o abandono na etapa de pagamento para usuários mobile que chegam via campanha de e-mail, sem aumentar o número de campos obrigatórios?"
+❌ Fraco: "Como podemos melhorar o fluxo de análise de fiança?"
+✅ Forte: "Como podemos reduzir o tempo de análise de fiança de 40 para 15 minutos para gestores de imobiliárias pequenas, sem aumentar o risco de aprovação incorreta?"
+
+❌ Fraco: "Como podemos melhorar o onboarding de imobiliárias?"
+✅ Forte: "Como podemos ajudar imobiliárias novas a cadastrar seu primeiro imóvel em menos de 10 minutos, sem que precisem de suporte para concluir o processo?"
 
 ### Separando Pedido de Problema
 
@@ -46,9 +51,9 @@ Quando receber um pedido, sempre pergunte:
 
 | ❌ Ruim | ✅ Bom |
 |---------|--------|
-| "Melhorar a experiência" | "Reduzir chamadas ao suporte sobre este fluxo em 30%" |
-| "Deixar mais simples" | "Usuários completam o fluxo sem ajuda em menos de 2 minutos" |
-| "Implementar o redesign" | "Taxa de conclusão do checkout mobile aumenta de 54% para 65%" |
+| "Melhorar a experiência de análise" | "Reduzir o tempo médio de análise de fiança de 40 para 15 minutos" |
+| "Deixar o cadastro mais simples" | "Imobiliárias novas completam o primeiro cadastro sem contato com suporte" |
+| "Implementar o redesign do CRM" | "Taxa de uso do funil de vendas sobe de 30% para 60% entre corretores ativos" |
 
 ### Mapeamento de Stakeholders
 
@@ -72,13 +77,13 @@ Conflitos entre necessidades desses grupos devem ser documentados explicitamente
 ### Tipos
 
 **Hipótese de problema** — sobre a existência e natureza do problema:
-> "Acreditamos que usuários novos abandonam o onboarding na etapa de configuração de perfil porque não entendem por que o produto precisa dessas informações."
+> "Acreditamos que gestores de imobiliárias abandonam a análise de fiança no meio do processo porque precisam alternar entre 3 sistemas diferentes para reunir as informações necessárias."
 
 **Hipótese de solução** — sobre a eficácia de uma abordagem:
-> "Se explicarmos o benefício de cada campo ao lado do campo, usuários completarão o onboarding com mais frequência."
+> "Se consolidarmos os dados de análise em uma única tela, o tempo médio de análise vai cair de 40 para menos de 20 minutos."
 
 **Hipótese de usuário** — sobre comportamento ou necessidade:
-> "Acreditamos que usuários recorrentes preferem acessar ações frequentes sem passar pelo menu principal."
+> "Acreditamos que corretores preferem visualizar o status das propostas diretamente na listagem de imóveis, sem precisar entrar em cada proposta individualmente."
 
 ### Critérios de uma Boa Hipótese
 
@@ -135,17 +140,17 @@ O que precisa ser confirmado: [lista]
 
 ### Sinais de Requisitos Problemáticos
 
-**Prescritivo de solução:** "Adicionar um modal com confirmação de dois passos"
-→ Pergunte: *Qual problema esse modal resolve?*
+**Prescritivo de solução:** "Adicionar um botão de aprovação rápida na listagem de propostas"
+→ Pergunte: *Qual problema esse botão resolve? O que está lento hoje?*
 
-**Sem critério de sucesso:** "Melhorar a experiência no checkout"
-→ Pergunte: *O que define "melhorar"?*
+**Sem critério de sucesso:** "Melhorar a experiência de análise de fiança"
+→ Pergunte: *O que define "melhorar"? Tempo? Taxa de conclusão? NPS?*
 
-**Contraditório:** "Simplificar o fluxo E adicionar mais opções"
-→ Aponte: *Esses objetivos estão em tensão. Qual é prioritário?*
+**Contraditório:** "Simplificar o fluxo de cadastro E coletar mais dados do inquilino"
+→ Aponte: *Esses objetivos estão em tensão. Qual é prioritário para este lançamento?*
 
-**Baseado em suposição não validada:** "Os usuários querem exportar para PDF"
-→ Pergunte: *Como sabemos? É dado ou hipótese?*
+**Baseado em suposição não validada:** "As imobiliárias querem exportar contratos em PDF"
+→ Pergunte: *Como sabemos? É dado de suporte, pesquisa ou hipótese interna?*
 
 ### Classificação de Constraints
 
