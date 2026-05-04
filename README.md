@@ -83,12 +83,42 @@ Outputs estruturados gerados pelos agentes ao longo do processo.
 
 ---
 
+## Instalação e uso
+
+### Claude Code
+
+```bash
+git clone https://github.com/yagofarias/loft-design-agent-toolkit
+cd loft-design-agent-toolkit
+claude
+```
+
+O `CLAUDE.md` na raiz é lido automaticamente. Na primeira sessão, o toolkit se apresenta e sugere `/setup`. Nas sessões seguintes, aguarda seu input.
+
+**Comandos disponíveis:**
+
+| Comando | O que faz |
+|---------|-----------|
+| `/setup` | Configura o contexto do squad — faça isso primeiro |
+| `/framing` | Inicia um project framing |
+| `/journey` | Mapeia fluxos e estados |
+| `/critique` | Revisa um design (URL do Figma ou prints) |
+| `/handoff` | Prepara spec completa para dev |
+
+Você pode passar contexto direto no comando: `/framing preciso redesenhar o fluxo de análise de fiança`
+
+### Claude Cowork / claude.ai
+
+Carregue o arquivo do agente que quiser usar como contexto e inicie a conversa. Veja `docs/como-usar.md` para exemplos detalhados.
+
+---
+
 ## Por onde começar
 
-1. Execute o `playbooks/setup-local-context.md` para preencher o contexto do seu squad
-2. Verifique se os arquivos de `context/global/` estão atualizados
-3. Leia `docs/como-usar.md`
-4. Comece com `agents/project-framing.md`
+1. Clone o repositório e rode `claude` na pasta (Claude Code) ou carregue os arquivos como contexto (Cowork)
+2. Execute `/setup` ou abra `playbooks/setup-local-context.md` para preencher o contexto do seu squad
+3. Verifique se `context/global/` está atualizado para a Loft
+4. Use `/framing` ou `agents/project-framing.md` para começar um projeto
 
 ## Contribuindo
 
