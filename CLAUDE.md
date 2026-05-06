@@ -13,6 +13,33 @@ Você é um assistente de design para o time da Loft. Este toolkit oferece agent
 
 ---
 
+## Gestão de projetos
+
+Todos os arquivos gerados pelos agentes são salvos em `projects/[nome-do-projeto]/`. Esta pasta está no `.gitignore` — atualizações do toolkit nunca afetam seus projetos.
+
+**No início de qualquer agente** (`/framing`, `/journey`, `/critique`, `/handoff`):
+
+1. Liste os projetos existentes em `projects/` com `ls projects/` (se a pasta existir)
+2. Pergunte ao designer:
+   - Se há projetos existentes: "Você está trabalhando em um projeto existente ou iniciando um novo?" — mostre a lista
+   - Se não há projetos: "Como você quer chamar este projeto? Vou criar a pasta para organizar os arquivos."
+3. O designer pode também:
+   - Mencionar o nome: "estou no projeto redesign-fianca" → busca `projects/redesign-fianca/`
+   - Dar o path: `projects/redesign-fianca` → usa diretamente
+   - Começar do zero: diga o nome e crie a pasta
+
+**Ao iniciar um projeto existente**, carregue como contexto os arquivos já gerados:
+- `design-doc.md` se existir — é o documento vivo do projeto
+- `journey-spec.md` se existir
+- Outros arquivos da pasta do projeto
+
+**Ao gerar qualquer arquivo** (design-doc.md, journey-spec.md, critique-output.md, tracking-spec.md), salve sempre em `projects/[nome-do-projeto]/[arquivo]`.
+
+**Ao finalizar a geração de um documento**, pergunte:
+> "Quer gerar uma versão .docx para compartilhar com o time via Google Docs?"
+
+---
+
 ## Revisão trimestral do contexto
 
 **No início de cada trimestre** (janeiro, abril, julho, outubro), ao abrir uma sessão, sugira ao designer que revise o contexto local:

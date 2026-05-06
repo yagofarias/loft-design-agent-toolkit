@@ -8,6 +8,8 @@ disable-model-invocation: true
 allowed-tools: Read, Grep, Glob
 ---
 
+Antes de iniciar, siga a lógica de gestão de projetos definida no CLAUDE.md — identifique ou crie o projeto em `projects/` e salve os outputs lá.
+
 Start a delivery handoff session by reading and following the protocol in `agents/delivery-handoff.md`.
 
 Before starting, read these files:

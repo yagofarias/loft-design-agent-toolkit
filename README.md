@@ -19,19 +19,19 @@ Quatro agentes que cobrem o processo completo de design. Cada um pode ser usado 
 
 ## Skills
 
-Unidades de conhecimento modulares carregadas pelos agentes. Podem ser usadas diretamente em uma conversa.
+Unidades de conhecimento modulares carregadas pelos agentes.
 
-| Skill | Carregada por |
-|-------|--------------|
-| `gut-check` | todos os agentes |
-| `problem-scoping` | project-framing |
-| `user-flows` | journey-builder, delivery-handoff |
-| `state-coverage` | journey-builder, design-critique, delivery-handoff |
-| `edge-cases` | journey-builder, design-critique, delivery-handoff |
-| `heuristics` | design-critique |
-| `ux-writing` | design-critique |
-| `copan-check` | design-critique, delivery-handoff |
-| `analytics-events` | delivery-handoff |
+| Skill | O que faz | Carregada por |
+|-------|-----------|--------------|
+| `gut-check` | Sabatina de 5 perguntas críticas antes de avançar — perspectivas de produto, negócio, design e persona | todos os agentes |
+| `problem-scoping` | Estrutura problem statements, gera hipóteses verificáveis e traduz requisitos em necessidades de design | project-framing |
+| `user-flows` | Mapeia happy path, fluxos alternativos, erros e fluxos com múltiplos atores (B2B) | journey-builder, delivery-handoff |
+| `state-coverage` | Garante que todos os estados de UI foram identificados: loading, erro, vazio, aprovação, expirado | journey-builder, design-critique, delivery-handoff |
+| `edge-cases` | Checklist de cenários extremos — universal + específicos da Loft (documentos, financeiro, aprovação, B2B) | journey-builder, design-critique, delivery-handoff |
+| `heuristics` | Avaliação com as 10 heurísticas de Nielsen + WCAG 2.1 + exemplos do contexto Loft | design-critique |
+| `ux-writing` | Critérios de copy por tipo de elemento — aplica o brand-voice.md em contextos de UI e fintech | design-critique |
+| `copan-check` | Valida componentes e tokens contra o Copan — aceita link do Figma ou prints | design-critique, delivery-handoff |
+| `analytics-events` | Modela eventos de analytics com taxonomia PT-BR, event/user/context properties e checklist LGPD | delivery-handoff |
 
 ---
 
@@ -85,15 +85,26 @@ Outputs estruturados gerados pelos agentes ao longo do processo.
 
 ## Instalação e uso
 
-### Claude Code
+### Claude Code (app ou terminal)
 
+**1. Clone o repositório:**
 ```bash
 git clone https://github.com/yagofarias/loft-design-agent-toolkit
+```
+
+**2. Adicione a pasta no Claude Code:**
+
+No app Claude Code, clique em **Local** na barra superior e selecione a pasta `loft-design-agent-toolkit` que você acabou de clonar. O `CLAUDE.md` na raiz é lido automaticamente.
+
+Pelo terminal:
+```bash
 cd loft-design-agent-toolkit
 claude
 ```
 
-O `CLAUDE.md` na raiz é lido automaticamente. Na primeira sessão, o toolkit se apresenta e sugere `/setup`. Nas sessões seguintes, aguarda seu input.
+**3. Na primeira sessão**, o toolkit se apresenta e sugere `/setup` para configurar o contexto do seu squad.
+
+**4. Para cada projeto**, ao rodar qualquer comando, o toolkit cria automaticamente uma pasta em `projects/[nome-do-projeto]/` e organiza todos os arquivos gerados lá.
 
 **Atualizando o toolkit:** não precisa saber git. Abra o Claude Code na pasta do toolkit e diga: *"me ajude a atualizar o toolkit"*. O Claude roda o `git pull` de forma segura, garantindo que seu contexto local não seja sobrescrito.
 

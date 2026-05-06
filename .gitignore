@@ -8,11 +8,10 @@ context/local/target-audiences.md
 context/local/brand-voice-local.md
 context/local/competitors.md
 
-# Outputs gerados pelos agentes (ficam no projeto do designer, não no toolkit)
-templates/design-doc-filled*.md
-templates/journey-spec-filled*.md
-templates/critique-output-filled*.md
-templates/tracking-spec-filled*.md
+# Projetos criados com o toolkit
+# Cada projeto fica em projects/[nome-do-projeto]/
+# O README da pasta é mantido, os projetos são pessoais
+projects/*/
 
 # Sistema operacional
 .DS_Store
