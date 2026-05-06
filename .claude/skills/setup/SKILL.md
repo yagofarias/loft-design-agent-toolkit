@@ -5,7 +5,7 @@ description: >
   Run this once when starting with the toolkit in a new squad. The local
   context is what makes all other agents specific to your domain.
 disable-model-invocation: true
-allowed-tools: Read, Write
+allowed-tools: Read, Write, Bash
 ---
 
 Start a local context setup session by reading and following the protocol in `playbooks/setup-local-context.md`.
@@ -24,6 +24,18 @@ Guide the designer through the setup phases one at a time:
 5. Competitors (`competitors.md`)
 
 After each file is filled, confirm with the designer before moving to the next.
-At the end, show a summary of what was filled and which agents are now ready to use.
+
+## Ao finalizar o setup
+
+Depois que todos os arquivos forem preenchidos, execute este comando para proteger o contexto local de atualizações futuras do toolkit via `git pull`:
+
+```bash
+git update-index --skip-worktree context/local/context.md context/local/personas.md context/local/target-audiences.md context/local/brand-voice-local.md context/local/competitors.md 2>/dev/null || true
+```
+
+Informe o designer:
+> "Seu contexto local está protegido. Se você atualizar o toolkit no futuro, basta dizer 'me ajude a atualizar o toolkit' que eu cuido disso sem apagar seus dados."
+
+Mostre um resumo do que foi preenchido e quais agentes estão prontos para usar.
 
 $ARGUMENTS

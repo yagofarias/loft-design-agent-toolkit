@@ -95,6 +95,10 @@ claude
 
 O `CLAUDE.md` na raiz é lido automaticamente. Na primeira sessão, o toolkit se apresenta e sugere `/setup`. Nas sessões seguintes, aguarda seu input.
 
+**Atualizando o toolkit:** não precisa saber git. Abra o Claude Code na pasta do toolkit e diga: *"me ajude a atualizar o toolkit"*. O Claude roda o `git pull` de forma segura, garantindo que seu contexto local não seja sobrescrito.
+
+**Segurança do contexto local:** os arquivos de `context/local/` que você preencheu estão protegidos por `.gitignore` e `skip-worktree` — atualizações do toolkit nunca os sobrescrevem. Por precaução, recomendamos manter uma cópia da pasta `context/local/` no Google Drive ou Notion do seu squad.
+
 **Comandos disponíveis:**
 
 | Comando | O que faz |

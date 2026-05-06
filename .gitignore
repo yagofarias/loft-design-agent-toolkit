@@ -1,0 +1,24 @@
+# Contexto local do squad
+# Estes arquivos são preenchidos por cada squad e não devem ser
+# sincronizados com o repositório principal do toolkit.
+# Cada squad mantém sua própria versão localmente.
+context/local/context.md
+context/local/personas.md
+context/local/target-audiences.md
+context/local/brand-voice-local.md
+context/local/competitors.md
+
+# Outputs gerados pelos agentes (ficam no projeto do designer, não no toolkit)
+templates/design-doc-filled*.md
+templates/journey-spec-filled*.md
+templates/critique-output-filled*.md
+templates/tracking-spec-filled*.md
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
