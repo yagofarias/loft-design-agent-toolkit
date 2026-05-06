@@ -180,9 +180,22 @@ O cronograma usa uma tabela visual com 3 meses completos. Ao gerar:
 3. **Se o designer tiver data de entrega**, faça engenharia reversa:
    - Calcule quantas semanas estão disponíveis
    - Distribua as fases de trás para frente a partir da data de entrega
-   - Sinaliza com `⚠️` fases que estão comprimidas demais
+   - Sinalize com `⚠️` fases que estão comprimidas demais
 
-Exemplo de tabela gerada (maio–junho–julho 2026):
+**Dev sprint — heurística de tempo mínimo após o handoff:**
+
+O gap entre "Handoff para dev" e "Lançamento" é o sprint de implementação. Não comprimir abaixo do mínimo do porte. Se o cronograma não couber, negociar escopo — nunca apertar dev.
+
+| Porte | Características | Dev sprint mínimo |
+|-------|----------------|-------------------|
+| **Pequeno** | Ajuste incremental, novo componente isolado, sem novo fluxo | 1–2 semanas |
+| **Médio** | Novo fluxo, 1 integração externa, 3–8 telas novas | 3–5 semanas |
+| **Grande** | Múltiplos fluxos, múltiplas integrações, nova feature completa | 6–8 semanas |
+| **Reimaginação** | Refatoração ampla, mudança estrutural de UX, múltiplas integrações novas | 8–12 semanas |
+
+> Referência: MVPs simples levam 8–12 semanas de dev; complexos, 4–6 meses (dados de mercado 2024–2025). Handoffs bem executados podem reduzir em 50% o tempo de implementação — mas só se o sprint estiver dimensionado para absorver a implementação, não apressado.
+
+Inclua uma linha explícita **"Dev sprint"** no Gantt entre o handoff e o lançamento — não deixe o intervalo implícito. Exemplo:
 
 ```
 | Fase | Mai 04-08 | Mai 11-15 | Mai 18-22 | Mai 25-29 | Jun 01-05 | Jun 08-12 | Jun 15-19 | Jun 22-26 | Jul 29/06-03 | Jul 07-11 | Jul 14-18 | Jul 21-25 | Jul 28-01/08 |
@@ -197,8 +210,9 @@ Exemplo de tabela gerada (maio–junho–julho 2026):
 | Design critique | | | | | | ████ | ████ | | | | | | |
 | **Entrega** | | | | | | | | | | | | | |
 | Handoff para dev | | | | | | | | ████ | | | | | |
-| Lançamento | | | | | | | | | | ████ | | | |
-| Revisão pós-lançamento | | | | | | | | | | | ████ | | |
+| Dev sprint (implementação) | | | | | | | | | ████ | ████ | ████ | | |
+| Lançamento | | | | | | | | | | | | ████ | |
+| Revisão pós-lançamento | | | | | | | | | | | | | ████ |
 ```
 
 ---
@@ -210,6 +224,8 @@ Exemplo de tabela gerada (maio–junho–julho 2026):
 - [ ] O fora do escopo está explícito?
 - [ ] As personas referenciadas existem no contexto local ou foram descritas?
 - [ ] O cronograma (quando preenchido) é realista dado o prazo informado?
+- [ ] O dev sprint após o handoff está dimensionado corretamente para o porte? (mínimo 3 semanas para features médias, 6+ para reimaginações — ver heurística acima)
+- [ ] Existe uma linha "Dev sprint" explícita no Gantt entre handoff e lançamento?
 - [ ] As seções [A PREENCHER] têm perguntas de orientação suficientes?
 
 ---

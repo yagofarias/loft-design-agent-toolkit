@@ -56,6 +56,8 @@ Este documento pode ser preenchido de duas formas:
 
 *Fases opcionais — adicione linhas se fizer sentido: `Benchmark competitivo` · `Pesquisa quantitativa` · `Teste A/B` · `Rollout gradual`*
 
+*⚠️ **Dev sprint:** o intervalo entre "Handoff para dev" e "Lançamento" é dedicado à implementação — inclua sempre uma linha "Dev sprint" explícita. Reserve no mínimo: **1–2 semanas** para ajustes pequenos · **3–5 semanas** para novo fluxo ou integração · **6–8 semanas** para feature grande · **8–12 semanas** para reimaginação de UX. Se o prazo não couber, reduza escopo — nunca comprima o dev sprint.*
+
 <!-- 
   INSTRUÇÕES PARA PREENCHER MANUALMENTE:
   - Substitua [Mês N] pelos 3 meses do projeto (ex: Maio, Junho, Julho)
@@ -78,6 +80,7 @@ Este documento pode ser preenchido de duas formas:
 | Design critique | | | | | | | | | | | | | |
 | **Entrega** | | | | | | | | | | | | | |
 | Handoff para dev | | | | | | | | | | | | | |
+| Dev sprint (implementação) | | | | | | | | | | | | | |
 | Lançamento | | | | | | | | | | | | | |
 | Revisão pós-lançamento | | | | | | | | | | | | | |
 
