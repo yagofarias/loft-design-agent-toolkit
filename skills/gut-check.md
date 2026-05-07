@@ -27,9 +27,20 @@ Esta skill interrompe o avanço automático para questionar o que está sendo as
 
 Com base no que foi descrito no intake, selecione as **5 perguntas de maior risco** para este contexto específico. Não use um questionário fixo — priorize o que pode mais facilmente estar errado ou não validado.
 
+Antes de selecionar as perguntas, avalie o escopo do projeto para calibrar a pergunta de **zoom-out**:
+
+- **Ajuste incremental** (pequena mudança): *"Esse ajuste resolve um sintoma ou o problema de fundo? Existe uma mudança maior que tornaria esse ajuste desnecessário?"*
+- **Nova feature ou fluxo**: *"Estamos construindo isso no nível certo de intervenção? Há algo de processo, integração ou modelo de negócio que tornaria essa feature insuficiente ou obsoleta?"*
+- **Redesign ou reimaginação**: *"Essa reimaginação endereça a causa raiz ou estamos otimizando um fluxo que não deveria existir do jeito que existe?"*
+
+A pergunta de zoom-out deve aparecer adaptada ao contexto específico — não como frase genérica, mas referenciando o projeto em questão. Inclua sempre pelo menos uma pergunta de zoom-out nas 5 selecionadas.
+
+---
+
 Selecione a partir das perspectivas abaixo, escolhendo as mais relevantes para o contexto:
 
 **🔵 Produto**
+- *[zoom-out contextual — adapte conforme o escopo acima]*
 - Esse é realmente o problema que precisamos resolver agora, ou existe outro mais urgente por trás?
 - Se isso funcionar perfeitamente, o que muda para o usuário ou para o negócio?
 - Qual evidência temos de que esse problema existe da forma que estamos assumindo?
