@@ -10,6 +10,7 @@ status: "[Rascunho | Em revisão | Aprovado | Em execução | Arquivado]"
 **Squad:** [Nome do squad]  
 **Stakeholder principal:** [Nome + área]  
 **Última atualização:** [DD/MM/AAAA]  
+**Confluence:** [URL da página — preenchido após publicar]  
 **Documentos relacionados:** [Links — Figma, ticket, SDD, PRD existente]
 
 ---

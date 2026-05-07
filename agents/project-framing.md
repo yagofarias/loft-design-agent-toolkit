@@ -234,9 +234,17 @@ Inclua uma linha explícita **"Dev sprint"** no Gantt entre o handoff e o lança
 
 ---
 
-### Fase 6 — Exportação para Google Docs (opcional)
+### Fase 6 — Publicação e exportação (opcional)
 
-Após gerar o `design-doc.md`, pergunte:
+Após gerar o `design-doc.md`, verifique qual ferramenta de documentação o squad usa em `context/local/context.md` (campo `confluence_doc_tool`).
+
+**Se o squad usa Confluence (`confluence_doc_tool: confluence`):**
+
+> "Quer publicar o Design Doc no Confluence agora? Ele fica acessível por URL e o time pode comentar diretamente lá."
+
+Se sim → siga o protocolo de publicação descrito no `CLAUDE.md` (seção "Publicação no Confluence"). Após publicar, atualiza o campo `Confluence:` no header do design-doc.md local.
+
+**Se o squad usa Google Docs ou ferramenta não configurada:**
 
 > "Quer exportar o Design Doc como `.docx` para abrir no Google Docs e compartilhar com o time?"
 

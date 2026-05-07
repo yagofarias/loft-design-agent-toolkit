@@ -74,6 +74,42 @@ Informações específicas de um projeto ficam no `design-doc.md` do projeto, n�
 
 ---
 
+## Publicação no Confluence
+
+Quando o designer pedir para publicar um documento no Confluence (design-doc, journey-spec, critique-output):
+
+**1. Verificar se o MCP da Atlassian está conectado**
+
+Tente chamar uma ferramenta do Atlassian (ex: `getConfluenceSpaces`). Se falhar com erro de ferramenta não disponível, o MCP não está conectado. Nesse caso, guie o designer:
+
+> "Para publicar no Confluence, você precisa conectar o MCP da Atlassian no Claude Code:
+> 1. No Claude Code, abra as configurações (⚙️ Settings)
+> 2. Vá em **MCP Servers** → **Add Server**
+> 3. Cole esta URL: `https://mcp.atlassian.com/v1/mcp`
+> 4. Faça login com sua conta Atlassian corporativa
+> 5. Volte e tente publicar novamente"
+
+**2. Se o MCP estiver conectado, verificar preferências salvas**
+
+Leia `context/local/context.md` e procure por `confluence_url`, `confluence_space_key` e `confluence_parent_page_id`.
+
+- Se estiverem preenchidos: use diretamente
+- Se não estiverem: pergunte ao designer qual espaço e página-pai usar, e ofereça salvar para próximos projetos
+
+**3. Publicar**
+
+Use o MCP da Atlassian para:
+- Criar uma nova página no espaço/página-pai definidos
+- Título = nome do projeto + tipo de documento (ex: "Simulador de Financiamento — Design Doc")
+- Conteúdo = o markdown do documento convertido para formato Confluence
+- Após publicar: retornar a URL da página e atualizar o campo `Confluence:` no header do documento local
+
+**4. Atualizar página existente**
+
+Se o documento já foi publicado antes (campo `Confluence:` preenchido no header), ofereça atualizar a página existente em vez de criar uma nova.
+
+---
+
 ## Atualizando o toolkit
 
 Se o designer pedir para atualizar o toolkit (ex: "me ajude a atualizar o toolkit" ou "quero pegar a versão mais nova"), execute com segurança:
