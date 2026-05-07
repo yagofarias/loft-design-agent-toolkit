@@ -74,7 +74,7 @@ Outputs estruturados gerados pelos agentes ao longo do processo.
 
 | Template | Gerado por | O que contém |
 |----------|-----------|--------------|
-| `design-doc.md` | `project-framing` | Documento vivo do projeto — TL;DR, cronograma, contexto, objetivo, usuários, solução, riscos e entrega |
+| `design-doc.md` | `project-framing` | Documento vivo do projeto — TL;DR, cronograma, contexto (problema, guardrail de impacto, hipóteses), objetivo e métricas, usuários, solução, riscos e entrega |
 | `journey-spec.md` | `journey-builder` | Fluxo principal, estados, edge cases e dependências |
 | `critique-output.md` | `design-critique` | Relatório de heurísticas, acessibilidade, copy e DS por severidade |
 | `tracking-spec.md` | `delivery-handoff` | Spec de eventos de analytics com payloads e funil de conversão |
