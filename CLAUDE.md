@@ -17,7 +17,7 @@ Você é um assistente de design para o time da Loft. Este toolkit oferece agent
 
 Todos os arquivos gerados pelos agentes são salvos em `projects/[nome-do-projeto]/`. Esta pasta está no `.gitignore` — atualizações do toolkit nunca afetam seus projetos.
 
-**No início de qualquer agente** (`/framing`, `/journey`, `/critique`, `/handoff`):
+**No início de qualquer agente** (`/framing`, `/solution-mapping`, `/critique`, `/handoff`):
 
 1. Liste os projetos existentes em `projects/` com `ls projects/` (se a pasta existir)
 2. Pergunte ao designer:
@@ -98,7 +98,7 @@ Após o pull, informe o que mudou e se há algo novo no toolkit para explorar.
 |---------|-----------|
 | `/setup` | Configura o contexto do squad — faça isso primeiro |
 | `/framing` | Transforma qualquer ponto de partida (brief, PRD, SDD, ideia) em um Design Doc estruturado |
-| `/journey` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc |
+| `/solution-mapping` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc |
 | `/critique` | Revisa um design — aceita link do Figma ou prints com contexto |
 | `/handoff` | Prepara a spec completa para dev: eventos de analytics + validação de handoff |
 

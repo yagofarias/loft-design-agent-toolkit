@@ -1,6 +1,6 @@
 ---
 version: "2.0"
-agent: journey-builder
+agent: solution-mapping
 status: "[Rascunho | Em revisão | Aprovado]"
 ---
 

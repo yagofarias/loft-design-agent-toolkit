@@ -163,7 +163,7 @@ Se **sim** → gere o `templates/design-doc.md` preenchido com:
 - **Seção 3 — Usuários e Cenário** — Personas, como fazem hoje, cenário principal
 
 **Seções com [A PREENCHER] + perguntas de orientação:**
-- **Seção 4 — Solução** — A ser preenchida junto com o `journey-builder`
+- **Seção 4 — Solução** — A ser preenchida junto com o `solution-mapping`
 - **Seção 5 — Riscos e Incertezas** — A ser enriquecida pelo `gut-check` e `design-critique`
 - **Seção 6 — Viabilidade e Entrega** — A ser completada pelo `delivery-handoff`
 

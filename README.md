@@ -11,7 +11,7 @@ Quatro agentes que cobrem o processo completo de design. Cada um pode ser usado 
 | Agente | O que faz |
 |--------|-----------|
 | `project-framing` | Transforma qualquer ponto de partida (brief, PRD, RFC, SDD ou ideia bruta) em um Design Doc estruturado. Aceita documentos existentes como input e extrai o que é relevante para design. Gera o documento vivo que guia o projeto inteiro. |
-| `journey-builder` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc. Preenche a seção 4 (Solução) do documento vivo. |
+| `solution-mapping` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc. Preenche a seção 4 (Solução) do documento vivo. |
 | `design-critique` | Avalia o design em uma passagem: heurísticas de usabilidade, acessibilidade WCAG, completude de estados, clareza de copy e consistência com o DS. Relatório consolidado. |
 | `delivery-handoff` | Gera a spec de eventos de analytics e valida se o design está completamente documentado para o dev — sem ambiguidade, sem estados faltando. |
 
@@ -25,9 +25,9 @@ Unidades de conhecimento modulares carregadas pelos agentes.
 |-------|-----------|--------------|
 | `gut-check` | Sabatina de 5 perguntas críticas antes de avançar — perspectivas de produto, negócio, design e persona | todos os agentes |
 | `problem-scoping` | Estrutura problem statements, gera hipóteses verificáveis e traduz requisitos em necessidades de design | project-framing |
-| `user-flows` | Mapeia happy path, fluxos alternativos, erros e fluxos com múltiplos atores (B2B) | journey-builder, delivery-handoff |
-| `state-coverage` | Garante que todos os estados de UI foram identificados: loading, erro, vazio, aprovação, expirado | journey-builder, design-critique, delivery-handoff |
-| `edge-cases` | Checklist de cenários extremos — universal + específicos da Loft (documentos, financeiro, aprovação, B2B) | journey-builder, design-critique, delivery-handoff |
+| `user-flows` | Mapeia happy path, fluxos alternativos, erros e fluxos com múltiplos atores (B2B) | solution-mapping, delivery-handoff |
+| `state-coverage` | Garante que todos os estados de UI foram identificados: loading, erro, vazio, aprovação, expirado | solution-mapping, design-critique, delivery-handoff |
+| `edge-cases` | Checklist de cenários extremos — universal + específicos da Loft (documentos, financeiro, aprovação, B2B) | solution-mapping, design-critique, delivery-handoff |
 | `heuristics` | Avaliação com as 10 heurísticas de Nielsen + WCAG 2.1 + exemplos do contexto Loft | design-critique |
 | `ux-writing` | Critérios de copy por tipo de elemento — aplica o brand-voice.md em contextos de UI e fintech | design-critique |
 | `copan-check` | Valida componentes e tokens contra o Copan — aceita link do Figma ou prints | design-critique, delivery-handoff |
@@ -75,7 +75,7 @@ Outputs estruturados gerados pelos agentes ao longo do processo.
 | Template | Gerado por | O que contém |
 |----------|-----------|--------------|
 | `design-doc.md` | `project-framing` | Documento vivo do projeto — TL;DR, cronograma, contexto (problema, guardrail de impacto, hipóteses), objetivo e métricas, usuários, solução, riscos e entrega |
-| `journey-spec.md` | `journey-builder` | Fluxo principal, estados, edge cases e dependências |
+| `journey-spec.md` | `solution-mapping` | Fluxo principal, estados, edge cases e dependências |
 | `critique-output.md` | `design-critique` | Relatório de heurísticas, acessibilidade, copy e DS por severidade |
 | `tracking-spec.md` | `delivery-handoff` | Spec de eventos de analytics com payloads e funil de conversão |
 
@@ -116,7 +116,7 @@ claude
 |---------|-----------|
 | `/setup` | Configura o contexto do squad — faça isso primeiro |
 | `/framing` | Inicia um project framing |
-| `/journey` | Mapeia fluxos e estados |
+| `/solution-mapping` | Mapeia fluxos e estados |
 | `/critique` | Revisa um design (URL do Figma ou prints) |
 | `/handoff` | Prepara spec completa para dev |
 

@@ -1,16 +1,16 @@
 ---
-name: journey
+name: solution-mapping
 description: >
-  Maps user flows, states, edge cases and dependencies from the Design Doc.
-  Use after project framing when you need to structure flows before opening Figma.
-  Produces a journey-spec.md ready for design and handoff.
+  Explores solution directions and maps flows, states, edge cases and
+  tangibilization artifacts. Starts with ideation (when needed) and ends
+  with the designer ready to open Figma. Use after /framing.
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob
 ---
 
 Antes de iniciar, siga a lógica de gestão de projetos definida no CLAUDE.md — identifique ou crie o projeto em `projects/` e salve os outputs lá.
 
-Start a journey mapping session by reading and following the protocol in `agents/journey-builder.md`.
+Start a solution mapping session by reading and following the protocol in `agents/solution-mapping.md`.
 
 Before starting, read these files:
 
@@ -32,9 +32,7 @@ Before starting, read these files:
 - `skills/edge-cases.md`
 - `skills/gut-check.md`
 
-**Design Doc (if exists):**
+**Project design doc (if exists):**
 - `templates/design-doc.md`
-
-Then follow `agents/journey-builder.md` from Phase 1 (intake).
 
 $ARGUMENTS

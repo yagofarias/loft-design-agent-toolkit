@@ -149,12 +149,50 @@ Os arquivos de `/context/global` são os mais críticos para qualidade dos outpu
 - Todos: `kebab-case.md`
 
 ### Commits
+
+Todo commit deve ter uma mensagem clara que responda: **o que mudou e por quê**. Não "atualiza arquivo X" — mas o que foi adicionado, corrigido ou removido e qual o impacto.
+
+**Formato:**
 ```
-feat: novo agente de X
-improve: refinamento de skill Y
-fix: correção em template Z
-context: atualização de design-system.md
-docs: melhoria no how-to-use
+[tipo]: [descrição do que mudou — específico]
+```
+
+**Tipos:**
+```
+feat:     novo agente, skill, template ou funcionalidade
+improve:  refinamento de conteúdo existente (ex: novos exemplos, seção ampliada)
+fix:      correção de erro, inconsistência ou referência quebrada
+refactor: renomear, reorganizar ou mover sem mudar comportamento
+context:  atualização de arquivos de contexto global
+docs:     melhorias em documentação (README, como-usar, como-contribuir)
+```
+
+**Exemplos bem escritos:**
+```
+feat: add solution-mapping agent with direction cards and tangibilization
+improve: edge-cases — add Loft-specific checklists for financial flows and B2B
+fix: update all references from journey-builder to solution-mapping
+refactor: rename ui-states to state-coverage across all files
+context: update brand-voice with fintech trust signals and B2B calibration
+docs: expand commit convention in como-contribuir
+```
+
+**Exemplos mal escritos (evitar):**
+```
+update files
+fix stuff
+changes
+WIP
+melhoria
+```
+
+Se a mudança é grande, adicione um corpo ao commit:
+```
+feat: add solution-mapping with ideation phase
+
+- Phase 0 generates 2-3 direction cards anchored in market references
+- Phase 5 generates tangibilization artifacts (Mermaid, text wireframe, storyboard)
+- Replaces journey-builder across all agents, skills and README
 ```
 
 ### PRs
