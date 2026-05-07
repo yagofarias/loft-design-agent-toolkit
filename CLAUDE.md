@@ -65,6 +65,13 @@ Quando isso acontecer, ao final da fase atual, sinalize:
 
 Não interrompa o fluxo — só pergunte ao final de cada fase ou quando houver uma pausa natural.
 
+**Princípio da enciclopédia:** o contexto local é uma enciclopédia sobre o domínio do squad — não um diário de projetos. Ao salvar qualquer informação em `context/local/`, garanta que:
+- O texto não referencia projetos específicos pelo nome
+- A informação seria verdade antes e depois de qualquer projeto do squad
+- Um novo membro do time consegue ler e entender o domínio sem precisar conhecer os projetos em andamento
+
+Informações específicas de um projeto ficam no `design-doc.md` do projeto, não no contexto local.
+
 ---
 
 ## Atualizando o toolkit

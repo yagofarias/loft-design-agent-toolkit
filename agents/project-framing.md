@@ -75,6 +75,9 @@ Colete apenas o que o documento de partida (se houver) não responde. Aceite em 
 4. **O que já foi tentado?** — Soluções anteriores, aprendizados existentes
 5. **Qual é o prazo?** — Data de entrega desejada ou estimativa
 6. **Contexto disponível** — Existe pesquisa, analytics, feedbacks ou benchmarks já feitos?
+7. **Hipóteses não validadas** — "O que você acredita ser verdade sobre esse problema que ainda não foi confirmado?" Liste como `[ASSUMIDO: ...]` ou `[A VALIDAR: ...]` para cada crença não testada. Essas hipóteses alimentam a Seção 4.1 do design-doc e tornam o gut-check mais preciso.
+8. **Guardrail de impacto** — "Quais outras áreas, times ou produtos da empresa poderiam ser afetados ou bloqueados por este projeto?" Pense em: jurídico/compliance, BizDev, squads que compartilham o mesmo sistema, canais ou produtos que herdam mudanças. Isso não é sobre aprovação — é sobre dependências que podem travar o projeto se descobertas tarde.
+9. **Audiências vs. personas** — Se a comunicação do produto varia significativamente por segmento (ex: gestor de assessoria vs. corretor de baixo volume), carregue `context/local/target-audiences.md` além das personas. Use personas quando a pergunta é "quem usa e como?"; use audiências quando a pergunta é "como comunicar diferente para segmentos diferentes?".
 
 Se alguma informação não estiver disponível, marque como `[A VALIDAR]` e continue.
 
@@ -140,6 +143,7 @@ Com base no intake, pesquisa e gut-check (quando executados):
 3. **Mapeie as tensões** — Existe conflito entre necessidade do negócio e do usuário? Entre urgência e qualidade?
 4. **Proponha métricas de sucesso** — Com base no problema e no contexto, sugira pelo menos uma métrica primária e uma guardrail.
 5. **Defina o fora do escopo** — O que explicitamente não entra nesta entrega.
+6. **Identifique o que vai para o contexto local** — Separe o que é conhecimento durável do squad (vai para `context/local/`) do que é específico do projeto (fica no design-doc). Regra: se o fato seria verdade em qualquer outro projeto do squad, é enciclopédia — vai para o contexto. Se só faz sentido neste projeto, fica no design-doc. **Nunca referencie projetos específicos no contexto local** — ele deve ser legível por quem nunca viu nenhum projeto do squad.
 
 ---
 
@@ -293,4 +297,6 @@ Salvar como `design-doc-[nome-do-projeto].docx` na pasta de trabalho atual. Apó
 - Não proponha soluções de interface nesta fase — o output é o problema estruturado, não a resposta
 - Se o brief for contraditório, aponte a contradição antes de prosseguir
 - Ao sugerir métricas, baseie-se no contexto do squad quando disponível em `context/local/context.md`
+- **Densidade do documento:** escreva com o nível de detalhe que cada seção exige. Contexto e problema merecem riqueza — são o que justifica o projeto. Seções ainda em aberto (solução, viabilidade) devem ser leves. Documente decisões e insights, não o percurso da conversa.
+- **Princípio da enciclopédia:** ao atualizar `context/local/`, nunca referencie projetos específicos. O contexto local é uma enciclopédia sobre o domínio — deve fazer sentido para alguém que nunca viu nenhum projeto do squad.
 - Se o gut-check foi pulado e o output revelar premissas frágeis, lembre ao final: "Você não passou pelo gut-check. Com base no que trabalhamos, há pontos que valeriam uma sabatina antes de avançar. Quer fazer agora?"

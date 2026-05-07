@@ -135,6 +135,36 @@ Este documento pode ser preenchido de duas formas:
 
 ---
 
+### 1.4 Guardrail de impacto ⚠️ importante
+
+*Quais outras áreas, times ou produtos podem ser afetados ou bloqueados por este projeto? Não é sobre aprovação — é sobre dependências que travam se descobertas tarde.*
+
+*Perguntas para ajudar:*
+*— Existe algum time de jurídico, compliance ou regulatório que precisa saber antes de avançar?*
+*— Quais outros squads ou produtos compartilham o mesmo sistema, engine ou fluxo que este projeto modifica?*
+*— Existem contratos com parceiros ou fornecedores que podem ser afetados?*
+*— Quais canais ou produtos herdam automaticamente mudanças feitas aqui?*
+
+| Área / Time / Produto | Como é impactado | Quando acionar |
+|-----------------------|-----------------|----------------|
+| [Ex: Jurídico/Compliance] | [Ex: consulta com CPF pode afetar score — precisa de parecer] | [Ex: antes de iniciar integração de produção] |
+| [Ex: Squad de Análise de Crédito] | [Ex: engine compartilhado — mudanças podem afetar o fluxo de crédito] | [Ex: alinhamento antes do handoff] |
+
+---
+
+### 1.5 Hipóteses iniciais
+
+*O que você acredita ser verdade sobre o problema que ainda não foi confirmado? Levantar explicitamente antes de projetar evita construir sobre premissas frágeis.*
+
+*Use `[ASSUMIDO: ...]` para crenças que guiam decisões e `[A VALIDAR: ...]` para o que precisa de verificação antes de avançar.*
+
+- `[ASSUMIDO:` ...]
+- `[A VALIDAR:` ...]
+
+*Estas hipóteses alimentam a Seção 4.1 (Opções consideradas) quando for hora de explorar soluções.*
+
+---
+
 ## 2. Objetivo e Sucesso
 
 ### 2.1 O que queremos alcançar ✅ obrigatório
