@@ -2,78 +2,121 @@
 name: setup
 description: >
   Guides the designer through filling the squad's local context files.
-  Run this once when starting with the toolkit in a new squad. The local
-  context is what makes all other agents specific to your domain.
+  Offers web research and corporate document analysis to build a first
+  draft quickly. Run once per squad, or when context needs a major update.
 disable-model-invocation: true
-allowed-tools: Read, Write, Bash
+allowed-tools: Read, Write, Bash, WebSearch, WebFetch
 ---
 
-Start a local context setup session by reading and following the protocol in `playbooks/setup-local-context.md`.
+Inicie o setup do contexto local do squad seguindo o protocolo abaixo.
 
-Before starting, read:
-- `playbooks/setup-local-context.md`
-- `context/local/README.md`
+## Fase 0 — Como você quer construir o contexto?
 
-Then check which files in `context/local/` already have content and which still have placeholder text (`[A PREENCHER]`). Start from where the designer left off — don't repeat what's already filled.
+Antes de fazer qualquer pergunta, apresente as opções:
 
-Guide the designer through the setup phases one at a time:
-1. Squad context (`context.md`)
+> "Posso te ajudar a construir o contexto do squad de três formas — você escolhe o que fizer mais sentido agora:
+>
+> **1. Pesquisa web** — busco informações públicas sobre o produto, domínio de mercado e concorrentes do seu squad para montar um rascunho
+> **2. Documentos corporativos** — se você compartilhar links ou conectar Drive/Confluence/Slack, analiso o que existir e uso como base
+> **3. Do zero** — respondemos juntos, campo por campo
+>
+> Você pode combinar qualquer uma. Com qual quer começar?"
+
+**Regra fundamental:** todo conhecimento coletado — seja da web ou de documentos — é tratado como **hipótese a validar**, não como fato. Mesmo documentos internos podem estar desatualizados.
+
+Ao apresentar algo coletado, use sempre a forma:
+- ✅ *"Encontrei que X parece ser verdade com base em [fonte]. Isso ainda se aplica?"*
+- ✅ *"Este documento é de [data] — pode estar desatualizado. O que ainda está correto?"*
+- ❌ ~~"X é verdade."~~
+
+---
+
+## Fase 1 — Coleta (se escolheu pesquisa ou documentos)
+
+**Se pesquisa web:**
+
+Use WebSearch para buscar:
+- Nome do produto + "Loft" + domínio (ex: "Loft financiamento imobiliário simulador")
+- Concorrentes do domínio
+- Contexto de mercado relevante
+
+Monte um rascunho dos arquivos com base no que encontrar.
+
+**Se documentos corporativos:**
+
+Pergunte: "Quais documentos você tem? Cole os links ou descreva onde estão (Confluence, Drive, Slack)."
+
+Se MCPs estiverem conectados (Confluence, Drive), acesse diretamente.
+Se não estiverem, peça que o designer cole o conteúdo relevante no chat.
+
+Analise e extraia informações relevantes para cada arquivo de contexto.
+
+---
+
+## Fase 2 — Validação do rascunho
+
+Apresente o rascunho completo dos arquivos de contexto de uma vez:
+
+> "Com base no que coletei, aqui está um rascunho do seu contexto local. Revise cada seção e me diga:
+> - O que está correto ✅
+> - O que está errado ou desatualizado ❌
+> - O que está faltando e precisa ser adicionado +"
+
+O designer edita e completa apenas o que está em branco ou errado — muito mais rápido do que partir do zero.
+
+---
+
+## Fase 3 — Preenchimento das lacunas
+
+Para o que não foi possível coletar automaticamente, percorra os arquivos um por um fazendo apenas as perguntas necessárias:
+
+1. Squad context (`context.md`) — regras de negócio, terminologia, constraints
 2. Personas (`personas.md`)
 3. Target audiences (`target-audiences.md`)
 4. Local brand voice (`brand-voice-local.md`)
 5. Competitors (`competitors.md`)
-6. Integrations (Confluence + documentation tool)
 
-After each file is filled, confirm with the designer before moving to the next.
+Confirme com o designer antes de passar para o próximo arquivo.
 
-## Fase 6 — Integrações
+---
 
-Após as 5 fases de contexto, pergunte:
+## Fase 4 — Integrações
+
+Após os arquivos de contexto, pergunte:
 
 > "O seu squad usa Confluence para centralizar documentação de projetos?"
 
-**Se sim:**
-
-1. Pergunte: "Qual é a URL do seu Confluence? (ex: https://loft.atlassian.net)"
-2. Pergunte: "Em qual espaço do Confluence você quer publicar os design docs? Cole o link de uma página ou o nome do espaço."
-3. Pergunte (opcional): "Existe uma página-pai onde os design docs devem ficar agrupados? Se sim, cole o link dela."
-
-Salve as respostas em `context/local/context.md` na seção de integrações:
+**Se sim:** colete URL do Confluence, chave do espaço e página-pai opcional. Salve em `context.md`:
 ```
-## Integrações
-
-confluence_url: [URL base do Confluence]
-confluence_space_key: [Chave do espaço — ex: DES, DESIGN]
-confluence_parent_page_id: [ID ou URL da página-pai, se houver]
+confluence_url: [URL]
+confluence_space_key: [chave]
+confluence_parent_page_id: [ID ou URL, se houver]
 confluence_doc_tool: confluence
 ```
 
-**Se não usa Confluence:**
-
-Pergunte: "O squad usa Google Drive para documentação? Se sim, qual pasta?" Salve se houver.
-
+**Se não:** pergunte sobre Google Drive e salve se houver:
 ```
 confluence_doc_tool: google_drive
-google_drive_folder_url: [URL da pasta, se houver]
+google_drive_folder_url: [URL, se houver]
 ```
 
-**Sobre o MCP da Atlassian:**
+Informe: "Para publicar automaticamente no Confluence, você precisará conectar o MCP da Atlassian. Me diga quando quiser fazer isso."
 
-Para a publicação funcionar, o MCP da Atlassian (Rovo) precisa estar conectado no Claude Code. Informe:
+---
 
-> "Para publicar automaticamente no Confluence, você precisa conectar o MCP da Atlassian uma vez. Quando quiser fazer isso, diga 'me ajude a conectar o Confluence' que eu te guio."
+## Ao finalizar
 
-## Ao finalizar o setup
-
-Depois que todos os arquivos forem preenchidos, execute este comando para proteger o contexto local de atualizações futuras do toolkit via `git pull`:
+Execute para proteger os arquivos de atualizações do toolkit:
 
 ```bash
 git update-index --skip-worktree context/local/context.md context/local/personas.md context/local/target-audiences.md context/local/brand-voice-local.md context/local/competitors.md 2>/dev/null || true
 ```
 
-Informe o designer:
-> "Seu contexto local está protegido. Se você atualizar o toolkit no futuro, basta dizer 'me ajude a atualizar o toolkit' que eu cuido disso sem apagar seus dados."
+Informe:
+> "Seu contexto local está protegido. Para atualizar o toolkit no futuro, diga 'me ajude a atualizar o toolkit'."
 
-Mostre um resumo do que foi preenchido e quais agentes estão prontos para usar.
+Mostre um resumo do que foi preenchido. Sugira começar com `/framing` para o primeiro projeto.
+
+> "Lembre: o contexto local é uma enciclopédia viva — quanto mais você alimenta conforme o produto evolui, mais os agentes acertam no contexto do seu squad."
 
 $ARGUMENTS

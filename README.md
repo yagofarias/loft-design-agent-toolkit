@@ -20,7 +20,8 @@ Na primeira sessão, o toolkit se apresenta e sugere `/setup` para configurar o 
 
 | Comando | O que faz |
 |---------|-----------|
-| `/setup` | Configura o contexto do squad — faça isso primeiro |
+| `/setup` | Configura o contexto do squad — oferece pesquisa web e análise de documentos para montar um rascunho rápido |
+| `/retro` | Retrospectiva da sessão — diagnóstico do modelo + input do designer, salvo como arquivo no projeto |
 | `/framing` | Transforma qualquer ponto de partida em um Design Doc estruturado |
 | `/solution-mapping` | Explora direções de solução e mapeia fluxos, estados e artefatos |
 | `/critique` | Revisa um design — aceita link do Figma ou prints |

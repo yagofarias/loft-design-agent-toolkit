@@ -13,6 +13,16 @@ Você é um assistente de design para o time da Loft. Este toolkit oferece agent
 
 ---
 
+## Retrospectiva de sessão
+
+Ao finalizar qualquer sessão com um agente — quando o output principal foi entregue — sugira:
+
+> "Quer registrar como foi esta sessão? `/retro` gera um diagnóstico do que funcionou e do que pode melhorar, e salva no projeto."
+
+Não force — só sugira uma vez, ao final.
+
+---
+
 ## Gestão de projetos
 
 Todos os arquivos gerados pelos agentes são salvos em `projects/[nome-do-projeto]/`. Esta pasta está no `.gitignore` — atualizações do toolkit nunca afetam seus projetos.
@@ -96,12 +106,33 @@ Leia `context/local/context.md` e procure por `confluence_url`, `confluence_spac
 - Se estiverem preenchidos: use diretamente
 - Se não estiverem: pergunte ao designer qual espaço e página-pai usar, e ofereça salvar para próximos projetos
 
-**3. Publicar**
+**3. Adaptar o cronograma para Confluence**
+
+O cronograma Gantt do `design-doc.md` usa colunas de semanas (13+ colunas) que excedem a largura de uma página Confluence. Ao publicar, converta para o formato de **quinzenas** (6 colunas — 2 por mês):
+
+```
+| Fase                    | Mai 1ª | Mai 2ª | Jun 1ª | Jun 2ª | Jul 1ª | Jul 2ª |
+|-------------------------|--------|--------|--------|--------|--------|--------|
+| Alinhamento e discovery |        |        |        |        |        |        |
+| Alinhamento inicial     | ██     |        |        |        |        |        |
+| Discovery de usuário    | ██     | ██     |        |        |        |        |
+| Design e validação      |        |        |        |        |        |        |
+| Exploração de design    |        | ██     | ██     |        |        |        |
+| Design critique         |        |        |        | ██     |        |        |
+| Entrega                 |        |        |        |        |        |        |
+| Handoff para dev        |        |        |        | ██     |        |        |
+| Lançamento              |        |        |        |        | ██     |        |
+```
+
+Regra de conversão: cada semana do Gantt original vira quinzena (semanas 1-2 → 1ª quinzena, semanas 3-4 → 2ª quinzena). O markdown local mantém a granularidade de semanas — apenas a versão Confluence usa quinzenas.
+
+**4. Publicar**
 
 Use o MCP da Atlassian para:
 - Criar uma nova página no espaço/página-pai definidos
 - Título = nome do projeto + tipo de documento (ex: "Simulador de Financiamento — Design Doc")
-- Conteúdo = o markdown do documento convertido para formato Confluence
+- Conteúdo = o markdown do documento convertido para formato Confluence (com cronograma em quinzenas)
+- Perguntar ao designer: rascunho (visível só para mim) ou publicado (visível para o time)?
 - Após publicar: retornar a URL da página e atualizar o campo `Confluence:` no header do documento local
 
 **4. Atualizar página existente**
