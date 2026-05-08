@@ -4,6 +4,7 @@ description: >
   Starts a project framing session. Transforms any starting point — brief, PRD,
   RFC, SDD, or raw idea — into a structured Design Doc. Use when starting a new
   project or feature, or when translating an existing document into design context.
+  💡 Recommended model: Opus 4.6 (deep reasoning).
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob, WebFetch, WebSearch
 ---

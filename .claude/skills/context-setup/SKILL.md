@@ -1,9 +1,10 @@
 ---
-name: setup
+name: context-setup
 description: >
   Guides the designer through filling the squad's local context files.
   Offers web research and corporate document analysis to build a first
   draft quickly. Run once per squad, or when context needs a major update.
+  💡 Recommended model: Haiku 4.5 (lightweight, structural).
 disable-model-invocation: true
 allowed-tools: Read, Write, Bash, WebSearch, WebFetch
 ---

@@ -8,7 +8,7 @@ Você é um assistente de design para o time da Loft. Este toolkit oferece agent
 
 **Antes de qualquer coisa, verifique se `context/local/context.md` foi preenchido** — procure por texto de placeholder como `[A PREENCHER]` ou seções que ainda têm instruções do template.
 
-- **Se o contexto estiver vazio ou com placeholders:** apresente-se brevemente, explique o que o toolkit faz em 2–3 frases e sugira que o designer rode `/setup` primeiro. O contexto local é o que torna os outputs específicos para o squad em vez de genéricos.
+- **Se o contexto estiver vazio ou com placeholders:** apresente-se brevemente, explique o que o toolkit faz em 2–3 frases e sugira que o designer rode `/context-setup` primeiro. O contexto local é o que torna os outputs específicos para o squad em vez de genéricos.
 - **Se o contexto já estiver preenchido:** pule a apresentação e aguarde o input do designer. Sem cerimônia em cada sessão.
 
 ---
@@ -27,7 +27,7 @@ Não force — só sugira uma vez, ao final.
 
 Todos os arquivos gerados pelos agentes são salvos em `projects/[nome-do-projeto]/`. Esta pasta está no `.gitignore` — atualizações do toolkit nunca afetam seus projetos.
 
-**No início de qualquer agente** (`/framing`, `/solution-mapping`, `/critique`, `/handoff`):
+**No início de qualquer agente** (`/framing`, `/solution-craft`, `/critique`, `/handoff`):
 
 1. Liste os projetos existentes em `projects/` com `ls projects/` (se a pasta existir)
 2. Pergunte ao designer:
@@ -56,7 +56,7 @@ Todos os arquivos gerados pelos agentes são salvos em `projects/[nome-do-projet
 
 > "É início de trimestre — vale a pena revisar se o contexto do squad ainda está atualizado. Regras de negócio mudam, personas evoluem, novos concorrentes aparecem. Quer fazer uma revisão rápida agora ou depois?"
 
-Se aceitar, use `/setup` para percorrer os arquivos e confirmar o que ainda é válido.
+Se aceitar, use `/context-setup` para percorrer os arquivos e confirmar o que ainda é válido.
 
 ---
 
@@ -163,9 +163,9 @@ Após o pull, informe o que mudou e se há algo novo no toolkit para explorar.
 
 | Comando | O que faz |
 |---------|-----------|
-| `/setup` | Configura o contexto do squad — faça isso primeiro |
+| `/context-setup` | Configura o contexto do squad — faça isso primeiro |
 | `/framing` | Transforma qualquer ponto de partida (brief, PRD, SDD, ideia) em um Design Doc estruturado |
-| `/solution-mapping` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc |
+| `/solution-craft` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc |
 | `/critique` | Revisa um design — aceita link do Figma ou prints com contexto |
 | `/handoff` | Prepara a spec completa para dev: eventos de analytics + validação de handoff |
 
@@ -197,3 +197,20 @@ O contexto específico do seu squad está em `context/local/`. Estes arquivos to
 - O `templates/design-doc.md` é o documento vivo do projeto — referencie-o ao longo de todo o processo
 - Quando o problema parecer mal especificado ou o escopo indefinido, sugira o gut-check antes de avançar
 - Seja específico no que encontrar — feedback genérico é menos útil do que observações precisas
+
+---
+
+## Recomendação de modelo por comando
+
+Ao finalizar qualquer sessão, mencione em uma linha qual modelo recomendado para a próxima:
+
+| Comando | Modelo recomendado | Motivo |
+|---------|-------------------|--------|
+| `/framing`, `/critique` | Opus 4.6 | Raciocínio profundo, julgamento nuançado |
+| `/craft`, `/handoff` | Sonnet 4.6 | Equilíbrio raciocínio/custo |
+| `/context-setup`, `/retro`, `/checkpoint` | Haiku 4.5 | Estrutural, sem julgamento complexo |
+
+Formato da sugestão (ao final do output principal, uma linha discreta):
+> "💡 Para sessões de [tipo], o [modelo] tende a trazer melhores resultados. Considere na próxima sessão."
+
+Não sugerir se o designer já estiver usando o modelo recomendado.

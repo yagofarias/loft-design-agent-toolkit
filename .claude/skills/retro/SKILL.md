@@ -4,6 +4,7 @@ description: >
   Runs a session retrospective after using any agent. Generates a diagnosis
   of what worked well and what could improve, collects the designer's input,
   and saves a retro-[agent]-[date].md file to the project folder.
+  💡 Recommended model: Haiku 4.5 (lightweight).
 disable-model-invocation: true
 allowed-tools: Read, Write
 ---

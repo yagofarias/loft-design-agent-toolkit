@@ -105,7 +105,7 @@ Abra o arquivo do agente, copie o conteúdo e cole no início de uma conversa co
 | Recebi um PRD e preciso transformar em design | `playbooks/brief-to-design.md` |
 | Mudança pequena em feature existente | `playbooks/quick-product-change.md` |
 | Preciso definir o problema (com ou sem pesquisa/benchmark) | `agents/project-framing.md` |
-| Preciso mapear telas e estados da jornada | `agents/solution-mapping.md` |
+| Preciso mapear telas e estados da jornada | `agents/solution-craft.md` |
 | Quero revisar meu design (usabilidade, copy e DS de uma vez) | `agents/design-critique.md` |
 | Preciso gerar tracking spec e validar handoff para dev | `agents/delivery-handoff.md` |
 
@@ -158,7 +158,7 @@ Chamo o agente de project-framing
        ↓
 Salvo o design-doc.md preenchido
        ↓
-Chamo o agente de solution-mapping
+Chamo o agente de solution-craft
        ↓
 Salvo o journey-spec.md preenchido
        ↓

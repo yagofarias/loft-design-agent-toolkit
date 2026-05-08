@@ -169,9 +169,9 @@ docs:     melhorias em documentação (README, como-usar, como-contribuir)
 
 **Exemplos bem escritos:**
 ```
-feat: add solution-mapping agent with direction cards and tangibilization
+feat: add solution-craft agent with direction cards and tangibilization
 improve: edge-cases — add Loft-specific checklists for financial flows and B2B
-fix: update all references from journey-builder to solution-mapping
+fix: update all references from journey-builder to solution-craft
 refactor: rename ui-states to state-coverage across all files
 context: update brand-voice with fintech trust signals and B2B calibration
 docs: expand commit convention in como-contribuir
@@ -188,7 +188,7 @@ melhoria
 
 Se a mudança é grande, adicione um corpo ao commit:
 ```
-feat: add solution-mapping with ideation phase
+feat: add solution-craft with ideation phase
 
 - Phase 0 generates 2-3 direction cards anchored in market references
 - Phase 5 generates tangibilization artifacts (Mermaid, text wireframe, storyboard)

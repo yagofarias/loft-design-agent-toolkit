@@ -1,6 +1,6 @@
 ---
 version: "2.0"
-agent: solution-mapping
+agent: solution-craft
 status: "[Rascunho | Em revisão | Aprovado]"
 ---
 

@@ -81,7 +81,7 @@ O agente decide automaticamente se executa as fases de pesquisa e benchmark com 
 
 ## Fase 2 — Jornada
 
-**Agente:** `agents/solution-mapping.md`
+**Agente:** `agents/solution-craft.md`
 
 **Input necessário:** `templates/design-doc.md` aprovado
 

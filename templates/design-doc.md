@@ -258,7 +258,7 @@ Este documento pode ser preenchido de duas formas:
 
 ## 4. Solução
 
-*Esta seção é preenchida durante a exploração de design, em conjunto com o `solution-mapping`. No início do projeto, deixe as subseções em aberto — preencha quando tiver alternativas para comparar.*
+*Esta seção é preenchida durante a exploração de design, em conjunto com o `solution-craft`. No início do projeto, deixe as subseções em aberto — preencha quando tiver alternativas para comparar.*
 
 ### 4.1 Opções consideradas ✅ obrigatório quando houver decisão
 

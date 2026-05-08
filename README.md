@@ -14,16 +14,17 @@ claude
 
 No **Claude Code app**: clique em **Local** na barra superior e selecione a pasta clonada.
 
-Na primeira sessão, o toolkit se apresenta e sugere `/setup` para configurar o contexto do seu squad. A partir daí, todos os projetos ficam organizados em `projects/[nome-do-projeto]/`.
+Na primeira sessão, o toolkit se apresenta e sugere `/context-setup` para configurar o contexto do seu squad. A partir daí, todos os projetos ficam organizados em `projects/[nome-do-projeto]/`.
 
 ### Comandos disponíveis
 
 | Comando | O que faz |
 |---------|-----------|
-| `/setup` | Configura o contexto do squad — oferece pesquisa web e análise de documentos para montar um rascunho rápido |
+| `/context-setup` | Configura o contexto do squad — oferece pesquisa web e análise de documentos para montar um rascunho rápido |
 | `/retro` | Retrospectiva da sessão — diagnóstico do modelo + input do designer, salvo como arquivo no projeto |
+| `/checkpoint` | Salva o estado da sessão e gera um bloco de contexto compacto para continuar em nova conversa |
 | `/framing` | Transforma qualquer ponto de partida em um Design Doc estruturado |
-| `/solution-mapping` | Explora direções de solução e mapeia fluxos, estados e artefatos |
+| `/solution-craft` | Explora direções de solução e mapeia fluxos, estados e artefatos |
 | `/critique` | Revisa um design — aceita link do Figma ou prints |
 | `/handoff` | Prepara a spec completa para dev |
 
@@ -44,7 +45,7 @@ Na primeira sessão, o toolkit se apresenta e sugere `/setup` para configurar o 
 | Agente | O que faz |
 |--------|-----------|
 | `project-framing` | Transforma qualquer ponto de partida (brief, PRD, RFC, SDD ou ideia) em um Design Doc. Aceita documentos existentes como input. |
-| `solution-mapping` | Explora direções de solução (direction cards) e mapeia fluxos, estados, edge cases e artefatos de tangibilização. |
+| `solution-craft` | Explora direções de solução (direction cards) e mapeia fluxos, estados, edge cases e artefatos de tangibilização. |
 | `design-critique` | Avalia o design em uma passagem: usabilidade, WCAG, estados, copy e Copan. Gera relatório com gate de aprovação. |
 | `delivery-handoff` | Gera a spec de analytics e valida se o design está completamente documentado para o dev. |
 

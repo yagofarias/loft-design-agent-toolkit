@@ -50,7 +50,7 @@ Valide com o stakeholder se o problem statement representa o que foi pedido ante
 
 ## Fase 2 — Jornada
 
-**Agente:** `agents/solution-mapping.md`
+**Agente:** `agents/solution-craft.md`
 
 Consulte o time de engenharia para constraints técnicas antes de mapear.
 

@@ -4,6 +4,7 @@ description: >
   Prepares the complete dev spec: generates the analytics event spec and
   validates the design is fully documented for implementation. Use as the
   last step before marking a journey as ready for dev.
+  💡 Recommended model: Sonnet 4.6 (balanced reasoning/cost).
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob
 ---

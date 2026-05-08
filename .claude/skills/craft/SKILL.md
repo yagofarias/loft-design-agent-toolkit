@@ -1,16 +1,17 @@
 ---
-name: solution-mapping
+name: craft
 description: >
   Explores solution directions and maps flows, states, edge cases and
   tangibilization artifacts. Starts with ideation (when needed) and ends
   with the designer ready to open Figma. Use after /framing.
+  💡 Recommended model: Sonnet 4.6 (balanced reasoning/cost).
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob
 ---
 
 Antes de iniciar, siga a lógica de gestão de projetos definida no CLAUDE.md — identifique ou crie o projeto em `projects/` e salve os outputs lá.
 
-Start a solution mapping session by reading and following the protocol in `agents/solution-mapping.md`.
+Start a solution mapping session by reading and following the protocol in `agents/solution-craft.md`.
 
 Before starting, read these files:
 

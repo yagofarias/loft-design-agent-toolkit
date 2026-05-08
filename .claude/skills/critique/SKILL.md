@@ -5,6 +5,7 @@ description: >
   coverage, copy clarity and Copan consistency. Accepts a Figma URL (accessed
   via Figma MCP when available) or screenshots with context. Produces a
   critique-output.md with a gate decision for handoff.
+  💡 Recommended model: Opus 4.6 (nuanced design judgment).
 disable-model-invocation: true
 allowed-tools: Read, Grep, Glob
 ---
