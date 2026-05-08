@@ -24,7 +24,7 @@ Na primeira sessão, o toolkit se apresenta e sugere `/context-setup` para confi
 | `/retro` | Retrospectiva da sessão — diagnóstico do modelo + input do designer, salvo como arquivo no projeto |
 | `/checkpoint` | Salva o estado da sessão e gera um bloco de contexto compacto para continuar em nova conversa |
 | `/framing` | Transforma qualquer ponto de partida em um Design Doc estruturado |
-| `/solution-craft` | Explora direções de solução e mapeia fluxos, estados e artefatos |
+| `/craft` | Explora direções de solução e mapeia fluxos, estados e artefatos |
 | `/critique` | Revisa um design — aceita link do Figma ou prints |
 | `/handoff` | Prepara a spec completa para dev |
 
