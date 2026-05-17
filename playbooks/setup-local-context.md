@@ -122,11 +122,11 @@ Para cada persona relevante no seu squad, responda:
 Com base nas respostas coletadas, preencha os arquivos em sequência:
 
 ```
-1. Abra context/local/context.md       → preencha com respostas da Fase 1
-2. Abra context/local/personas.md      → preencha com respostas da Fase 2
+1. Abra context/local/context.md           → preencha com respostas da Fase 1
+2. Abra context/local/personas.md          → preencha com respostas da Fase 2
 3. Abra context/local/target-audiences.md  → preencha com respostas da Fase 3
 4. Abra context/local/brand-voice-local.md → preencha com respostas da Fase 4
-5. Crie context/local/competitors.md   → preencha com respostas da Fase 5
+5. Crie context/local/competitors.md       → preencha com respostas da Fase 5
 ```
 
 Para cada arquivo:

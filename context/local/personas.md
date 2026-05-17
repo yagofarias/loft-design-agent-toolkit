@@ -3,6 +3,11 @@
 > Personas específicas deste segmento de produto.
 > Complementam (não substituem) visões mais amplas de usuário que possam existir na empresa.
 > Atualize sempre que houver nova pesquisa ou aprendizado relevante.
+>
+> **Instrução para o agente:** Cada persona tem um bloco Job-to-be-Done. Se estiver vazio,
+> derive um job candidato a partir dos objetivos e fricções da própria persona e pergunte
+> ao designer se reflete a realidade antes de salvar. Formato: *"Quando [situação],
+> quero [motivação], para [resultado esperado]."*
 
 ---
 
@@ -35,6 +40,15 @@
 
 **Citação representativa:**
 > "[Uma frase que captura o mindset desta persona neste contexto]"
+
+**Job-to-be-Done:**
+> Quando [situação], quero [motivação], para [resultado esperado].
+
+<!--
+  Se o squad ainda não definiu o JTBD desta persona, deixe em branco.
+  O agente irá sugerir um job candidato com base nos objetivos e fricções acima
+  e pedirá validação antes de salvar.
+-->
 
 ---
 

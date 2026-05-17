@@ -152,7 +152,7 @@ git pull origin main
 Antes de rodar, verifique se o `skip-worktree` está ativo nos arquivos de contexto local. Se não estiver, execute primeiro:
 
 ```bash
-git update-index --skip-worktree context/local/context.md context/local/personas.md context/local/target-audiences.md context/local/brand-voice-local.md context/local/competitors.md 2>/dev/null || true
+git update-index --skip-worktree context/local/context.md context/local/personas.md context/local/target-audiences.md context/local/brand-voice-local.md context/local/competitors.md context/local/research-archive.md 2>/dev/null || true
 ```
 
 Após o pull, informe o que mudou e se há algo novo no toolkit para explorar.
@@ -165,6 +165,7 @@ Após o pull, informe o que mudou e se há algo novo no toolkit para explorar.
 |---------|-----------|
 | `/context-setup` | Configura o contexto do squad — faça isso primeiro |
 | `/framing` | Transforma qualquer ponto de partida (brief, PRD, SDD, ideia) em um Design Doc estruturado |
+| `/research-plan` | Transforma hipóteses do design-doc em plano de pesquisa executável com método, participantes e roteiros |
 | `/solution-craft` | Mapeia fluxos, estados, edge cases e dependências a partir do Design Doc |
 | `/critique` | Revisa um design — aceita link do Figma ou prints com contexto |
 | `/handoff` | Prepara a spec completa para dev: eventos de analytics + validação de handoff |
@@ -184,7 +185,7 @@ Estes arquivos se aplicam a todo trabalho neste toolkit. Leia-os quando relevant
 O contexto específico do seu squad está em `context/local/`. Estes arquivos tornam os outputs específicos para o domínio — sempre carregue o que existir:
 
 - `context/local/context.md` — regras de negócio, terminologia, constraints *(sempre)*
-- `context/local/personas.md` — perfis de usuário
+- `context/local/personas.md` — perfis de usuário e jobs-to-be-done
 - `context/local/target-audiences.md` — segmentos de público e guias de comunicação
 - `context/local/brand-voice-local.md` — ajustes de tom específicos do domínio
 - `context/local/competitors.md` — mapeamento competitivo

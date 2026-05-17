@@ -2,9 +2,10 @@
 name: design-critique
 description: >
   Realiza uma critique completa de um design: avalia heurísticas de
-  usabilidade, acessibilidade, estados, edge cases, e valida copies e
-  consistência com o design system. Produz um relatório único priorizado
-  por impacto. Usar antes de apresentar para stakeholders ou passar para dev.
+  usabilidade, acessibilidade, qualidade visual (composição e tipografia),
+  estados, edge cases, e valida copies e consistência com o design system.
+  Produz um relatório único priorizado por impacto. Usar antes de apresentar
+  para stakeholders ou passar para dev.
 tools: Read, Grep, Glob
 model: sonnet
 ---
@@ -78,6 +79,41 @@ Para cada problema encontrado, documente:
 |---|----------------------------|---------|--------------|-----------|---------|
 | | | | | 0–4 | |
 
+### Fase 2.5 — Qualidade Visual
+
+Avalie a composição visual do design como uma dimensão separada da usabilidade. O objetivo não é aplicar regras rígidas — é identificar onde a composição enfraquece a comunicação ou cria atrito visual desnecessário.
+
+> **Nota:** esta fase é mais eficaz com acesso visual direto ao design (prints ou Figma). Com descrição textual apenas, aplique o que for possível e sinalize as dimensões que não puderam ser avaliadas.
+
+Para cada dimensão, registre: o que foi observado, qual é o impacto para o usuário e uma direção de melhoria (quando aplicável).
+
+**Balance — distribuição de peso visual**
+- A tela tem um centro de gravidade claro ou o peso está disperso sem direção?
+- Elementos de alto peso (imagens, blocos escuros, tipografia grande) estão ancorando a composição de forma intencional ou acidental?
+- Em layouts assimétricos: a assimetria cria tensão com propósito ou parece descuido?
+
+**Whitespace — espaço como elemento ativo**
+- O espaçamento comunica hierarquia — grupos próximos são relacionados, grupos distantes são independentes?
+- Existe espaço de respiro suficiente para o olho descansar antes de absorver o próximo bloco de informação?
+- O espaço está sendo usado para guiar o olhar ou apenas preencher o que sobrou?
+
+**Rhythm — cadência e consistência visual**
+- Existe um ritmo repetível de espaçamentos, tamanhos e pesos ao longo da tela?
+- A quebra de ritmo (quando existe) é intencional para criar destaque, ou é inconsistência?
+- Seções equivalentes têm tratamento visual equivalente?
+
+**Gestalt — como os elementos se relacionam**
+- Proximidade: elementos agrupados visualmente são de fato relacionados semanticamente?
+- Similaridade: elementos com a mesma função têm a mesma aparência?
+- Figura/fundo: o conteúdo principal se destaca claramente do fundo e dos elementos secundários?
+- Continuidade: o olhar tem um caminho natural de leitura, ou precisa saltar sem direção?
+
+Documente os achados no mesmo formato das fases anteriores:
+
+| # | Dimensão | Observação | Impacto | Sugestão |
+|---|----------|-----------|---------|---------|
+| | Balance / Whitespace / Rhythm / Gestalt | | | |
+
 ### Fase 3 — Revisão de Estados e Edge Cases
 
 Execute `skills/state-coverage.md` e `skills/edge-cases.md`:
@@ -128,11 +164,11 @@ Produza o `templates/critique-output.md` com:
 - Os 2 ou 3 problemas de maior impacto
 - Recomendação geral: ✅ Pronto para avançar / ⚠️ Pronto com ressalvas / ❌ Requer revisão
 
-**Problemas por severidade** (usabilidade + acessibilidade + copy + DS unificados):
+**Problemas por severidade** (usabilidade + acessibilidade + qualidade visual + copy + DS unificados):
 
 | # | Categoria | Problema | Tela/Momento | Severidade | Sugestão |
 |---|-----------|---------|--------------|-----------|---------|
-| 1 | Heurística / WCAG / Copy / DS | | | 4-3-2-1 | |
+| 1 | Heurística / WCAG / Visual / Copy / DS | | | 4-3-2-1 | |
 
 **Estados ausentes:**
 Lista com impacto e sugestão.

@@ -247,6 +247,35 @@ A acessibilidade não é uma camada extra — é parte da avaliação heurístic
 
 ---
 
+## Avaliação Tipográfica
+
+Tipografia é avaliada em quatro dimensões. O objetivo é identificar onde o sistema tipográfico enfraquece a leitura ou a hierarquia — não aplicar métricas absolutas.
+
+### T1 — Hierarquia e Escala
+- A escala tipográfica comunica claramente o que é primário, secundário e terciário?
+- Existe proporção perceptível entre os níveis — ou os tamanhos são tão próximos que a hierarquia se perde?
+- Estão sendo usados apenas os níveis definidos no sistema (Copan: hero, h1–h4, subtitle, paragraph-lg/md/sm, caption, overline)?
+- **Sinal de problema:** dois níveis que parecem o mesmo tamanho em telas diferentes. Heading que não se distingue do body em peso ou tamanho.
+
+### T2 — Legibilidade
+- O corpo de texto tem tamanho suficiente para leitura confortável no dispositivo de destino?
+- O line-height cria espaço adequado — nem comprimido, nem tão aberto que perde a unidade de parágrafo?
+- A largura de coluna permite leitura fluida sem que o olho se perca na quebra de linha?
+- **Sinal de problema:** texto que cansa após poucos parágrafos. Linhas muito longas em desktop. Line-height que faz parágrafos parecerem linhas soltas.
+
+### T3 — Consistência semântica
+- Elementos com a mesma função têm o mesmo tratamento tipográfico em toda a interface?
+- Labels de campos, títulos de seção e textos de apoio têm um padrão reconhecível e repetível?
+- O peso (bold) está sendo usado para criar ênfase ou para preencher espaço visual?
+- **Sinal de problema:** o mesmo tipo de informação aparece com estilos diferentes em telas distintas sem motivo. Bold usado em quase tudo — perde o valor de destaque.
+
+### T4 — Token compliance
+- Os estilos tipográficos usados correspondem aos tokens do Copan, não a valores manuais de fonte/tamanho?
+- Variações fora do sistema têm justificativa clara?
+- **Sinal de problema:** fonte ou tamanho que não existe na escala do Copan. Peso manual em vez de usar o estilo bold correspondente.
+
+---
+
 ## Escala de Severidade
 
 | Nível | Descrição | Ação |

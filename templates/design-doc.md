@@ -11,6 +11,7 @@ status: "[Rascunho | Em revisão | Aprovado | Em execução | Arquivado]"
 **Stakeholder principal:** [Nome + área]  
 **Última atualização:** [DD/MM/AAAA]  
 **Confluence:** [URL da página — preenchido após publicar]  
+**Plano de pesquisa:** [Link para research-plan.md — preenchido se /research-plan for rodado]  
 **Documentos relacionados:** [Links — Figma, ticket, SDD, PRD existente]
 
 ---

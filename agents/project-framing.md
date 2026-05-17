@@ -167,6 +167,12 @@ Se **sim** → gere o `templates/design-doc.md` preenchido com:
 - **Seção 5 — Riscos e Incertezas** — A ser enriquecida pelo `gut-check` e `design-critique`
 - **Seção 6 — Viabilidade e Entrega** — A ser completada pelo `delivery-handoff`
 
+**Após gerar o design-doc**, conte os itens `[A VALIDAR:]` no documento gerado. Se houver 1 ou mais:
+
+> "Encontrei [N] hipótese(s) marcada(s) como `[A VALIDAR:]` neste design-doc. Antes de avançar para a solução, pode valer estruturar uma pesquisa para validá-las. Quer rodar o `/research-plan` agora?"
+
+Não force — só sugira uma vez. Se o designer preferir avançar para o `/solution-craft`, respeite.
+
 **Cronograma — formato Gantt por semanas:**
 
 O cronograma usa uma tabela visual com 3 meses completos. Ao gerar:
