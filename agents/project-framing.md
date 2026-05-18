@@ -155,88 +155,59 @@ Ao final da conversa, pergunte:
 
 Se **sim** → gere o `templates/design-doc.md` preenchido com:
 
-**Seções a preencher agora:**
-- **TL;DR** — 3-5 frases resumindo o projeto
-- **Cronograma** — Se o designer informou uma data de entrega, faça engenharia reversa e sugira distribuição das fases. Caso contrário, deixe as fases com `[A DEFINIR]` e adicione apenas as que fazem sentido para o projeto.
-- **Seção 1 — Contexto** — Problema, por que agora, pedido vs. problema real
-- **Seção 2 — Objetivo e Sucesso** — O que queremos alcançar, métricas sugeridas, fora do escopo
-- **Seção 3 — Usuários e Cenário** — Personas, como fazem hoje, cenário principal
+- **TL;DR** — 2–3 frases: problema, quem sente, o que estamos fazendo, como saberemos que deu certo
+- **Problema** — um parágrafo que embarca o usuário, a dor, o custo e a urgência. Sem fragmentar em subtópicos.
+- **Objetivo e Sucesso** — o que queremos alcançar em termos de impacto + tabela de métricas (primária + guardrail). Se o designer não souber formular o objetivo, ajude com perguntas: *"Daqui a 30 dias, o que teria mudado para o usuário se esse projeto der certo?"*
+- **Cronograma** — tabela de quinzenas preenchida (ver formato abaixo)
+- **Decisões de Design** — tabela vazia, pronta para o designer preencher ao longo do projeto
 
-**Seções com [A PREENCHER] + perguntas de orientação:**
-- **Seção 4 — Solução** — A ser preenchida junto com o `solution-craft`
-- **Seção 5 — Riscos e Incertezas** — A ser enriquecida pelo `gut-check` e `design-critique`
-- **Seção 6 — Viabilidade e Entrega** — A ser completada pelo `delivery-handoff`
+**Após gerar o design-doc**, sugira o próximo passo uma vez:
 
-**Após gerar o design-doc**, conte os itens `[A VALIDAR:]` no documento gerado. Se houver 1 ou mais:
+> "Quer rodar o `/research-plan` para estruturar a validação das hipóteses levantadas? Ou prefere ir direto para o `/solution-craft`?"
 
-> "Encontrei [N] hipótese(s) marcada(s) como `[A VALIDAR:]` neste design-doc. Antes de avançar para a solução, pode valer estruturar uma pesquisa para validá-las. Quer rodar o `/research-plan` agora?"
+**Cronograma — formato de quinzenas:**
 
-Não force — só sugira uma vez. Se o designer preferir avançar para o `/solution-craft`, respeite.
+O cronograma usa 6 colunas (2 quinzenas por mês, 3 meses). Este é o formato padrão — o mesmo usado no Confluence, sem conversão.
 
-**Cronograma — formato Gantt por semanas:**
+1. **Calcule os meses corretos** a partir do mês atual (ou do mês informado pelo designer)
+2. **Marque as fases com ████** nas quinzenas correspondentes. Células inativas ficam vazias.
+3. **Se o designer tiver data de entrega**, faça engenharia reversa distribuindo de trás para frente. Sinalize `⚠️` em fases comprimidas demais.
+4. **Inclua sempre uma linha "Dev sprint"** entre handoff e lançamento — não deixe o intervalo implícito.
 
-O cronograma usa uma tabela visual com 3 meses completos. Ao gerar:
+**Dev sprint — tempo mínimo por porte:**
 
-1. **Calcule as semanas corretas** a partir do mês atual (ou do mês informado pelo designer):
-   - Mostre sempre 3 meses completos, começando pelo mês de início
-   - Cada coluna = 1 semana de trabalho (segunda a sexta)
-   - Cabeçalho de mês: use `colspan` igual ao número de semanas do mês
-   - Meses com semana cruzando a virada: atribua a semana ao mês onde cai a maioria dos dias úteis
-   - Exemplo para maio/2026: 4 semanas (04–08, 11–15, 18–22, 25–29) → colspan=4
-   - Exemplo para julho/2026: 5 semanas (29/06–03, 07–11, 14–18, 21–25, 28–01/08) → colspan=5
+| Porte | Dev sprint mínimo |
+|-------|------------------|
+| Ajuste incremental, componente isolado | 1–2 semanas |
+| Novo fluxo, 1 integração, 3–8 telas | 3–5 semanas |
+| Múltiplos fluxos, nova feature completa | 6–8 semanas |
+| Refatoração ampla, mudança estrutural | 8–12 semanas |
 
-2. **Marque as fases com ████** nas semanas correspondentes. Células inativas ficam vazias.
-
-3. **Se o designer tiver data de entrega**, faça engenharia reversa:
-   - Calcule quantas semanas estão disponíveis
-   - Distribua as fases de trás para frente a partir da data de entrega
-   - Sinalize com `⚠️` fases que estão comprimidas demais
-
-**Dev sprint — heurística de tempo mínimo após o handoff:**
-
-O gap entre "Handoff para dev" e "Lançamento" é o sprint de implementação. Não comprimir abaixo do mínimo do porte. Se o cronograma não couber, negociar escopo — nunca apertar dev.
-
-| Porte | Características | Dev sprint mínimo |
-|-------|----------------|-------------------|
-| **Pequeno** | Ajuste incremental, novo componente isolado, sem novo fluxo | 1–2 semanas |
-| **Médio** | Novo fluxo, 1 integração externa, 3–8 telas novas | 3–5 semanas |
-| **Grande** | Múltiplos fluxos, múltiplas integrações, nova feature completa | 6–8 semanas |
-| **Reimaginação** | Refatoração ampla, mudança estrutural de UX, múltiplas integrações novas | 8–12 semanas |
-
-> Referência: MVPs simples levam 8–12 semanas de dev; complexos, 4–6 meses (dados de mercado 2024–2025). Handoffs bem executados podem reduzir em 50% o tempo de implementação — mas só se o sprint estiver dimensionado para absorver a implementação, não apressado.
-
-Inclua uma linha explícita **"Dev sprint"** no Gantt entre o handoff e o lançamento — não deixe o intervalo implícito. Exemplo:
+Exemplo de cronograma gerado:
 
 ```
-| Fase | Mai 04-08 | Mai 11-15 | Mai 18-22 | Mai 25-29 | Jun 01-05 | Jun 08-12 | Jun 15-19 | Jun 22-26 | Jul 29/06-03 | Jul 07-11 | Jul 14-18 | Jul 21-25 | Jul 28-01/08 |
-|------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-----------|-------------|-----------|-----------|-----------|-------------|
-| **Alinhamento e discovery** | | | | | | | | | | | | | |
-| Alinhamento inicial | ████ | | | | | | | | | | | | |
-| Discovery de usuário | ████ | ████ | | | | | | | | | | | |
-| Discovery de eng | | ████ | | | | | | | | | | | |
-| **Design e validação** | | | | | | | | | | | | | |
-| Exploração de design | | | ████ | ████ | | | | | | | | | |
-| Teste de usabilidade | | | | ████ | ████ | | | | | | | | |
-| Design critique | | | | | | ████ | ████ | | | | | | |
-| **Entrega** | | | | | | | | | | | | | |
-| Handoff para dev | | | | | | | | ████ | | | | | |
-| Dev sprint (implementação) | | | | | | | | | ████ | ████ | ████ | | |
-| Lançamento | | | | | | | | | | | | ████ | |
-| Revisão pós-lançamento | | | | | | | | | | | | | ████ |
+| Fase | Mai 1ª | Mai 2ª | Jun 1ª | Jun 2ª | Jul 1ª | Jul 2ª |
+|------|--------|--------|--------|--------|--------|--------|
+| **Discovery** | | | | | | |
+| Pesquisa de usuário | ████ | ████ | | | | |
+| **Design** | | | | | | |
+| Exploração | | ████ | ████ | | | |
+| Validação | | | | ████ | | |
+| **Entrega** | | | | | | |
+| Handoff para dev | | | | ████ | | |
+| Dev sprint | | | | | ████ | ████ |
+| Lançamento | | | | | | ████ |
 ```
 
 ---
 
 ### Fase 5 — Validação
 
-- [ ] O TL;DR é compreensível para alguém de fora do squad?
-- [ ] As métricas de sucesso são mensuráveis e têm baseline?
-- [ ] O fora do escopo está explícito?
-- [ ] As personas referenciadas existem no contexto local ou foram descritas?
-- [ ] O cronograma (quando preenchido) é realista dado o prazo informado?
-- [ ] O dev sprint após o handoff está dimensionado corretamente para o porte? (mínimo 3 semanas para features médias, 6+ para reimaginações — ver heurística acima)
-- [ ] Existe uma linha "Dev sprint" explícita no Gantt entre handoff e lançamento?
-- [ ] As seções [A PREENCHER] têm perguntas de orientação suficientes?
+- [ ] O TL;DR é compreensível para alguém de fora do squad em 30 segundos?
+- [ ] O Problema embarca o usuário, a dor, o custo e a urgência em um único parágrafo?
+- [ ] As métricas de sucesso são mensuráveis e têm baseline definido?
+- [ ] O cronograma tem uma linha "Dev sprint" explícita entre handoff e lançamento?
+- [ ] O dev sprint está dimensionado corretamente para o porte do projeto?
 
 ---
 

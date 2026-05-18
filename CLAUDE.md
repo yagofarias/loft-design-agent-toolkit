@@ -106,32 +106,12 @@ Leia `context/local/context.md` e procure por `confluence_url`, `confluence_spac
 - Se estiverem preenchidos: use diretamente
 - Se não estiverem: pergunte ao designer qual espaço e página-pai usar, e ofereça salvar para próximos projetos
 
-**3. Adaptar o cronograma para Confluence**
+**3. Publicar**
 
-O cronograma Gantt do `design-doc.md` usa colunas de semanas (13+ colunas) que excedem a largura de uma página Confluence. Ao publicar, converta para o formato de **quinzenas** (6 colunas — 2 por mês):
-
-```
-| Fase                    | Mai 1ª | Mai 2ª | Jun 1ª | Jun 2ª | Jul 1ª | Jul 2ª |
-|-------------------------|--------|--------|--------|--------|--------|--------|
-| Alinhamento e discovery |        |        |        |        |        |        |
-| Alinhamento inicial     | ██     |        |        |        |        |        |
-| Discovery de usuário    | ██     | ██     |        |        |        |        |
-| Design e validação      |        |        |        |        |        |        |
-| Exploração de design    |        | ██     | ██     |        |        |        |
-| Design critique         |        |        |        | ██     |        |        |
-| Entrega                 |        |        |        |        |        |        |
-| Handoff para dev        |        |        |        | ██     |        |        |
-| Lançamento              |        |        |        |        | ██     |        |
-```
-
-Regra de conversão: cada semana do Gantt original vira quinzena (semanas 1-2 → 1ª quinzena, semanas 3-4 → 2ª quinzena). O markdown local mantém a granularidade de semanas — apenas a versão Confluence usa quinzenas.
-
-**4. Publicar**
-
-Use o MCP da Atlassian para:
+O design-doc já usa formato de quinzenas — não é necessária conversão. Use o MCP da Atlassian para:
 - Criar uma nova página no espaço/página-pai definidos
 - Título = nome do projeto + tipo de documento (ex: "Simulador de Financiamento — Design Doc")
-- Conteúdo = o markdown do documento convertido para formato Confluence (com cronograma em quinzenas)
+- Conteúdo = o markdown do documento local (publicar como está)
 - Perguntar ao designer: rascunho (visível só para mim) ou publicado (visível para o time)?
 - Após publicar: retornar a URL da página e atualizar o campo `Confluence:` no header do documento local
 
