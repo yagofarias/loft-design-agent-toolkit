@@ -111,28 +111,20 @@ Com base no método selecionado, ofereça gerar os artefatos:
 - Para testes de usabilidade → gere plano de teste com tarefas, critérios de sucesso e perguntas pós-teste
 - Para surveys → gere estrutura de questionário com escala e ordem das perguntas
 
-### Fase 6 — Plano de Análise
-
-Defina antes de ir a campo:
-
-- Abordagem analítica (análise temática, affinity mapping, análise de tarefas)
-- Critérios de sucesso: o que confirma e o que invalida cada hipótese
-- Destino dos achados: design-doc, Dovetail, personas, readout com time
-
-### Fase 7 — Output
+### Fase 6 — Output
 
 Preencha o template `templates/research-plan.md` com tudo que foi definido e salve em `projects/[nome]/research-plan.md`.
 
-Atualize o design-doc relacionado adicionando o link para o plano de pesquisa no campo "Documentos relacionados".
+Atualize o design-doc relacionado adicionando o link para o plano de pesquisa no campo "Plano de pesquisa".
 
 Pergunte ao designer:
-> "Quer publicar este plano no Confluence agora? Posso adaptar o formato."
+> "Quer publicar este plano no Confluence agora?"
 
-### Fase 8 — Retorno de Achados (pós-pesquisa)
+### Fase 7 — Retorno de Achados (pós-pesquisa)
 
 Quando o designer retornar com os resultados, execute `skills/summarize-interview.md` para cada transcript e:
 
-1. Preencha a seção **Achados** do research-plan.md
+1. Preencha o template `templates/research-output.md` e salve em `projects/[nome]/research-output.md`
 2. Atualize o design-doc: substitua `[A VALIDAR: X]` por `[VALIDADO: achado]` ou `[INVALIDADO: achado]`
 3. Ofereça atualizar `context/local/research-archive.md` com o resumo do estudo
 4. Pergunte: "Algum achado muda o que está no design-doc ou revela um job não documentado nas personas?"
