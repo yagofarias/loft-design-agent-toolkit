@@ -1,17 +1,12 @@
+# Quick Product Change
+
+Use quando: mudança pontual em feature existente, ajuste de copy, correção de UX ou melhoria incremental com escopo bem definido.
+
+**Não use quando:** a mudança afeta fluxos inteiros, muda a arquitetura de informação ou envolve componentes novos significativos — use `start-from-scratch.md`.
+
 ---
-name: quick-product-change
-description: >
-  Playbook acelerado para mudanças pequenas e incrementais em produto
-  existente. Foco em critique e handoff simplificado.
----
 
-# Playbook: Quick Product Change
-
-Use quando: Mudança pontual em feature existente, ajuste de copy, correção de UX, ou melhoria incremental com escopo bem definido.
-
-**Não use quando:** A mudança afeta fluxos inteiros, muda a arquitetura de informação, ou envolve componentes novos significativos — use `start-from-scratch.md`.
-
-## Decisão Rápida de Escopo
+## Decisão rápida de escopo
 
 1. A mudança afeta mais de 3 telas? → `start-from-scratch`
 2. Muda como o usuário completa uma tarefa principal? → `start-from-scratch`
@@ -19,27 +14,29 @@ Use quando: Mudança pontual em feature existente, ajuste de copy, correção de
 
 ---
 
-## Fluxo Comprimido
+## Fluxo comprimido
 
 ```
 [Mudança identificada]
         ↓
-  MINI FRAMING (você mesmo)
+  Mini framing (você mesmo)
         ↓
       (design)
         ↓
-  SOLUTION CRITIQUE
+    /critique
         ↓
-   DELIVERY HANDOFF (simplificado)
+    /handoff (simplificado)
 ```
 
 ---
 
-## Fase 1 — Mini Framing (sem agente)
+## Fase 1 — Mini framing (sem agente)
+
+Responda antes de abrir o Figma:
 
 **O que está mudando?** [Uma frase]
 
-**Por que?**
+**Por quê?**
 - [ ] Bug de UX reportado
 - [ ] Dado de analytics mostrando problema
 - [ ] Pedido de stakeholder com justificativa
@@ -55,6 +52,7 @@ Use quando: Mudança pontual em feature existente, ajuste de copy, correção de
 
 ## Fase 2 — Design
 
+Referências:
 - `context/global/design-system.md` — uso correto do Copan
 - `context/global/brand-voice.md` — se houver copy nova
 - `context/local/context.md` — regras específicas do squad
@@ -63,18 +61,18 @@ Use quando: Mudança pontual em feature existente, ajuste de copy, correção de
 
 ## Fase 3 — Critique
 
-**Agente:** `agents/design-critique.md`
+**Comando:** `/critique`
 
 Peça ao agente para focar em:
 1. A mudança endereça o problema declarado?
-2. Introduz novos problemas de heurística, acessibilidade ou copy?
+2. Introduz novos problemas de usabilidade, acessibilidade ou copy?
 3. É consistente com o padrão existente no produto e no Copan?
 
 ---
 
-## Fase 4 — Handoff Simplificado
+## Fase 4 — Handoff simplificado
 
-Para mudanças pequenas, documente no ticket ou comentário do Figma:
+Para mudanças pequenas, documente diretamente no ticket ou comentário do Figma:
 
 ```
 MUDANÇA: [O que foi alterado]
@@ -85,4 +83,4 @@ COPY NOVA: [Se houver, o texto final]
 TRACKING: [Evento novo ou modificado, se houver]
 ```
 
-Use `agents/delivery-handoff.md` apenas se a mudança tiver ambiguidade ou novos eventos de analytics.
+Use `/handoff` apenas se a mudança tiver ambiguidade ou novos eventos de analytics.

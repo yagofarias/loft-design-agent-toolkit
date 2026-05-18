@@ -1,15 +1,4 @@
----
-name: setup-local-context
-description: >
-  Playbook guiado para ajudar o squad a preencher a camada de contexto local
-  do toolkit. Faz perguntas progressivas e produz os arquivos de context/local/
-  prontos para uso pelos agentes. Usar uma vez por squad, ou quando o contexto
-  mudar significativamente (novo produto, novo público, pivô de estratégia).
-tools: Read, Write
-model: sonnet
----
-
-# Playbook: Setup do Contexto Local do Squad
+# Setup do Contexto Local do Squad
 
 Este playbook guia o designer (ou o responsável pelo toolkit no squad) a preencher os arquivos de contexto local. Esses arquivos são o que transforma os agentes genéricos em agentes que conhecem o seu domínio.
 

@@ -1,93 +1,84 @@
----
-name: brief-to-design
-description: >
-  Playbook para transformar um brief de negócio, PRD, ou requisito
-  de stakeholder em design pronto para desenvolvimento.
----
+# Brief to Design
 
-# Playbook: Brief to Design
-
-Use quando: Você recebeu um PRD, um requisito de stakeholder, ou um brief formal e precisa transformar isso em design com qualidade de handoff.
+Use quando: você recebeu um PRD, requisito de stakeholder, ou brief formal e precisa transformar isso em design com qualidade de handoff.
 
 ---
 
-## Antes de Começar: Diagnóstico do Brief
+## Diagnóstico do brief
 
-| Tipo | Características | Ação |
-|------|----------------|------|
-| **PRD completo** | Tem contexto, métricas, personas, critérios de aceite | Ir direto para Fase 1 |
-| **PRD parcial** | Tem o quê mas falta o porquê ou os critérios | Fase 0 obrigatória |
-| **Brief informal** | Conversa, e-mail, ou Slack com requisito vago | Fase 0 obrigatória |
-| **Requisito técnico** | Ticket de eng, requisito de compliance | Traduzir antes da Fase 0 |
+| Tipo | Ação |
+|------|------|
+| PRD completo — tem contexto, métricas, personas, critérios | Ir direto para Fase 1 |
+| PRD parcial — tem o quê mas falta o porquê | Fase 0 obrigatória |
+| Brief informal — conversa, e-mail ou Slack | Fase 0 obrigatória |
+| Requisito técnico — ticket de eng, compliance | Traduzir antes da Fase 0 |
 
 ---
 
-## Fase 0 — Validação do Brief (quando necessário)
+## Fase 0 — Validação do brief (quando necessário)
 
-Produza um documento de alinhamento com:
-1. **O que entendi que foi pedido**
-2. **O que está ambíguo**
-3. **O que estou assumindo**
-4. **Minha recomendação de escopo**
+Antes de chamar qualquer agente, produza um documento curto com:
 
-**Compartilhe com o stakeholder antes de continuar.**
+1. O que entendi que foi pedido
+2. O que está ambíguo
+3. O que estou assumindo
+4. Minha recomendação de escopo
+
+Compartilhe com o stakeholder e confirme antes de continuar.
 
 ---
 
 ## Fase 1 — Framing
 
-**Agente:** `agents/project-framing.md`
+**Comando:** `/framing`
 
-Passe como input:
-- O brief original e o documento de validação (Fase 0)
-- Confirmações recebidas do stakeholder
-
-O agente vai decidir se executa pesquisa ou benchmark com base no contexto disponível.
+Passe o brief original e as confirmações do stakeholder como input. O agente gera o Design Doc e separa o que foi pedido do problema real.
 
 Valide com o stakeholder se o problem statement representa o que foi pedido antes de avançar.
 
 ---
 
-## Fase 2 — Jornada
+## Fase 2 — Pesquisa (quando necessário)
 
-**Agente:** `agents/solution-craft.md`
+**Comando:** `/research-plan`
 
-Consulte o time de engenharia para constraints técnicas antes de mapear.
-
----
-
-## Fase 3 — Design
-
-Referências obrigatórias:
-- `templates/journey-spec.md`
-- `templates/design-doc.md`
-- `context/global/design-system.md`
-- `context/local/context.md`
-
-A cada decisão de design que se afasta do brief, documente o motivo.
+Se o Design Doc tiver hipóteses a validar, estruture a pesquisa antes de ir para a solução. Especialmente útil quando o brief assume comportamentos do usuário que não foram confirmados.
 
 ---
 
-## Fase 4 — Validação com Stakeholder (pré-critique)
+## Fase 3 — Solução e Design
 
-Apresente o design para o stakeholder:
+**Comando:** `/solution-craft`
+
+Consulte o time de engenharia para constraints técnicas antes de mapear os fluxos.
+
+A cada decisão de design que se afasta do brief, documente o motivo na seção Decisões de Design do design-doc.
+
+---
+
+## Fase 4 — Validação com stakeholder (pré-critique)
+
+Apresente o design antes de chamar o critique:
+
 1. "Isso resolve o que foi pedido?"
 2. "Há algum requisito que não ficou representado?"
 
-Ajuste antes de chamar o critique.
+Ajuste com base no feedback antes de continuar.
 
 ---
 
-## Fase 5 — Critique e Entrega
+## Fase 5 — Critique e Handoff
 
-Siga as fases 4 e 5 do `start-from-scratch.md`.
+**Comandos:** `/critique` → `/handoff`
+
+Siga o fluxo completo descrito em `docs/start-from-scratch.md` a partir da Fase 5.
 
 ---
 
-## Armadilhas Comuns
+## Armadilhas comuns
 
-**A solução já vem no brief:** Stakeholders frequentemente pedem uma feature específica quando o problema real é outro. Sempre questione.
+**A solução já vem no brief:** stakeholders frequentemente pedem uma feature específica quando o problema real é outro. O `/framing` ajuda a separar os dois — não pule essa etapa.
 
-**O escopo cresce durante o design:** Documente o que está fora do escopo e crie tickets separados para o resto.
+**Escopo crescente durante o design:** documente o que está fora do escopo no Design Doc e crie tickets separados para o resto.
 
-**O brief está desatualizado:** Confirme se as premissas ainda são válidas antes de começar.
+**Brief desatualizado:** confirme se as premissas ainda são válidas antes de começar.

@@ -1,151 +1,99 @@
----
-name: start-from-scratch
-description: >
-  Playbook completo para projetos que começam do zero. Define a
-  sequência de agentes desde o brief até o handoff, com gates de
-  qualidade entre cada fase.
----
+# Start From Scratch
 
-# Playbook: Start From Scratch
+Use quando: novo produto, nova feature de médio ou grande porte, ou quando não existe nenhum artefato anterior sobre o problema.
 
-Use quando: Novo produto, nova feature de médio ou grande porte, ou quando não existe nenhum artefato anterior sobre o problema.
-
-## Visão Geral do Fluxo
+## Fluxo completo
 
 ```
 [Brief / Ideia bruta]
         ↓
-   PROJECT FRAMING
-   (+ pesquisa e benchmark quando necessário)
+    /framing
         ↓
-  [Problem Frame] ← gate 1
+  [Design Doc] ← gate 1
         ↓
-  JOURNEY BUILDER
+  /research-plan  ← se houver hipóteses a validar
         ↓
-  [Journey Spec] ← gate 2
+  /solution-craft
         ↓
     (design no Figma)
         ↓
- SOLUTION CRITIQUE
- (usabilidade + acessibilidade + copy + DS)
+    /critique
         ↓
-  [Critique Output] ← gate 3
+    /handoff
         ↓
-  DELIVERY HANDOFF
-  (tracking spec + validação para dev)
-        ↓
-   [Pronto para dev] ← gate 4
+  [Pronto para dev] ← gate final
 ```
 
 ---
 
-## Fase 0 — Contexto
+## Fase 0 — Contexto do squad
 
-Antes de chamar qualquer agente, verifique:
+Antes de qualquer agente, confirme que o contexto local está preenchido:
 
-**Globais (mantidos pelo time central):**
-- [ ] `context/global/product-principles.md`
-- [ ] `context/global/design-system.md`
-- [ ] `context/global/brand-voice.md`
+- [ ] `context/local/context.md` — regras de negócio, terminologia, constraints
+- [ ] `context/local/personas.md` — perfis de usuário e jobs-to-be-done
+- [ ] `context/local/competitors.md` — mapeamento competitivo
 
-**Locais (preencha antes de começar):**
-- [ ] `context/local/context.md` ← regras de negócio, terminologia, constraints
-- [ ] `context/local/personas.md` ← se relevante
-- [ ] `context/local/target-audiences.md` ← se relevante
-- [ ] `context/local/brand-voice-local.md` ← se o squad tiver tom específico
+Se não estiver preenchido, rode `/context-setup` primeiro.
 
 ---
 
 ## Fase 1 — Framing
 
-**Agente:** `agents/project-framing.md`
+**Comando:** `/framing`
 
-**Input necessário:**
-- Brief, PRD, ou descrição do problema
-- Nome do stakeholder que pediu e prazo
-- Pesquisa, analytics ou benchmarks disponíveis (opcional)
+Passe como input o brief, PRD, RFC ou descrição do problema. O agente transforma em um Design Doc estruturado.
 
-**Output esperado:** `templates/design-doc.md`
-
-O agente decide automaticamente se executa as fases de pesquisa e benchmark com base no contexto disponível.
-
-### Gate 1 — Checklist de Aprovação
-
-- [ ] O problem statement está em formato "Como podemos..."?
-- [ ] O usuário primário está identificado com contexto de uso?
-- [ ] Os critérios de sucesso são mensuráveis?
-- [ ] O que está fora do escopo está explícito?
-- [ ] As hipóteses são verificáveis?
+**Gate 1 — antes de avançar:**
+- [ ] O problema descreve quem sente a dor, o quanto custa e por que resolver agora?
+- [ ] O objetivo está em termos de impacto — não de entregável?
+- [ ] As métricas de sucesso são mensuráveis e têm baseline?
 
 ---
 
-## Fase 2 — Jornada
+## Fase 2 — Pesquisa (quando necessário)
 
-**Agente:** `agents/solution-craft.md`
+**Comando:** `/research-plan`
 
-**Input necessário:** `templates/design-doc.md` aprovado
+Use quando o Design Doc tiver hipóteses críticas que precisam ser validadas antes de ir para a solução. O agente extrai os `[A VALIDAR:]` do design-doc e monta um plano de pesquisa executável.
 
-**Output esperado:** `templates/journey-spec.md`
-
-### Gate 2 — Checklist de Aprovação
-
-- [ ] Fluxo principal mapeado do ponto de entrada ao de saída?
-- [ ] Todos os estados obrigatórios documentados por tela?
-- [ ] Edge cases críticos identificados e priorizados?
-- [ ] Dependências de dados/API mapeadas?
-- [ ] Dúvidas em aberto documentadas com responsável?
+Pule esta fase se as hipóteses já estiverem validadas ou o prazo não comportar pesquisa.
 
 ---
 
-## Fase 3 — Design (Figma)
+## Fase 3 — Solução
 
-Use o `templates/journey-spec.md` como referência constante. Para cada tela:
+**Comando:** `/solution-craft`
 
-1. Consulte `context/global/design-system.md` para componentes disponíveis no Copan
-2. Implemente todos os estados mapeados no journey spec
-3. Documente nos layers do Figma qualquer decisão que não seja óbvia
+Mapeia fluxos, estados, edge cases e artefatos de tangibilização a partir do Design Doc.
 
 ---
 
-## Fase 4 — Critique
+## Fase 4 — Design (Figma)
 
-**Agente:** `agents/design-critique.md`
+Use o output do `/solution-craft` como referência. Para cada tela:
 
-**Input necessário:**
-- Link do Figma ou descrição detalhada da jornada
-- `templates/design-doc.md`
-- `templates/journey-spec.md`
-
-**Output esperado:** `templates/critique-output.md`
-
-O agente cobre heurísticas de usabilidade, acessibilidade, estados, edge cases, copies e consistência com o Copan em um único relatório.
-
-### Gate 3 — Checklist de Aprovação
-
-- [ ] Nenhum problema de severidade 4 (catastrófico)?
-- [ ] Problemas de severidade 3 têm plano de endereçamento?
-- [ ] O design atende ao problem statement?
-- [ ] Nenhum componente novo bloqueando — proposta ao Copan feita?
+- Consulte `context/global/design-system.md` para componentes do Copan
+- Implemente todos os estados mapeados
+- Documente no Figma decisões que não sejam óbvias
 
 ---
 
-## Fase 4 — Entrega
+## Fase 5 — Critique
 
-**Agente:** `agents/delivery-handoff.md`
+**Comando:** `/critique`
 
-**Input necessário:**
-- `templates/journey-spec.md`
-- `templates/critique-output.md` (confirmando que passou pela revisão)
-- Ferramenta de analytics do time
+Aceita link do Figma ou prints. Cobre usabilidade, composição visual, acessibilidade, estados, copy e Copan em um único relatório.
 
-**Output esperado:**
-- `templates/tracking-spec.md`
-- Relatório de handoff com checklist para o dev
+**Gate final — antes de passar para dev:**
+- [ ] Nenhum problema de severidade 4?
+- [ ] Problemas de severidade 3 têm plano de resolução?
+- [ ] O design resolve o problema declarado no Design Doc?
 
-### Gate 4 — Checklist Final
+---
 
-- [ ] Nenhum item bloqueante no relatório de handoff?
-- [ ] Tracking spec com todos os eventos P0 especificados?
-- [ ] Componentes novos comunicados ao time de DS?
+## Fase 6 — Handoff
 
-**Somente após todos os gates:** Mover frame no Figma para "Pronto para Dev".
+**Comando:** `/handoff`
+
+Gera a spec de analytics e valida se o design está completamente documentado para o dev.
