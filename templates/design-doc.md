@@ -374,12 +374,14 @@ Este documento pode ser preenchido de duas formas:
 
 ---
 
-## Decisões Registradas
+## Decisões de Design
 
-*Use ao longo do projeto para registrar decisões importantes com contexto suficiente para que alguém que entrar depois entenda o raciocínio. Uma linha por decisão relevante — não precisa registrar tudo.*
+*Registro vivo das decisões importantes tomadas ao longo do projeto. O objetivo é que qualquer pessoa que entrar depois entenda o raciocínio — não apenas o que foi decidido, mas por que e o que foi descartado.*
 
-*Quando registrar: quando o time debateu duas opções e escolheu uma, quando um requisito mudou, quando uma premissa foi validada ou invalidada.*
+*Quando registrar: quando o time debateu duas ou mais opções e escolheu uma, quando um requisito mudou, quando uma premissa foi validada ou invalidada, quando uma restrição técnica forçou uma direção.*
 
-| Data | Decisão | Alternativa descartada | Por quê esta e não aquela |
-|------|---------|------------------------|--------------------------|
-| [DD/MM] | [O que foi decidido, em uma frase] | [O que foi descartado] | [O raciocínio — 1-2 frases] |
+*O designer preenche diretamente a qualquer momento. O agente lê e respeita o que já está aqui — nunca sobrescreve.*
+
+| # | Decisão | Alternativas descartadas | Por que esta | Trade-offs | Data |
+|---|---------|--------------------------|-------------|-----------|------|
+| 1 | [O que foi decidido, em uma frase] | [O que foi descartado] | [O raciocínio — 1-2 frases] | [O que se abre mão com esta escolha] | [DD/MM] |

@@ -199,6 +199,20 @@ O contexto específico do seu squad está em `context/local/`. Estes arquivos to
 - Quando o problema parecer mal especificado ou o escopo indefinido, sugira o gut-check antes de avançar
 - Seja específico no que encontrar — feedback genérico é menos útil do que observações precisas
 
+## Decisões de Design
+
+A seção "Decisões de Design" do design-doc é de responsabilidade do designer — ele preenche diretamente a qualquer momento. O agente nunca registra decisões automaticamente nem sobrescreve o que já está documentado.
+
+Ao final de qualquer sessão com um agente (`/framing`, `/research-plan`, `/solution-craft`, `/critique`), após entregar o output principal, sugira uma vez:
+
+> "Alguma decisão tomada nesta sessão vale registrar na seção Decisões de Design do design-doc? Posso te ajudar a formatar."
+
+Não repita a sugestão na mesma sessão. Se o designer pedir para registrar uma decisão, formate no padrão da tabela:
+
+`| # | Decisão | Alternativas descartadas | Por que esta | Trade-offs | Data |`
+
+e apresente para o designer revisar antes de adicionar ao documento.
+
 ---
 
 ## Recomendação de modelo por comando
