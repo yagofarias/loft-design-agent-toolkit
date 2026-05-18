@@ -64,7 +64,7 @@ Os arquivos de `/context/local` são mantidos por você e pelo seu squad. São o
 
 ### 3. Teste com um projeto real
 
-Escolha um projeto pequeno em andamento e passe pelo `playbooks/quick-product-change.md`. É o mais rápido e te dá uma ideia de como o toolkit funciona antes de usar em algo maior.
+Escolha um projeto pequeno em andamento e passe pelo `docs/quick-product-change.md`. É o mais rápido e te dá uma ideia de como o toolkit funciona antes de usar em algo maior.
 
 ---
 
@@ -101,9 +101,9 @@ Abra o arquivo do agente, copie o conteúdo e cole no início de uma conversa co
 
 | Situação | Use este agente / playbook |
 |----------|---------------------------|
-| Recebi um brief e não sei por onde começar | `playbooks/start-from-scratch.md` |
-| Recebi um PRD e preciso transformar em design | `playbooks/brief-to-design.md` |
-| Mudança pequena em feature existente | `playbooks/quick-product-change.md` |
+| Recebi um brief e não sei por onde começar | `docs/start-from-scratch.md` |
+| Recebi um PRD e preciso transformar em design | `docs/brief-to-design.md` |
+| Mudança pequena em feature existente | `docs/quick-product-change.md` |
 | Preciso definir o problema (com ou sem pesquisa/benchmark) | `agents/project-framing.md` |
 | Preciso mapear telas e estados da jornada | `agents/solution-craft.md` |
 | Quero revisar meu design (usabilidade, copy e DS de uma vez) | `agents/design-critique.md` |

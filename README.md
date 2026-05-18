@@ -33,7 +33,7 @@ Na primeira sessão, o toolkit se apresenta e sugere `/context-setup` para confi
 | `/critique` | Revisa um design — aceita link do Figma ou prints |
 | `/handoff` | Prepara a spec completa para dev |
 | `/retro` | Retrospectiva da sessão — diagnóstico do modelo + input do designer, salvo como arquivo no projeto |
-| `/memory` | Salva o estado da sessão atual (arquivos gerados, decisões, próximos passos) e gera um bloco de contexto compacto para colar no início da próxima conversa — evita perder contexto entre sessões |
+| `/memory` | Registra decisões e discussões da sessão de forma compacta. Usar ao longo do projeto para nunca começar do zero. |
 
 ---
 
@@ -102,6 +102,10 @@ O toolkit carrega dois níveis de contexto que tornam os outputs específicos pa
 
 - [Como usar](docs/como-usar.md) — guia completo de uso, workflows e perguntas frequentes
 - [Como contribuir](docs/como-contribuir.md) — convenções de commits, processo de PR e como escrever agentes e skills
+- [Brief to design](docs/brief-to-design.md) — como partir de um PRD ou brief para um design pronto para handoff
+- [Quick product change](docs/quick-product-change.md) — fluxo para mudanças incrementais em produto existente
+- [Start from scratch](docs/start-from-scratch.md) — como iniciar um projeto novo do zero
+- [Setup local context](docs/setup-local-context.md) — guia para configurar o contexto do squad
 
 ---
 
