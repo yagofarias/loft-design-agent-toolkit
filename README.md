@@ -33,7 +33,7 @@ Na primeira sessão, o toolkit se apresenta e sugere `/context-setup` para confi
 | `/critique` | Revisa um design — aceita link do Figma ou prints |
 | `/handoff` | Prepara a spec completa para dev |
 | `/retro` | Retrospectiva da sessão — diagnóstico do modelo + input do designer, salvo como arquivo no projeto |
-| `/checkpoint` | Salva o estado da sessão e gera um bloco de contexto compacto para continuar em nova conversa |
+| `/memory` | Salva o estado da sessão atual (arquivos gerados, decisões, próximos passos) e gera um bloco de contexto compacto para colar no início da próxima conversa — evita perder contexto entre sessões |
 
 ---
 

@@ -203,7 +203,7 @@ Ao finalizar qualquer sessão, mencione em uma linha qual modelo recomendado par
 |---------|-------------------|--------|
 | `/framing`, `/critique` | Opus 4.6 | Raciocínio profundo, julgamento nuançado |
 | `/craft`, `/handoff` | Sonnet 4.6 | Equilíbrio raciocínio/custo |
-| `/context-setup`, `/retro`, `/checkpoint` | Haiku 4.5 | Estrutural, sem julgamento complexo |
+| `/context-setup`, `/retro`, `/memory` | Haiku 4.5 | Estrutural, sem julgamento complexo |
 
 Formato da sugestão (ao final do output principal, uma linha discreta):
 > "💡 Para sessões de [tipo], o [modelo] tende a trazer melhores resultados. Considere na próxima sessão."

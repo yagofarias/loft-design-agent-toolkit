@@ -1,15 +1,15 @@
 ---
-name: checkpoint
+name: memory
 description: >
-  Saves a checkpoint of the current session: what was produced, decisions made,
-  and a compact context block to paste at the start of the next conversation.
-  Use after 2+ agents in one session to preserve context efficiently.
+  Salva o estado da sessão atual: o que foi produzido, decisões tomadas,
+  e um bloco de contexto compacto para colar no início da próxima conversa.
+  Usar após 2+ agentes em uma sessão para preservar contexto de forma eficiente.
   💡 Recommended model: Haiku 4.5 (lightweight, structural).
 disable-model-invocation: true
 allowed-tools: Read, Write
 ---
 
-Gere um checkpoint da sessão atual seguindo o protocolo abaixo.
+Gere um memory da sessão atual seguindo o protocolo abaixo.
 
 ## Protocolo
 
@@ -50,7 +50,7 @@ Gere um bloco compacto para ser colado no início da próxima conversa, permitin
 
 ### Passo 3 — Salvar o arquivo
 
-Salve em `projects/[nome-do-projeto]/checkpoint-[data].md` com o inventário completo + o bloco de contexto compacto.
+Salve em `projects/[nome-do-projeto]/memory-[data].md` com o inventário completo + o bloco de contexto compacto.
 
 Após salvar, informe o path e mostre o bloco de contexto compacto destacado — é o que o designer vai copiar.
 
@@ -58,8 +58,8 @@ Após salvar, informe o path e mostre o bloco de contexto compacto destacado —
 
 ### Quando sugerir
 
-O CLAUDE.md sugere o `/checkpoint` ao final de sessões que encadearam 2+ agentes. Se você perceber que a sessão está ficando longa antes disso, pode sugerir proativamente:
+O CLAUDE.md sugere o `/memory` ao final de sessões que encadearam 2+ agentes. Se você perceber que a sessão está ficando longa antes disso, pode sugerir proativamente:
 
-> "Essa sessão está ficando densa. Quer fazer um `/checkpoint` agora para preservar o contexto antes de continuar?"
+> "Essa sessão está ficando densa. Quer fazer um `/memory` agora para preservar o contexto antes de continuar?"
 
 $ARGUMENTS
